@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.2] - 2026-06-09
+- Updated changelog and version paths 
 
 ## [1.1.0] - 2026-04-16
 - Add way more fixes for TD ui

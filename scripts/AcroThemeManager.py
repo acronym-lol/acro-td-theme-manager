@@ -495,11 +495,11 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
             # Parse CSS theme file
             newColors = self._cssParser.parse(dat.text)
         except Exception as e:
-            debug(f'AcroThemeManager: CSS parse error - {e}')
+            #debug(f'AcroThemeManager: CSS parse error - {e}')
             return
 
         if not newColors:
-            debug('AcroThemeManager: No valid colors parsed from theme')
+            #debug('AcroThemeManager: No valid colors parsed from theme')
             return
 
         # Separate colors by type
@@ -569,7 +569,7 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
                     count += 1
             except Exception as e:
                 debug(f'AcroThemeManager: Failed to set {key}: {e}')
-        debug(f'AcroThemeManager: Applied {count} colors, skipped {skipped} unchanged')
+        #debug(f'AcroThemeManager: Applied {count} colors, skipped {skipped} unchanged')
 
     def _colorsMatch(self, a, b, tolerance=0.01):
         """Check if two RGB tuples match within tolerance"""
@@ -589,8 +589,8 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
                     count += 1
                 except Exception as e:
                     debug(f'AcroThemeManager: Failed to set {key}: {e}')
-        if count > 0:
-            debug(f'AcroThemeManager: Updated {count} changed colors')
+        # if count > 0:
+        #     debug(f'AcroThemeManager: Updated {count} changed colors')
 
     def _applyTUIK2Colors(self, colors):
         """Apply TUIK2 colors to ThemeManager parameters
@@ -618,8 +618,8 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
             self.ownerComp.par[par_name + 'a'] = a
             count += 1
 
-        if count > 0:
-            debug(f'AcroThemeManager: Applied {count} TUIK2 colors')
+        # if count > 0:
+        #     debug(f'AcroThemeManager: Applied {count} TUIK2 colors')
 
     def _applyOpColors(self, colors):
         """Apply colors to component parameters via op shortcuts
@@ -667,8 +667,8 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
             except Exception as e:
                 debug(f'AcroThemeManager: Failed to set op.{shortcut}.par.{par_base}: {e}')
 
-        if count > 0:
-            debug(f'AcroThemeManager: Applied {count} op shortcut colors')
+        # if count > 0:
+        #     debug(f'AcroThemeManager: Applied {count} op shortcut colors')
 
     def Refresh(self):
         """Force full refresh from theme file"""
