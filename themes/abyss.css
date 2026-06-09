@@ -1,0 +1,1808 @@
+/* Theme: Abyss */
+/* Deep ocean bioluminescence — where light comes from within */
+/* Abyssal black depths with glowing jellyfish, anglerfish lures, */
+/* and phosphorescent deep-sea coral */
+/* Built from td-base-template.css */
+
+
+:root {
+
+    /* ============================================================ */
+    /* SECTION 1: CORE PALETTE                                      */
+    /* ============================================================ */
+    /* These are the primary colors to change when creating a new   */
+    /* theme. Everything else in the file derives from these.       */
+    /* ============================================================ */
+
+    /* -- Background tones (abyssal depths) -- */
+    --palette-bg:            #060B14;  /* The abyss — near-total darkness */
+    --palette-bg-dark:       #030610;  /* Hadal zone */
+    --palette-bg-surface:    #0C1220;  /* Deep current */
+    --palette-bg-raised:     #141C2E;  /* Twilight zone shelf */
+    --palette-bg-highlight:  #1E2840;  /* Faint bioluminescent glow */
+
+    /* -- Text tones (bioluminescent glow) -- */
+    --palette-fg:            #88B0C8;  /* Pale deep-sea light */
+    --palette-fg-bright:     #B0D8E8;  /* Jellyfish pulse */
+    --palette-fg-muted:      #3A5068;  /* Distant shimmer */
+    --palette-fg-dim:        #1E3048;  /* Barely visible */
+
+    /* -- Accent colors (bioluminescence) -- */
+    --palette-accent:        #22DDAA;  /* Phosphorescent green — anglerfish lure */
+    --palette-accent-alt:    #4466AA;  /* Deep ocean blue */
+    --palette-accent-alt-bright: #88AADD;  /* Moon jellyfish glow — timeline */
+    --palette-tuik-accent:   #22DDAA;  /* Bioluminescent Green - TUIK2 button accent */
+
+    /* -- Border -- */
+    --palette-border:        #2A3C58;  /* Dark water boundary */
+
+    /* -- Syntax (creatures of the deep) -- */
+    --palette-keyword:       #4488DD;  /* Electric blue — deep sea squid */
+    --palette-function:      #22DDAA;  /* Phosphorescent green — bioluminescence */
+    --palette-string:        #DD6688;  /* Deep coral pink — tube worms */
+    --palette-number:        #88AADD;  /* Ghostly pale blue — moon jellyfish */
+    --palette-comment:       #2A4060;  /* Dark water — barely visible */
+
+    /* -- Semantic (deep sea signals) -- */
+    --palette-error:         #CC4466;  /* Warning red — venomous */
+    --palette-warning:       #DD8844;  /* Amber glow — anglerfish */
+    --palette-success:       #22BB88;  /* Living green — healthy reef */
+    --palette-info:          #4488DD;  /* Electric blue */
+
+
+    /* ============================================================ */
+    /* SECTION 2: GRAY RAMP                                         */
+    /* ============================================================ */
+    /* Adjust these to match your palette-bg/fg tones. The default  */
+    /* is a neutral gray ramp. Theme creators may want a non-linear */
+    /* ramp or one tinted toward warm/cool.                         */
+    /* ============================================================ */
+
+    /* Abyss extremes */
+    --black: #020408;     /* Total darkness */
+    --white: #B0D8E8;     /* Jellyfish pulse */
+
+    /* Ocean depth gray ramp — descending through water columns */
+    --gray-05: #040810;
+    --gray-10: #060B14;   /* The abyss */
+    --gray-15: #0A1018;
+    --gray-20: #0C1220;
+    --gray-25: #101828;
+    --gray-30: #141C2E;
+    --gray-35: #182236;
+    --gray-36: #1A2438;
+    --gray-40: #1E2840;
+    --gray-42: #222C44;
+    --gray-45: #263048;
+    --gray-50: #2C3850;
+    --gray-52: #303C56;
+    --gray-55: #34425C;
+    --gray-60: #3A5068;   /* Distant shimmer */
+    --gray-65: #486078;
+    --gray-67: #506880;
+    --gray-70: #587088;
+    --gray-72: #607890;
+    --gray-75: #688098;
+    --gray-80: #7898A8;
+    --gray-85: #88A8B8;
+    --gray-90: #98B8C8;
+    --gray-95: #A8C8D8;
+
+    /* Abyss system grays */
+    --gray-sys-30: #141C2E;
+    --gray-sys-50: #2C3850;
+    --gray-sys-70: #587088;
+    --gray-sys-75: #688098;
+    --gray-sys-90: #98B8C8;
+
+
+    /* ============================================================ */
+    /* SECTION 3: UI CHROME                                         */
+    /* ============================================================ */
+    /* Network editor, menubar, playbar, status bar, timeline.      */
+    /* These define the main structural areas of the TD interface.   */
+    /* ============================================================ */
+
+    /* Network editor - the deep ocean floor */
+    --network-bg: #060B14;
+    --network-grid: #0E1828;                          /* Faint depth lines */
+    --network-grid-axis: #1A3050;                     /* Bioluminescent grid axis */
+    --network-autoscroll: #0A1018;
+
+    /* Top menubar */
+    --menubar-bg: #0C1220;
+    --buttonstrip-bg: #141C2E;
+
+    /* Bottom playbar - deep glow */
+    --playbar-bg: #1E3048;
+    --playbar-on: #22DDAA;                            /* Phosphorescent GO */
+    --playbar-off: #030610;
+    --statusbar-bg: #0A1018;
+    --statusbar-fg: #22DDAA;                          /* Glowing status */
+
+    /* Timeline/animation (jive) */
+    --timeline-bg: var(--palette-bg);
+    --timeline-bar-bg: var(--palette-fg-muted);
+
+    /* Parameter panel backgrounds */
+    --parms-bg: var(--gray-25);
+
+
+    /* ============================================================ */
+    /* SECTION 4: TINTED BACKGROUNDS                                */
+    /* ============================================================ */
+    /* Used throughout panels, lists, and selection highlights.      */
+    /* Derived from palette-bg to maintain tonal consistency.        */
+    /* ============================================================ */
+
+    --bg-tinted-05: darken(var(--palette-bg), 0.03);
+    --bg-tinted-10: var(--palette-bg);
+    --bg-tinted-15: lighten(var(--palette-bg), 0.03);
+    --bg-tinted-20: lighten(var(--palette-bg), 0.06);
+    --bg-tinted-25: lighten(var(--palette-bg), 0.10);
+
+
+    /* ============================================================ */
+    /* SECTION 5: OPERATOR FAMILY COLORS                            */
+    /* ============================================================ */
+    /*                                                              */
+    /* !! PROTECTED -- DO NOT CHANGE HUES !!                        */
+    /*                                                              */
+    /* Operator family colors are universal across all TD themes.   */
+    /* Users rely on these hues to identify operator types at a     */
+    /* glance. You MAY adjust brightness (value) and saturation to  */
+    /* fit your theme's contrast, but NEVER change the hue.         */
+    /*                                                              */
+    /* CHOP = green (#628C46)    DAT  = magenta (#935C80)           */
+    /* MAT  = yellow (#9F9447)   POP  = blue (#504EBF)              */
+    /* SOP  = blue (#4A80B3)     TOP  = purple (#695C93)            */
+    /*                                                              */
+    /* EXCEPTION: COMP is neutral gray — no hue to protect.         */
+    /* COMPs are the most common container, so their color is       */
+    /* derived from the palette to blend with the theme's surfaces. */
+    /*                                                              */
+    /* ============================================================ */
+
+    --op-chop: #628C46;
+    --op-comp: var(--palette-bg-surface);              /* COMP - neutral, derived from palette */
+    --op-dat: #935C80;
+    --op-mat: #9F9447;
+    --op-pop: #504EBF;
+    --op-sop: #4A80B3;
+    --op-top: #695C93;
+
+    /* Operator hilite variants (brighter versions for hover/edit) */
+    --op-comp-hilite: lighten(var(--palette-bg-surface), 0.12);
+    --op-mat-editbg: #ABA366;
+    --op-mat-hilite: #D9D361;
+    --op-pop-hilite: #8F99FF;
+    --op-sop-editbg: #618FB8;
+    --op-sop-hilite: #7EC3E6;
+
+
+    /* ============================================================ */
+    /* SECTION 6: SEMANTIC COLORS                                   */
+    /* ============================================================ */
+    /* Status colors used for errors, warnings, success, and        */
+    /* selection indicators throughout the TD interface.             */
+    /* ============================================================ */
+
+    --error: var(--palette-error);
+    --warning: var(--palette-warning);
+    --success: var(--palette-success);
+    --info: var(--palette-info);
+
+    --selected: var(--palette-accent);       /* Selected node/item highlight */
+    --current: var(--palette-success);       /* Current/active indicator */
+    --located: var(--white);                 /* Mouse-located indicator */
+
+
+    /* ============================================================ */
+    /* SECTION 7: DAT EDITOR / SYNTAX HIGHLIGHTING                  */
+    /* ============================================================ */
+    /* Code editor backgrounds, line number gutters, and syntax     */
+    /* coloring for Python, GLSL, JSON, TScript, XML, and YAML.    */
+    /* ============================================================ */
+
+    /* DAT editor backgrounds */
+    --dat-bg: var(--palette-bg);                          /* Code editor background */
+    --dat-bg-hilite: var(--palette-bg-highlight);          /* Current line highlight */
+    --dat-lineno-bg: lighten(var(--palette-bg), 0.02);     /* Line number gutter */
+    --dat-lineno-bg-hilite: lighten(var(--palette-bg-highlight), 0.05);
+
+    /* Python syntax -- maps to palette syntax colors */
+    --python-text: var(--palette-accent);                  /* Default Python text (TD uses yellow) */
+    --python-keywords: var(--palette-keyword);
+    --python-functions: var(--palette-function);
+    --python-strings: var(--palette-string);
+    --python-numbers: var(--palette-number);
+    --python-comments: var(--palette-comment);
+    --python-hilite: var(--palette-bg-highlight);          /* Text selection in editor */
+
+    /* GLSL/JSON (deep sea creatures) */
+    --syntax-keywords: #4488DD;    /* Electric squid */
+    --syntax-functions: #22DDAA;   /* Phosphorescent plankton */
+    --syntax-strings: #DD6688;     /* Tube worm coral */
+    --syntax-numbers: #88AADD;     /* Moon jellyfish */
+    --syntax-comments: #2A4060;    /* Dark water */
+    --syntax-symbols: #1E3048;     /* Deep current */
+
+    /* TScript (bioluminescence) */
+    --tscript-text: #6688CC;       /* Ctenophore glow */
+    --tscript-editing: #22DDAA;    /* Phosphorescent flash */
+    --tscript-hilite: #1E2840;     /* Dark highlight */
+    --tscript-noteditable: #3A5068;
+
+    /* XML (reef life) */
+    --xml-tags: #4488DD;           /* Electric blue */
+    --xml-attributes: #22DDAA;     /* Bioluminescent green */
+    --xml-attributevalues: #DD8844; /* Amber anglerfish */
+    --xml-entityrefs: #AA66CC;     /* Sea anemone purple */
+
+    /* YAML (deep current) */
+    --yaml-keys: #22DDAA;          /* Phosphorescent */
+    --yaml-booleans: #AA66CC;      /* Anemone purple */
+    --yaml-symbols: #88B0C8;       /* Pale light */
+
+
+    /* ============================================================ */
+    /* SECTION 8: PARAMETER MODES                                   */
+    /* ============================================================ */
+    /*                                                              */
+    /* !! PROTECTED -- DO NOT CHANGE HUES !!                        */
+    /*                                                              */
+    /* Parameter mode colors indicate how a parameter gets its      */
+    /* value. Users rely on these hues to understand parameter      */
+    /* state:                                                       */
+    /*   Expression = cyan/teal    Override = green                  */
+    /*   Bind/Export = purple      Constant = default gray           */
+    /* You MAY adjust brightness and saturation but NOT hue.        */
+    /*                                                              */
+    /* ============================================================ */
+
+    /* Expression mode (cyan/teal) */
+    --expr-bg: #80B3B3;
+    --expr-bg-disabled: #405959;
+    --expr-bg-off: #8CA6A6;
+    --expr-bg-on: #7FAFAF;
+    --expr-bg-selected: #A7E6E6;
+    --expr-fg: #A5E6E6;
+    --expr-hilite: #1A4D8C;
+    --expr-field-bg: var(--gray-20);
+    --expr-field-hilite: #527373;
+
+    /* Override mode (green) */
+    --override-bg: #598040;
+    --override-bg-disabled: #243319;
+    --override-bg-off: #849A7F;
+    --override-bg-on: #598040;
+    --override-bg-selected: #528033;
+    --override-fg: #A5E699;
+    --override-hilite: #1A591A;
+    --override-field-hilite: #2B4029;
+
+    /* Bind/Export mode (purple) */
+    --bind-bg: #313033;
+    --bind-bg-disabled: #6A5C99;
+    --bind-bg-enabled: #C4B3FF;
+    --bind-fg: #C4B3FF;
+    --bind-hilite: #4F4766;
+
+
+    /* ============================================================ */
+    /* SECTION 9: TILE FLAGS                                        */
+    /* ============================================================ */
+    /* Tile flags identify operator states (display, render, bypass, */
+    /* etc.) in the network editor. These are semantic colors that  */
+    /* users learn to recognize.                                    */
+    /* ============================================================ */
+
+    --flag-display: #327DFF;
+    --flag-render: #8766FF;
+    --flag-bypass-cross: #CC0000;
+    --flag-clone: #FF4D4D;
+    --flag-template: #DE60E3;
+    --flag-compare: #1CC3BD;
+    --flag-capture: #76BB15;
+    --flag-export: #86BF60;
+    --flag-hardlock: #FFFF00;
+    --flag-link: #C7BA11;
+    --flag-origin: #D64F38;
+    --flag-pickable: #E28E19;
+
+
+    /* ============================================================ */
+    /* SECTION 10: GEO RENDER                                       */
+    /* ============================================================ */
+    /* 3D viewport colors -- axes, grids, handles, points, wires.   */
+    /* These are specialized colors for the geometry viewer.         */
+    /* ============================================================ */
+
+    --geo-grid: #383838;
+    --geo-grid-snap: var(--gray-sys-30);
+    --geo-wire: #CCCCBA;
+    --geo-point: #1796FF;
+    --geo-point-selected: var(--palette-warning);
+    --geo-handle: #FF2B00;
+    --geo-handle-selected: #FF82CC;
+    --geo-xaxis: #6B4040;
+    --geo-yaxis: #406B40;
+    --geo-zaxis: #40406B;
+
+
+    /* ============================================================ */
+    /* SECTION 11: JIVE / ANIMATION                                 */
+    /* ============================================================ */
+    /* Animation editor (Jive) colors for channels, handles, and    */
+    /* timeline elements.                                           */
+    /* ============================================================ */
+
+    --jive-bg: var(--timeline-bg);
+    --jive-channel-display: var(--palette-info);
+    --jive-channel-picked: var(--palette-warning);
+    --jive-channel-template: #AA66CC;   /* Sea anemone */
+    --jive-handle-time: #4466AA;       /* Deep ocean */
+
+
+    /* ============================================================ */
+    /* SECTION 12: CHOP GRAPH BARS                                  */
+    /* ============================================================ */
+    /* Channel graph bar colors -- one per channel index.            */
+    /* ============================================================ */
+
+    /* CHOP bars - bioluminescent spectrum */
+    --chop-bar-0: #2A4060;   /* Dark water */
+    --chop-bar-1: #4488DD;   /* Electric squid */
+    --chop-bar-2: #22DDAA;   /* Phosphorescent */
+    --chop-bar-3: #22BB88;   /* Living reef */
+    --chop-bar-4: #DD6688;   /* Tube worm */
+    --chop-bar-5: #AA66CC;   /* Sea anemone */
+    --chop-bar-6: #DD8844;   /* Anglerfish lure */
+    --chop-bar-7: #88AADD;   /* Moon jellyfish */
+
+
+    /* ============================================================ */
+    /* SECTION 13: KNOB                                             */
+    /* ============================================================ */
+    /* Rotary knob colors used in parameter panels.                 */
+    /* ============================================================ */
+
+    --knob-inner: var(--palette-accent-alt);
+    --knob-notch: var(--palette-accent);
+
+
+    /* ============================================================ */
+    /* SECTION 14: OTHER UI                                         */
+    /* ============================================================ */
+    /* Splitpane bars, startup messages, textport, multitext.        */
+    /* ============================================================ */
+
+    --splitpane-bar: #1E2840;
+    --startup-error: #CC4466;
+    --startup-warning: #DD8844;
+    --textport-editable: #22DDAA;       /* Phosphorescent */
+    --textport-noteditable: #3A5068;    /* Distant shimmer */
+    --multitext-editable: #22BB88;      /* Living reef */
+    --multitext-editing: #22DDAA;       /* Phosphorescent */
+    --multitext-noteditable: #3A5068;
+
+
+    /* ============================================================ */
+    /* SECTION 15: TUIK2 COMPONENTS                                 */
+    /* ============================================================ */
+    /* TUIK2 is TouchDesigner's built-in UI widget system used for  */
+    /* buttons, sliders, knobs, fields, titlebars, and other        */
+    /* interface components in parameter dialogs and panels.         */
+    /* ============================================================ */
+
+    /* --- Buttons --- */
+    --tuik2-button-border-disable: rgba(35, 36, 38, 0.8);
+    --tuik2-button-bordera: var(--palette-border);
+    --tuik2-button-borderb: var(--palette-bg-dark);
+    --tuik2-button-disable: var(--palette-bg-raised);          /* Disabled button background */
+    --tuik2-button-off: var(--palette-bg-raised);              /* Normal button background */
+    --tuik2-button-offroll: lighten(var(--palette-bg-raised), 0.10);  /* Button hover */
+    --tuik2-button-on: darken(var(--palette-accent), 0.15);     /* Pressed/active button */
+    --tuik2-button-onroll: darken(var(--palette-accent), 0.25); /* Active button hover */
+    --tuik2-buttontext-disable: var(--palette-fg-dim);
+    --tuik2-buttontext-off: var(--palette-fg);
+    --tuik2-buttontext-offroll: var(--palette-fg-bright);
+    --tuik2-buttontext-on: var(--palette-bg-dark);
+    --tuik2-buttontext-onroll: var(--palette-fg-bright);
+
+    /* --- Checkbox --- */
+    --tuik2-checkbox-border: rgba(186, 186, 191, 0.8);
+    --tuik2-checkbox-border-disable: rgba(84, 84, 89, 0.8);
+
+    /* --- Field --- */
+    --tuik2-field-disable: rgba(48, 54, 64, 0.8);
+    --tuik2-field-on: rgba(74, 79, 89, 0.8);
+    --tuik2-field-onroll: rgba(48, 54, 64, 0.8);
+
+    /* --- Gadget --- */
+    --tuik2-gadget-bg: var(--palette-bg-surface);   /* Parameter panel gadget background */
+    --tuik2-gadget-bordera: var(--palette-border);
+    --tuik2-gadget-borderb: var(--palette-bg-dark);
+
+    /* --- Header --- */
+    --tuik2-header-bg: rgba(71, 77, 89, 0.8);
+    --tuik2-header-bordera: rgba(122, 128, 140, 0.8);
+
+    /* --- Indicator --- */
+    --tuik2-indicator-disable: #800000;
+    --tuik2-indicator-off: #CC0000;
+    --tuik2-indicator-roll: #FF0000;
+
+    /* --- Knob --- */
+    --tuik2-knob-disable: darken(var(--palette-bg-dark), 0.01);
+    --tuik2-knob-off: var(--palette-bg-dark);
+    --tuik2-knob-roll: lighten(var(--palette-bg-dark), 0.04);
+    --tuik2-knobindicator-disable: #33334C;
+    --tuik2-knobindicator-off: darken(var(--palette-accent-alt), 0.05);
+    --tuik2-knobindicator-roll: lighten(var(--palette-accent-alt), 0.15);
+
+    /* --- Label --- */
+    --tuik2-label-text: rgba(177, 180, 191, 0.8);
+    --tuik2-label-text-disable: rgba(177, 180, 191, 0.8);
+
+    /* --- Operator --- */
+    /* PROTECTED: These map directly to operator family colors.     */
+    /* Do not modify -- they must stay consistent with Section 5.   */
+    --tuik2-operator-chop: rgba(98, 140, 70, 0.8);
+    --tuik2-operator-chopfilter: rgba(72, 112, 45, 0.95);
+    --tuik2-operator-chopgenerator: rgba(49, 84, 25, 0.95);
+    --tuik2-operator-comp: rgba(48, 48, 48, 0.8);
+    --tuik2-operator-compfilter: rgba(43, 43, 43, 0.96);
+    --tuik2-operator-compgenerator: rgba(34, 34, 34, 0.95);
+    --tuik2-operator-compvoid: rgba(45, 45, 45, 0.95);
+    --tuik2-operator-dat: rgba(147, 92, 127, 0.8);
+    --tuik2-operator-datfilter: rgba(118, 65, 98, 0.95);
+    --tuik2-operator-datgenerator: rgba(103, 49, 83, 0.8);
+    --tuik2-operator-mat: rgba(159, 148, 71, 0.8);
+    --tuik2-operator-matfilter: rgba(127, 126, 57, 0.95);
+    --tuik2-operator-matgenerator: rgba(111, 110, 50, 0.95);
+    --tuik2-operator-sop: rgba(74, 127, 178, 0.8);
+    --tuik2-operator-sopfilter: rgba(43, 93, 142, 0.95);
+    --tuik2-operator-sopgenerator: rgba(23, 75, 125, 0.95);
+    --tuik2-operator-top: rgba(105, 92, 147, 0.8);
+    --tuik2-operator-topfilter: rgba(97, 81, 147, 0.95);
+    --tuik2-operator-topgenerator: rgba(77, 65, 118, 0.95);
+
+    /* --- Slider --- */
+    --tuik2-slider-bg-disable: rgba(33, 35, 38, 0.8);
+    --tuik2-slider-bg-on: rgba(59, 60, 64, 0.8);
+    --tuik2-slider-bg-onroll: rgba(46, 47, 51, 0.8);
+    --tuik2-slider-range-off: rgba(65, 92, 120, 0.2);
+
+    /* --- Template --- */
+    --tuik2-template-bordera: rgba(138, 0, 138, 0.8);
+    --tuik2-template-borderb: rgba(46, 0, 46, 0.8);
+    --tuik2-template-off: rgba(46, 0, 46, 0.8);
+    --tuik2-template-offroll: rgba(69, 0, 69, 0.8);
+    --tuik2-template-on: rgba(230, 0, 230, 0.8);
+    --tuik2-template-onroll: rgba(230, 0, 230, 0.8);
+
+    /* --- Titlebar --- */
+    --tuik2-titlebar-bordera: darken(var(--palette-accent-alt), 0.15);
+    --tuik2-titlebar-off: darken(var(--palette-accent-alt), 0.25);
+    --tuik2-titlebar-on: darken(var(--palette-accent-alt), 0.20);
+    --tuik2-titlebar-text-off: var(--palette-fg);
+
+    /* --- Other --- */
+    --tuik2-root-time: var(--palette-accent-alt-bright);
+    --tuik2-transparent: rgba(0, 0, 0, 0);
+
+
+    /* ============================================================ */
+    /* SECTION 16: McWIDGETS                                        */
+    /* ============================================================ */
+    /* AcroWidgets (op.WIDGETS) UI component colors for widget containers, */
+    /* buttons, tabs, and matrix elements.                          */
+    /* ============================================================ */
+
+    /* McWidget Container — matches TD gadget/panel styling */
+    --mcw-wc-bg: var(--palette-bg-surface);
+    --mcw-wc-bg-selected: var(--palette-tuik-accent);         /* Orange selection like TUIK */
+    --mcw-wc-bg-drag: var(--palette-accent-alt);              /* Blue-gray drag indicator */
+    --mcw-wc-bg-drop: var(--palette-success);                 /* Green drop target */
+    --mcw-wc-header: var(--palette-bg-raised);                /* Header matches raised surfaces */
+    --mcw-wc-header-selected: var(--palette-tuik-accent);
+    --mcw-wc-header-drag: lighten(var(--palette-accent-alt), 0.15);
+    --mcw-wc-header-drop: lighten(var(--palette-success), 0.15);
+    --mcw-wc-text: var(--palette-fg-muted);
+    --mcw-wc-text-selected: var(--palette-fg-bright);         /* Bright text on selection */
+    --mcw-wc-text-drag: var(--palette-fg-bright);
+    --mcw-wc-text-drop: var(--palette-fg-bright);
+
+    /* McWidget Button — matches TUIK2 button styling */
+    --mcw-button-off: var(--palette-bg-raised);               /* Raised surface for off state */
+    --mcw-button-offroll: lighten(var(--palette-bg-raised), 0.08);
+    --mcw-button-on: var(--palette-tuik-accent);              /* Orange for on state */
+    --mcw-button-onroll: lighten(var(--palette-tuik-accent), 0.10);
+    --mcw-buttontext-off: var(--palette-fg);
+    --mcw-buttontext-offroll: var(--palette-fg-bright);
+    --mcw-buttontext-on: var(--palette-fg-bright);
+    --mcw-buttontext-onroll: var(--palette-fg-bright);
+
+    /* McWidget Tabs — matches TUIK2 tab styling */
+    --mcw-tab-off: var(--palette-bg-surface);                 /* Surface for off state */
+    --mcw-tab-offroll: var(--palette-bg-raised);
+    --mcw-tab-on: var(--palette-bg-raised);                   /* Raised for on state */
+    --mcw-tab-onroll: lighten(var(--palette-bg-raised), 0.08);
+    --mcw-tabtext-off: var(--palette-fg-muted);
+    --mcw-tabtext-offroll: var(--palette-fg);
+    --mcw-tabtext-on: var(--palette-fg-bright);
+    --mcw-tabtext-onroll: var(--palette-fg-bright);
+
+    /* McWidget Matrix — matches TUIK2 toggle styling */
+    --mcw-matrix-off: var(--palette-bg-raised);               /* Raised surface for off */
+    --mcw-matrix-offroll: lighten(var(--palette-bg-raised), 0.08);
+    --mcw-matrix-on: var(--palette-tuik-accent);              /* Orange for on state */
+
+    /* McWidget List — subtle gray steps, accent-tinted selection */
+    --mcw-list-bg: var(--palette-bg-surface);                 /* Surface for list container */
+    --mcw-list-itemoff: var(--palette-bg-surface);            /* Surface for items */
+    --mcw-list-itemoffroll: var(--palette-bg-raised);         /* Raised on hover */
+    --mcw-list-itemon: darken(var(--palette-accent-alt), 0.15);  /* Accent-tinted selection */
+    --mcw-list-itemonroll: darken(var(--palette-accent-alt), 0.10);
+    --mcw-list-textoff: var(--palette-fg);
+    --mcw-list-textoffroll: var(--palette-fg-bright);
+    --mcw-list-texton: var(--palette-fg-bright);
+    --mcw-list-textonroll: var(--palette-fg-bright);
+
+    /* Macros Macro List — matches MCW list with rainbow text levels */
+    --mc-list-bg: var(--palette-bg-surface);
+    --mc-list-rowbg: var(--palette-bg-surface);
+    --mc-list-itemoff: var(--palette-bg-surface);
+    --mc-list-itemoffroll: var(--palette-bg-raised);
+    --mc-list-itemon: darken(var(--palette-accent-alt), 0.15);
+    --mc-list-itemonroll: darken(var(--palette-accent-alt), 0.10);
+    /* Macro text levels — rainbow progression through syntax colors */
+    --mc-list-textl0: var(--palette-fg-bright);               /* L0: brightest — root */
+    --mc-list-textl1: var(--palette-info);                    /* L1: info blue */
+    --mc-list-textl2: var(--palette-keyword);                 /* L2: keyword hue */
+    --mc-list-textl3: var(--palette-number);                  /* L3: number hue */
+    --mc-list-textl4: var(--palette-function);                /* L4: function hue */
+    --mc-list-textl5: var(--palette-string);                  /* L5: string hue */
+    --mc-list-textl6: var(--palette-error);                   /* L6: error hue */
+    --mc-list-textl7: var(--palette-fg-muted);                /* L7: muted — deepest */
+    --mc-list-erroroff: var(--palette-bg-dark);
+    --mc-list-erroroffroll: var(--palette-bg-surface);
+    --mc-list-erroron: var(--palette-error);
+    --mc-list-erroronroll: lighten(var(--palette-error), 0.10);
+    --mc-list-borderdark: darken(var(--mc-list-bg), 0.1);      /* Dark border */
+    --mc-list-borderlight: lighten(var(--mc-list-bg), 0.17);  /* Light border */
+    --mc-list-draghighlight: var(--palette-tuik-accent);
+} /* end :root */
+
+
+/* ================================================================ */
+/*                                                                  */
+/*  SELECTOR RULES                                                  */
+/*                                                                  */
+/*  Everything below maps TD's internal color system names to the   */
+/*  variables defined above. You generally do not need to edit      */
+/*  these unless adding support for new TD color selectors.         */
+/*                                                                  */
+/* ================================================================ */
+
+
+/* ============================================================ */
+/* OPERATOR FAMILY COLORS                                       */
+/* ============================================================ */
+
+CHOP { color: var(--op-chop); }
+COMP { color: var(--op-comp); }
+COMP.hilite { color: var(--op-comp-hilite); }
+DAT { color: var(--op-dat); }
+MAT { color: var(--op-mat); }
+MAT.editbg { color: var(--op-mat-editbg); }
+MAT.hilite { color: var(--op-mat-hilite); }
+POP { color: var(--op-pop); }
+POP.hilite { color: var(--op-pop-hilite); }
+SOP { color: var(--op-sop); }
+SOP.editbg { color: var(--op-sop-editbg); }
+SOP.hilite { color: var(--op-sop-hilite); }
+TOP { color: var(--op-top); }
+OP.default { color: var(--gray-67); }
+
+
+/* ============================================================ */
+/* SEMANTIC STATUS COLORS                                       */
+/* ============================================================ */
+
+circle.check { color: var(--success); }
+circle.minus { color: var(--error); }
+default.error { color: var(--error); }
+dialog.error { color: var(--error); }
+tile.error { color: var(--error); }
+tile.warning { color: var(--warning); }
+playback.warning { color: var(--warning); }
+tile.current { color: var(--current); }
+tile.picked { color: var(--selected); }
+
+
+/* ============================================================ */
+/* DAT EDITOR                                                   */
+/* Code editor backgrounds, line numbers, and syntax coloring   */
+/* ============================================================ */
+
+/* Backgrounds */
+dat.bg.editable { color: var(--dat-bg); }
+dat.bg.noteditable { color: var(--dat-bg); }
+dat.bg.hilite { color: var(--dat-bg-hilite); }
+
+/* Line numbers */
+dat.lineno.bg { color: var(--dat-lineno-bg); }
+dat.lineno.bg.hilite { color: var(--dat-lineno-bg-hilite); }
+dat.lineno.fg { color: var(--palette-fg); }                    /* Line number text */
+dat.lineno.fg.nodata { color: var(--palette-fg-muted); }       /* Line numbers beyond content */
+
+/* Python syntax */
+dat.python.editable { color: var(--python-text); }
+dat.python.noteditable { color: var(--python-text); }
+dat.python.editing { color: var(--python-text); }
+dat.python.keywords { color: var(--python-keywords); }
+dat.python.functions { color: var(--python-functions); }
+dat.python.strings { color: var(--python-strings); }
+dat.python.numbers { color: var(--python-numbers); }
+dat.python.comments { color: var(--python-comments); }
+dat.python.hilite { color: var(--python-hilite); }
+
+/* GLSL syntax */
+dat.glsl.keywords { color: var(--syntax-keywords); }
+dat.glsl.functions { color: var(--syntax-functions); }
+dat.glsl.strings { color: var(--syntax-strings); }
+dat.glsl.numbers { color: var(--syntax-numbers); }
+dat.glsl.comments { color: var(--syntax-comments); }
+dat.glsl.preprocessors { color: var(--palette-fg-muted); }     /* GLSL #preprocessor directives */
+
+/* JSON syntax */
+dat.json.booleans { color: var(--syntax-keywords); }
+dat.json.numbers { color: var(--syntax-numbers); }
+dat.json.strings { color: var(--syntax-strings); }
+dat.json.comments { color: var(--syntax-comments); }
+dat.json.symbols { color: var(--syntax-symbols); }
+
+/* XML syntax */
+dat.xml.tags { color: var(--xml-tags); }
+dat.xml.attributes { color: var(--xml-attributes); }
+dat.xml.attributevalues { color: var(--xml-attributevalues); }
+dat.xml.entityrefs { color: var(--xml-entityrefs); }
+dat.xml.comments { color: var(--syntax-comments); }
+dat.xml.symbols { color: var(--syntax-symbols); }
+
+/* YAML syntax */
+dat.yaml.keys { color: var(--yaml-keys); }
+dat.yaml.booleans { color: var(--yaml-booleans); }
+dat.yaml.numbers { color: var(--syntax-numbers); }
+dat.yaml.strings { color: var(--syntax-strings); }
+dat.yaml.comments { color: var(--syntax-comments); }
+dat.yaml.symbols { color: var(--yaml-symbols); }
+
+/* TScript */
+dat.tscript.editable { color: var(--tscript-text); }
+dat.tscript.editing { color: var(--tscript-editing); }
+dat.tscript.noteditable { color: var(--tscript-noteditable); }
+dat.tscript.hilite { color: var(--tscript-hilite); }
+dat.tscript.comments { color: var(--palette-fg-dim); }         /* TScript comments - subtle gray */
+
+/* Comment, indicators, scrollbar, table */
+dat.comment.fg { color: lighten(var(--palette-accent-alt), 0.10); }  /* Bluish comment text */
+dat.indicators { color: var(--gray-30); }
+dat.scroll { color: var(--palette-accent); }                    /* Scrollbar position indicator */
+dat.table.outline { color: lighten(var(--palette-bg), 0.03); }  /* Table cell borders */
+dat.table.select.background { color: var(--python-hilite); }
+dat.table.select.outline { color: var(--palette-fg-muted); }    /* Selected table cell border */
+
+
+/* ============================================================ */
+/* DEFAULT UI ELEMENTS                                          */
+/* Buttons, fields, labels, menus, sliders, and other standard  */
+/* UI components used throughout TouchDesigner.                  */
+/* ============================================================ */
+
+default.bg { color: var(--gray-25); }
+default.fg { color: var(--gray-65); }
+default.button { color: var(--gray-sys-75); }
+default.button.select { color: var(--gray-40); }
+default.buttonstrip { color: var(--buttonstrip-bg); }
+default.check { color: var(--gray-75); }
+default.radio { color: var(--gray-40); }
+default.rightcheck { color: var(--gray-50); }
+
+/* Arrows */
+default.arrow.locate { color: var(--white); }
+default.arrow.off { color: var(--black); }
+default.arrow.on { color: var(--white); }
+
+/* Borders */
+default.border.hilite { color: var(--white); }
+default.tile.line { color: var(--gray-20); }
+
+/* Fields */
+default.field.bg { color: var(--gray-70); }
+default.field.bg.loc { color: var(--gray-90); }
+default.field.bg.sel { color: var(--gray-95); }
+default.field.fg { color: var(--gray-10); }
+default.input { color: var(--gray-sys-70); }
+
+/* Grooves */
+default.groove.hilite { color: var(--gray-25); }
+default.groove.lolite { color: var(--buttonstrip-bg); }
+
+/* Labels */
+default.label { color: var(--palette-fg-dim); }                /* Dim label text */
+default.line { color: var(--gray-sys-50); }
+
+/* List entries */
+default.listentry.bg { color: var(--gray-36); }
+default.listentry.bg.loc { color: var(--gray-42); }
+default.listentry.fg { color: var(--gray-65); }
+default.listentry.outline { color: var(--gray-20); }
+
+/* Menus */
+default.menu { color: var(--gray-25); }
+default.menu.fg { color: var(--gray-65); }
+default.menu.loc { color: lighten(var(--palette-fg-dim), 0.05); }   /* Menu located highlight */
+default.menubar { color: var(--menubar-bg); }
+default.menubar.loc { color: lighten(var(--palette-fg-dim), 0.05); } /* Menubar located highlight */
+default.menuheading.bg { color: var(--gray-30); }
+
+/* Multitext (inline text editing) */
+default.multitext.editable { color: var(--multitext-editable); }
+default.multitext.editing { color: var(--multitext-editing); }
+default.multitext.hilite { color: var(--white); }
+default.multitext.noteditable { color: var(--multitext-noteditable); }
+
+/* Other defaults */
+default.negativespace { color: var(--black); }
+default.override { color: #406775; }                           /* Override mode indicator - teal tint */
+default.paper { color: var(--gray-sys-90); }
+default.scrollbars.bg { color: var(--gray-30); }
+default.separator { color: var(--gray-60); }
+default.slider.outline { color: var(--gray-20); }
+default.slider.thumb { color: var(--gray-35); }
+default.slider.thumb.outline { color: var(--gray-50); }
+default.stow.bg { color: var(--gray-30); }
+
+
+/* ============================================================ */
+/* DIALOGS                                                      */
+/* Modal dialog boxes, confirmation prompts, comment indicators */
+/* ============================================================ */
+
+dialog.bg { color: var(--gray-20); }
+dialog.commented { color: var(--info); }
+dialog.commented.comp { color: #00B3FF; }                      /* Component comment indicator */
+dialog.commenthint { color: var(--gray-20); }
+dialog.commenthint.comp { color: var(--gray-50); }
+dialog.confirm.bg { color: var(--gray-30); }
+dialog.confirm.fg { color: var(--black); }
+
+
+/* ============================================================ */
+/* ADD OPERATOR                                                 */
+/* ============================================================ */
+
+addoperator.fg { color: var(--black); }
+
+
+/* ============================================================ */
+/* CHANNEL EXPORT                                               */
+/* ============================================================ */
+
+channelexport.destination.bg { color: var(--gray-60); }
+channelexport.node.bg { color: var(--gray-40); }
+channelexport.node.fg { color: var(--gray-sys-90); }
+
+
+/* ============================================================ */
+/* CHOP GRAPH / TRACK                                           */
+/* Channel operator graph and track display colors              */
+/* ============================================================ */
+
+chop.graph.bg { color: var(--black); }
+chop.graph.divider { color: darken(var(--palette-bg-dark), 0.02); }  /* Near-black divider */
+chop.graph.label { color: var(--black); }
+chop.graph.pickbox { color: var(--white); }
+chop.graph.bar.0 { color: var(--chop-bar-0); }
+chop.graph.bar.1 { color: var(--chop-bar-1); }
+chop.graph.bar.2 { color: var(--chop-bar-2); }
+chop.graph.bar.3 { color: var(--chop-bar-3); }
+chop.graph.bar.4 { color: var(--chop-bar-4); }
+chop.graph.bar.5 { color: var(--chop-bar-5); }
+chop.graph.bar.6 { color: var(--chop-bar-6); }
+chop.graph.bar.7 { color: var(--chop-bar-7); }
+chop.track.bg { color: var(--black); }
+chop.track.channel { color: var(--gray-40); }
+chop.track.extendindicator { color: var(--white); }
+chop.track.label { color: var(--black); }
+chop.track.label.located.bg { color: darken(var(--palette-success), 0.15); }  /* Green located track label */
+chop.track.label.selected.bg { color: #45673E; }              /* Dark green selected track label */
+chop.track.separator { color: var(--gray-sys-50); }
+chop.track.time { color: var(--palette-info); }                /* Blue time indicator */
+chop.track.timebar { color: darken(var(--palette-bg-dark), 0.02); }  /* Near-black timebar */
+
+
+/* ============================================================ */
+/* COLOR BUTTON                                                 */
+/* ============================================================ */
+
+colorbutton.bg { color: var(--white); }
+colorbutton.fg { color: var(--black); }
+
+
+/* ============================================================ */
+/* DESKTOP                                                      */
+/* ============================================================ */
+
+desktop.exposeon { color: var(--error); }
+desktop.nosave { color: darken(var(--palette-success), 0.25); }  /* Dark green "not saved" indicator */
+
+
+/* ============================================================ */
+/* EXTENDED HELP                                                */
+/* ============================================================ */
+
+extendedhelp.bg { color: var(--palette-bg-surface); }          /* Help panel background */
+extendedhelp.fg { color: var(--gray-65); }
+
+
+/* ============================================================ */
+/* FRAME INDICATOR                                              */
+/* ============================================================ */
+
+frameindicator.bg { color: var(--gray-60); }
+frameindicator.fg { color: var(--gray-sys-70); }
+
+
+/* ============================================================ */
+/* GADGET                                                       */
+/* ============================================================ */
+
+gadget.dualmonitor.bg { color: var(--black); }
+gadget.offscreenwin.bg { color: var(--black); }
+
+
+/* ============================================================ */
+/* GEO DETAIL                                                   */
+/* Geometry detail view (SOP info display)                      */
+/* ============================================================ */
+
+geodetail.bg { color: var(--black); }
+geodetail.compare { color: var(--flag-compare); }
+geodetail.fg { color: var(--info); }
+geodetail.template { color: var(--flag-template); }
+
+
+/* ============================================================ */
+/* GEO RENDER                                                   */
+/* 3D viewport -- axes, grids, handles, points, wires, prims    */
+/* ============================================================ */
+
+georender.aux { color: #FF7312; }                              /* Auxiliary geometry highlight */
+georender.axes { color: var(--error); }
+georender.cplane { color: #008080; }                           /* Construction plane */
+georender.cplane.selected { color: var(--geo-handle-selected); }
+georender.current { color: var(--current); }
+georender.geo.axes { color: var(--black); }
+georender.geo.axes.selected { color: var(--error); }
+georender.ghost { color: #4D6699; }                            /* Ghost geometry overlay */
+georender.grid { color: var(--geo-grid); }
+georender.grid.snap { color: var(--gray-sys-30); }
+georender.guide1 { color: #FF4D4D; }                           /* Guide line 1 */
+georender.guide2 { color: #FFB34D; }                           /* Guide line 2 */
+georender.handle { color: var(--geo-handle); }
+georender.handle.axis { color: #00FFFF; }                      /* Handle axis highlight */
+georender.handle.col1 { color: #CCCC00; }                      /* Handle color gradient 1 */
+georender.handle.col2 { color: #999900; }                      /* Handle color gradient 2 */
+georender.handle.col3 { color: #666600; }                      /* Handle color gradient 3 */
+georender.handle.col4 { color: #333300; }                      /* Handle color gradient 4 */
+georender.handle.pivot { color: var(--success); }
+georender.handle.rotate { color: var(--warning); }
+georender.handle.selected { color: var(--geo-handle-selected); }
+georender.handle.xaxis { color: var(--error); }                /* X axis = red */
+georender.handle.yaxis { color: var(--success); }              /* Y axis = green */
+georender.handle.zaxis { color: var(--info); }                 /* Z axis = blue */
+georender.heightvector { color: #FF8080; }                     /* Height field vector display */
+georender.label { color: var(--gray-80); }
+georender.label.aux { color: #CCCC00; }                        /* Auxiliary label */
+georender.label.bg { color: var(--gray-20); }
+georender.ortho.origin { color: var(--gray-15); }
+georender.point { color: var(--geo-point); }
+georender.point.closure { color: #00FFF7; }                    /* Closure point */
+georender.point.selected { color: var(--geo-point-selected); }
+georender.point.unused { color: #EBE39E; }                     /* Unused point */
+georender.prim.aux { color: #B36666; }                         /* Auxiliary primitive */
+georender.prim.aux.selected { color: #E699B3; }                /* Selected aux primitive */
+georender.prim.closure { color: #4FE64F; }                     /* Closure primitive */
+georender.prim.edits { color: var(--white); }
+georender.prim.info { color: #FF26C7; }                        /* Primitive info text */
+georender.prim.info.selected { color: #FFBFFF; }               /* Selected prim info */
+georender.prim.selected { color: var(--warning); }
+georender.selected { color: var(--warning); }
+georender.selected.child { color: #808000; }                   /* Selected child geometry */
+georender.selected.spot { color: var(--white); }
+georender.simpledraw { color: var(--white); }
+georender.subdivide.edge.selected { color: var(--error); }
+georender.subdivide.edge.weighted { color: #00FFFF; }          /* Weighted subdivision edge */
+georender.template { color: var(--gray-40); }
+georender.wire { color: var(--geo-wire); }
+georender.xaxis { color: var(--geo-xaxis); }
+georender.yaxis { color: var(--geo-yaxis); }
+georender.zaxis { color: var(--geo-zaxis); }
+
+
+/* ============================================================ */
+/* GRAPH                                                        */
+/* General graph grid and separator colors                      */
+/* ============================================================ */
+
+graph.grid.axes { color: var(--gray-20); }
+graph.grid.axes.main { color: var(--gray-25); }
+graph.grid.label { color: var(--gray-70); }
+graph.grid.label.selected.bg { color: var(--black); }
+graph.separator { color: darken(var(--palette-bg), 0.01); }    /* Graph pane separator */
+
+
+/* ============================================================ */
+/* GROUP LIST                                                   */
+/* ============================================================ */
+
+grouplist.bg { color: var(--bg-tinted-10); }
+grouplist.splitbar { color: var(--gray-60); }
+
+
+/* ============================================================ */
+/* ICON                                                         */
+/* ============================================================ */
+
+icon.located { color: var(--white); }
+icon.notlocated { color: var(--gray-80); }
+icon.outline { color: var(--black); }
+icon.shadow { color: var(--gray-40); }
+
+
+/* ============================================================ */
+/* IMAGE                                                        */
+/* ============================================================ */
+
+image.disable.overlay { color: var(--black); }
+
+
+/* ============================================================ */
+/* INPUT FIELD                                                  */
+/* ============================================================ */
+
+inputfield.disabled { color: var(--gray-40); }
+inputfield.enabled { color: var(--gray-10); }
+inputfield.hilite { color: var(--gray-65); }
+
+
+/* ============================================================ */
+/* JIVE (Animation Editor)                                      */
+/* Timeline, channels, handles, and animation curve display     */
+/* ============================================================ */
+
+jive.accel.bg { color: var(--gray-sys-50); }
+jive.accel.fg { color: var(--gray-80); }
+jive.channel.bg { color: var(--timeline-bg); }
+jive.channel.crosshairs { color: #808000; }                    /* Olive crosshair in animation editor */
+jive.channel.current { color: var(--current); }
+jive.channel.display { color: var(--jive-channel-display); }
+jive.channel.normal { color: var(--gray-60); }
+jive.channel.picked { color: var(--jive-channel-picked); }
+jive.channel.plot.aux1 { color: #BF40BF; }                    /* Aux plot 1 - magenta */
+jive.channel.plot.aux1.mark { color: #DF9FDF; }               /* Aux plot 1 marker */
+jive.channel.plot.aux2 { color: #BFBF40; }                    /* Aux plot 2 - olive */
+jive.channel.plot.aux2.mark { color: #DFDF9F; }               /* Aux plot 2 marker */
+jive.channel.plot.aux3 { color: #40BFBF; }                    /* Aux plot 3 - teal */
+jive.channel.plot.aux3.mark { color: #9FDFDF; }               /* Aux plot 3 marker */
+jive.channel.plot.aux4 { color: #FF0080; }                    /* Aux plot 4 - hot pink */
+jive.channel.plot.aux4.mark { color: #FF80BF; }               /* Aux plot 4 marker */
+jive.channel.template { color: var(--jive-channel-template); }
+jive.currenttime.bg { color: var(--gray-sys-70); }
+jive.currenttime.fg { color: var(--white); }
+jive.frame.timetext { color: darken(var(--palette-info), 0.10); }  /* Blue frame time text */
+jive.graph.bg { color: var(--black); }
+jive.handle.time { color: var(--jive-handle-time); }
+jive.inout.bg { color: var(--gray-sys-50); }
+jive.inout.fg { color: var(--gray-80); }
+jive.pickbox { color: var(--white); }
+jive.rawvalue.bg { color: var(--gray-sys-50); }
+jive.rawvalue.fg { color: var(--gray-80); }
+jive.scalehandle.bg { color: var(--gray-sys-50); }
+jive.scalehandle.fg { color: var(--gray-80); }
+jive.segment.bg { color: var(--gray-sys-50); }
+jive.segment.fg { color: var(--gray-80); }
+jive.slice.bar { color: var(--warning); }
+jive.slice.box { color: var(--gray-sys-50); }
+jive.slope.bg { color: var(--gray-sys-50); }
+jive.slope.fg { color: var(--gray-80); }
+jive.timeline.bg { color: var(--timeline-bar-bg); }
+jive.timeline.fg { color: var(--white); }
+jive.timemark.bg { color: var(--gray-sys-70); }
+jive.timemark.fg { color: var(--white); }
+
+
+/* ============================================================ */
+/* KNOB                                                         */
+/* ============================================================ */
+
+knob.hash { color: var(--black); }
+knob.inner { color: var(--knob-inner); }
+knob.notch { color: var(--knob-notch); }
+knob.outline { color: var(--black); }
+
+
+/* ============================================================ */
+/* LASSO                                                        */
+/* Selection rectangle in network editor                        */
+/* ============================================================ */
+
+lasso.bg { color: var(--black); }
+lasso.fg { color: var(--white); }
+
+
+/* ============================================================ */
+/* MIDI DEVICE                                                  */
+/* ============================================================ */
+
+mididevice.mapper.bg { color: var(--gray-sys-70); }
+mididevice.mapper.disabled { color: #669966; }                 /* Muted green - disabled MIDI mapping */
+mididevice.mapper.enabled { color: darken(var(--palette-success), 0.20); }  /* Active MIDI mapping */
+mididevice.mapper.enabled.outline { color: var(--black); }
+
+
+/* ============================================================ */
+/* NET OVERVIEW                                                 */
+/* Minimap overview of the network editor                       */
+/* ============================================================ */
+
+netoverview.bg { color: var(--gray-60); }
+netoverview.fg { color: var(--black); }
+
+
+/* ============================================================ */
+/* NODE CHOOSER                                                 */
+/* ============================================================ */
+
+nodechooser.down.hilite { color: #669966; }                    /* Green highlight in node chooser */
+
+
+/* ============================================================ */
+/* OP INFO                                                      */
+/* Operator information popup                                   */
+/* ============================================================ */
+
+opinfo.bg { color: var(--white); }
+opinfo.fg { color: var(--black); }
+
+
+/* ============================================================ */
+/* OP LIST                                                      */
+/* Operator list panel (uses tinted backgrounds)                */
+/* ============================================================ */
+
+oplist.bg { color: var(--bg-tinted-10); }
+oplist.equal.fg { color: var(--gray-80); }
+oplist.header { color: var(--bg-tinted-05); }
+oplist.outline { color: var(--bg-tinted-15); }
+oplist.select.edithilite { color: var(--bg-tinted-20); }
+oplist.select.field.enable { color: var(--gray-85); }
+oplist.select.field.hilite { color: var(--gray-50); }
+oplist.select.hilite { color: var(--bg-tinted-15); }
+oplist.select.outline { color: var(--bg-tinted-25); }
+oplist.splitbar { color: var(--gray-60); }
+oplist.treearrow.fg { color: var(--black); }
+oplist.treebutton.bg { color: var(--gray-sys-50); }
+oplist.treebutton.fg { color: var(--black); }
+
+
+/* ============================================================ */
+/* OVERLAP                                                      */
+/* Overlap display for timing/range visualization               */
+/* ============================================================ */
+
+overlap.bg { color: #838B83; }                                 /* Olive-tinted overlap background */
+overlap.range1 { color: #F4A460; }                             /* Sandy brown range indicator */
+overlap.range2 { color: #FAFAD2; }                             /* Light goldenrod range indicator */
+overlap.range3 { color: #FAFAD2; }                             /* Light goldenrod range indicator */
+
+
+/* ============================================================ */
+/* PANEL                                                        */
+/* Panel component display                                      */
+/* ============================================================ */
+
+panel.bg { color: var(--gray-10); }
+panel.edit.normal { color: var(--white); }
+panel.edit.picked { color: var(--warning); }
+
+
+/* ============================================================ */
+/* PARAMETERS                                                   */
+/* Parameter panel buttons, fields, sliders, toggles, labels    */
+/* ============================================================ */
+
+/* --- Bind mode --- */
+parms.bind.bg { color: var(--bind-bg); }
+parms.bind.bg.disabled { color: var(--bind-bg-disabled); }
+parms.bind.bg.enabled { color: var(--bind-bg-enabled); }
+parms.bind.fg { color: var(--bind-fg); }
+parms.bind.hilite { color: var(--bind-hilite); }
+parms.bind.indicator { color: var(--bind-fg); }
+
+/* --- Buttons --- */
+parms.button.bg { color: var(--gray-36); }
+parms.button.bg.disabled { color: var(--gray-30); }
+parms.button.bg.loc { color: var(--gray-42); }
+parms.button.bg.sel { color: var(--gray-36); }
+parms.button.border { color: var(--gray-20); }
+parms.button.border.disabled { color: var(--gray-20); }
+parms.button.border.inner { color: var(--gray-25); }
+parms.button.border.top { color: var(--gray-45); }
+parms.button.fg { color: var(--gray-72); }
+parms.button.fg.disabled { color: var(--gray-40); }
+
+/* --- Button expression mode --- */
+parms.button.expr.bg { color: var(--gray-20); }
+parms.button.expr.bg.loc { color: lighten(var(--palette-bg), 0.06); }   /* Located expression button */
+parms.button.expr.bg.sel { color: lighten(var(--palette-bg), 0.04); }   /* Selected expression button */
+parms.button.expr.border { color: var(--gray-15); }
+parms.button.expr.border.inner { color: var(--gray-15); }
+parms.button.expr.border.top { color: lighten(var(--palette-bg), 0.06); }
+parms.button.expr.fg { color: var(--expr-fg); }
+
+/* --- Button override mode --- */
+parms.button.override.bg { color: var(--override-bg); }
+parms.button.override.bg.loc { color: lighten(var(--override-bg), 0.05); }  /* Located override button */
+parms.button.override.bg.sel { color: var(--override-bg); }
+parms.button.override.border { color: var(--gray-20); }
+parms.button.override.border.inner { color: darken(var(--override-bg), 0.08); }  /* Inner border */
+parms.button.override.border.top { color: var(--op-chop); }
+parms.button.override.fg { color: var(--override-fg); }
+
+/* --- Comment --- */
+parms.comment.disabled.fg { color: var(--gray-60); }
+
+/* --- Const & dialog --- */
+parms.const.bg { color: var(--palette-fg-dim); }               /* Constant mode background */
+parms.dialog.bg { color: var(--gray-25); }
+parms.dialog.fg { color: var(--gray-90); }
+
+/* --- Disabled --- */
+parms.disabled.bg { color: var(--gray-25); }
+parms.disabled.err.bg { color: #800000; }                     /* Dark red - disabled error state */
+parms.disabled.err.fg { color: var(--gray-40); }
+parms.disabled.fg { color: var(--gray-40); }
+
+/* --- Error --- */
+parms.err.bg { color: var(--error); }
+parms.err.fg { color: var(--gray-80); }
+
+/* --- Expand --- */
+parms.expand.bg { color: var(--gray-25); }
+
+/* --- Expression mode --- */
+parms.expr.bg { color: var(--expr-bg); }
+parms.expr.bg.disabled { color: var(--expr-bg-disabled); }
+parms.expr.bg.off { color: var(--expr-bg-off); }
+parms.expr.bg.off.selected { color: lighten(var(--expr-bg), 0.10); }  /* Selected off expression */
+parms.expr.bg.on { color: var(--expr-bg-on); }
+parms.expr.bg.on.selected { color: lighten(var(--expr-bg), 0.15); }   /* Selected on expression */
+parms.expr.bg.selected { color: var(--expr-bg-selected); }
+parms.expr.fg { color: var(--expr-fg); }
+parms.expr.fg.off { color: var(--gray-10); }
+parms.expr.fg.on { color: var(--gray-10); }
+parms.expr.field.bg { color: var(--expr-field-bg); }
+parms.expr.field.bg.loc { color: lighten(var(--palette-bg), 0.04); }         /* Located expression field */
+parms.expr.field.bg.selected { color: var(--gray-15); }
+parms.expr.field.bg.selected.loc { color: lighten(var(--palette-bg), 0.01); } /* Located selected expr field */
+parms.expr.field.fg { color: var(--expr-fg); }
+parms.expr.field.hilite { color: var(--expr-field-hilite); }
+parms.expr.hilite { color: var(--expr-hilite); }
+parms.expr.menubar.bg { color: var(--expr-bg); }
+parms.expr.menubar.bg.loc { color: var(--expr-bg); }
+parms.expr.menubar.bg.sel { color: var(--expr-bg); }
+parms.expr.menubar.fg { color: var(--gray-10); }
+parms.expr.menubar.fg.loc { color: var(--gray-10); }
+parms.expr.menubar.fg.sel { color: var(--gray-10); }
+
+/* --- Numeric fields --- */
+parms.field.numeric.bg { color: lighten(var(--palette-bg-raised), 0.05); }           /* Numeric field background */
+parms.field.numeric.bg.loc { color: var(--gray-40); }
+parms.field.numeric.bg.selected { color: var(--gray-45); }
+parms.field.numeric.bg.selected.loc { color: lighten(var(--palette-bg-raised), 0.08); }  /* Located selected numeric */
+parms.field.numeric.fg { color: var(--gray-75); }
+parms.field.numeric.hilite { color: var(--gray-30); }
+
+/* --- String fields --- */
+parms.field.string.bg { color: var(--gray-70); }
+parms.field.string.bg.loc { color: var(--gray-75); }
+parms.field.string.bg.selected { color: var(--gray-90); }
+parms.field.string.bg.selected.loc { color: var(--gray-95); }
+parms.field.string.fg { color: var(--gray-10); }
+parms.field.string.hilite { color: var(--gray-72); }
+
+/* --- Folder tabs --- */
+parms.foldertab.fg { color: var(--gray-75); }
+parms.foldertab.loc { color: var(--gray-85); }
+parms.foldertab.underline { color: var(--gray-85); }
+
+/* --- Labels --- */
+parms.label.fg { color: var(--gray-72); }
+parms.label.fg.disabled { color: var(--gray-40); }
+parms.label.fg.loc { color: var(--gray-85); }
+
+/* --- Menubar --- */
+parms.menubar.bg { color: var(--gray-36); }
+parms.menubar.bg.loc { color: var(--gray-42); }
+parms.menubar.bg.sel { color: var(--gray-36); }
+parms.menubar.disabled.bg { color: var(--gray-35); }
+parms.menubar.disabled.fg { color: var(--gray-50); }
+parms.menubar.fg { color: var(--gray-72); }
+parms.menubar.fg.loc { color: var(--gray-70); }
+parms.menubar.fg.sel { color: var(--gray-70); }
+parms.menubar.outline { color: var(--gray-20); }
+parms.menubar.outline.loc { color: var(--gray-20); }
+
+/* --- Menu entries --- */
+parms.menuentry.bg { color: var(--gray-36); }
+parms.menuentry.bg.loc { color: var(--gray-42); }
+parms.menuentry.bg.sel { color: var(--gray-50); }
+parms.menuentry.fg { color: var(--gray-72); }
+parms.menuentry.fg.loc { color: var(--gray-70); }
+parms.menuentry.fg.sel { color: var(--gray-10); }
+parms.menuentry.outline { color: var(--gray-20); }
+
+/* --- Multi input --- */
+parms.multi.input.bg { color: var(--gray-30); }
+parms.multi.input.bg.loc { color: lighten(var(--palette-bg-raised), 0.06); }  /* Located multi input */
+parms.multi.input.border { color: var(--gray-42); }
+parms.multi.input.delete { color: #CC1A40; }                  /* Red delete button */
+parms.multi.input.entry.bg { color: var(--gray-30); }
+parms.multi.input.entry.fg { color: var(--gray-72); }
+parms.multi.input.title.bg { color: var(--gray-35); }
+parms.multi.input.title.fg { color: var(--gray-70); }
+parms.multi.input.up { color: #408C8C; }                      /* Teal up arrow */
+
+/* --- Override mode --- */
+parms.override.bg { color: var(--override-bg); }
+parms.override.bg.disabled { color: var(--override-bg-disabled); }
+parms.override.bg.off { color: var(--override-bg-off); }
+parms.override.bg.off.selected { color: lighten(var(--override-bg), 0.15); }   /* Selected off override */
+parms.override.bg.on { color: var(--override-bg-on); }
+parms.override.bg.on.selected { color: lighten(var(--override-bg), 0.05); }    /* Selected on override */
+parms.override.bg.selected { color: var(--override-bg-selected); }
+parms.override.fg { color: var(--override-fg); }
+parms.override.fg.off { color: var(--gray-10); }
+parms.override.fg.on { color: var(--gray-10); }
+parms.override.field.bg { color: var(--override-bg); }
+parms.override.field.bg.loc { color: lighten(var(--override-bg), 0.05); }         /* Located override field */
+parms.override.field.bg.selected { color: var(--override-bg-selected); }
+parms.override.field.bg.selected.loc { color: lighten(var(--override-bg), 0.03); } /* Located selected override */
+parms.override.field.fg { color: var(--override-fg); }
+parms.override.field.hilite { color: var(--override-field-hilite); }
+parms.override.hilite { color: var(--override-hilite); }
+parms.override.menubar.bg { color: var(--override-bg); }
+parms.override.menubar.bg.loc { color: var(--override-bg); }
+parms.override.menubar.bg.sel { color: var(--override-bg); }
+parms.override.menubar.fg { color: var(--override-fg); }
+parms.override.menubar.fg.loc { color: var(--override-fg); }
+parms.override.menubar.fg.sel { color: var(--override-fg); }
+
+/* --- Readonly --- */
+parms.readonly.bg { color: var(--gray-25); }
+parms.readonly.fg { color: #BFBF4D; }                         /* Yellowish readonly text */
+parms.readonly.hilite { color: #595933; }                      /* Dark yellow readonly highlight */
+
+/* --- Slider --- */
+parms.slider.bg { color: lighten(var(--palette-bg), 0.04); }   /* Slider track background */
+parms.slider.disabled.bg { color: var(--gray-30); }
+parms.slider.disabled.fg { color: var(--gray-35); }
+parms.slider.fg { color: var(--gray-05); }
+parms.slider.thumb { color: var(--gray-40); }
+parms.slider.thumb.disabled { color: var(--gray-30); }
+parms.slider.thumb.disabled.outline { color: var(--gray-30); }
+parms.slider.thumb.loc { color: var(--gray-50); }
+parms.slider.thumb.off { color: var(--gray-50); }
+parms.slider.thumb.on { color: var(--gray-50); }
+parms.slider.thumb.outline { color: lighten(var(--palette-bg), 0.06); }      /* Slider thumb outline */
+parms.slider.thumb.outline.loc { color: lighten(var(--palette-bg), 0.06); }  /* Located thumb outline */
+
+/* --- Text hints --- */
+parms.text.hint { color: var(--gray-30); }
+parms.text.hint.dark { color: var(--gray-40); }
+parms.text.hint.light { color: var(--gray-60); }
+
+/* --- Textbox --- */
+parms.textbox.expr.bg { color: #8FA3B0; }                     /* Tinted expression textbox */
+parms.textbox.override.bg { color: #7EB3CB; }                 /* Tinted override textbox */
+
+/* --- Toggle --- */
+parms.toggle.bg { color: var(--gray-15); }
+parms.toggle.bg.off { color: lighten(var(--palette-bg-raised), 0.04); }  /* Toggle off background */
+parms.toggle.bg.off.loc { color: lighten(var(--palette-bg), 0.08); }     /* Located toggle off */
+parms.toggle.bg.on { color: var(--gray-55); }
+parms.toggle.bg.on.loc { color: var(--gray-65); }
+parms.toggle.disabled.bg { color: var(--gray-20); }
+parms.toggle.disabled.fg { color: var(--gray-25); }
+parms.toggle.fg { color: var(--gray-50); }
+parms.toggle.fg.off { color: var(--gray-70); }
+parms.toggle.fg.on { color: var(--gray-10); }
+parms.toggle.outline { color: var(--gray-20); }
+parms.toggle.thumb.disabled { color: var(--gray-40); }
+parms.toggle.thumb.off { color: var(--gray-20); }
+parms.toggle.thumb.off.loc { color: lighten(var(--palette-bg), 0.04); }  /* Located toggle thumb off */
+parms.toggle.thumb.on { color: var(--gray-70); }
+parms.toggle.thumb.on.loc { color: var(--gray-85); }
+
+
+/* ============================================================ */
+/* PERFORMANCE                                                  */
+/* Performance monitor display                                  */
+/* ============================================================ */
+
+performance.actualtime { color: darken(var(--palette-success), 0.25); }  /* Dark green actual time bar */
+performance.bg { color: var(--gray-05); }
+performance.embeddedtime { color: var(--gray-30); }
+performance.text { color: var(--gray-70); }
+performance.totaltime { color: var(--gray-15); }
+
+
+/* ============================================================ */
+/* PLAYBAR                                                      */
+/* Bottom playback control strip                                */
+/* ============================================================ */
+
+playbar.bg { color: var(--playbar-bg); }
+playbar.off { color: var(--playbar-off); }
+playbar.on { color: var(--playbar-on); }
+playbar.reset { color: var(--warning); }
+
+
+/* ============================================================ */
+/* PREF LIST                                                    */
+/* Preferences dialog list                                      */
+/* ============================================================ */
+
+preflist.info.child.bg { color: var(--white); }
+preflist.info.child.fg { color: var(--black); }
+preflist.info.error { color: var(--error); }
+preflist.info.filtered { color: var(--gray-60); }
+preflist.info.message { color: var(--gray-80); }
+preflist.info.normal { color: var(--gray-sys-50); }
+preflist.info.warning { color: var(--black); }
+preflist.label.append.bg { color: var(--gray-60); }
+preflist.label.hide.bg { color: var(--gray-60); }
+preflist.text.bad.fg { color: var(--gray-sys-75); }
+preflist.text.good.fg { color: var(--black); }
+preflist.text.input.bg { color: var(--gray-sys-70); }
+preflist.text.picked.bg { color: var(--gray-60); }
+
+
+/* ============================================================ */
+/* RAMP                                                         */
+/* Color/value ramp editor                                      */
+/* ============================================================ */
+
+ramp.bg { color: var(--black); }
+ramp.blue { color: var(--info); }
+ramp.green { color: var(--success); }
+ramp.red { color: var(--error); }
+ramp.marker.normal.bg { color: var(--black); }
+ramp.marker.normal.fg { color: var(--white); }
+ramp.marker.selected.bg { color: var(--white); }
+ramp.marker.selected.fg { color: var(--black); }
+ramp.saturation { color: var(--error); }
+ramp.value { color: var(--white); }
+
+
+/* ============================================================ */
+/* RANGE                                                        */
+/* Range slider component                                       */
+/* ============================================================ */
+
+range.arrow.bg { color: var(--gray-60); }
+range.arrow.fg { color: var(--gray-sys-70); }
+range.bg { color: var(--gray-sys-50); }
+range.tick { color: var(--black); }
+
+
+/* ============================================================ */
+/* RUBBER BOX                                                   */
+/* Selection rectangle                                          */
+/* ============================================================ */
+
+rubberbox.fg { color: var(--white); }
+
+
+/* ============================================================ */
+/* SLIDER                                                       */
+/* ============================================================ */
+
+slider.linethumb.bg { color: var(--black); }
+slider.linethumb.fg { color: var(--white); }
+
+
+/* ============================================================ */
+/* SPLIT PANE                                                   */
+/* Divider bar between editor panes                             */
+/* ============================================================ */
+
+splitpane.bar { color: var(--splitpane-bar); }
+splitpane.bar.dragging { color: var(--gray-40); }
+
+
+/* ============================================================ */
+/* STARTUP                                                      */
+/* Startup splash screen messages                               */
+/* ============================================================ */
+
+startup.error { color: var(--startup-error); }
+startup.message { color: var(--gray-70); }
+startup.warning { color: var(--startup-warning); }
+
+
+/* ============================================================ */
+/* STATUS BAR                                                   */
+/* Bottom status bar                                            */
+/* ============================================================ */
+
+statusbar.bg1 { color: var(--statusbar-bg); }
+statusbar.bg2 { color: var(--gray-50); }
+statusbar.fg1 { color: var(--statusbar-fg); }
+statusbar.fg2 { color: var(--black); }
+
+
+/* ============================================================ */
+/* SWATCH                                                       */
+/* Color swatch display                                         */
+/* ============================================================ */
+
+swatch.none.bg { color: darken(var(--palette-bg-dark), 0.02); }  /* Empty swatch background */
+swatch.none.text { color: var(--palette-fg); }                    /* Empty swatch label */
+
+
+/* ============================================================ */
+/* TEXTPORT                                                     */
+/* Python/TScript console                                       */
+/* ============================================================ */
+
+textport.bg { color: var(--gray-05); }
+textport.editable { color: var(--textport-editable); }
+textport.editing { color: var(--multitext-editing); }
+textport.fg { color: var(--gray-75); }
+textport.hilite { color: var(--gray-90); }
+textport.line { color: var(--gray-45); }
+textport.noteditable { color: var(--textport-noteditable); }
+textport.status.bg1 { color: var(--gray-sys-30); }
+textport.status.bg2 { color: var(--gray-sys-50); }
+textport.status.fg1 { color: var(--gray-sys-90); }
+textport.status.fg2 { color: var(--black); }
+
+
+/* ============================================================ */
+/* TEXTSHEET                                                    */
+/* Table/spreadsheet editor                                     */
+/* ============================================================ */
+
+textsheet.bg { color: var(--bg-tinted-10); }
+textsheet.editable { color: #B3B3FF; }                        /* Lavender - editable cell text */
+textsheet.noteditable { color: #1ABBE2; }                     /* Cyan - non-editable cell text */
+textsheet.row.hilite { color: var(--warning); }
+textsheet.select.copy { color: #666699; }                     /* Purple-blue - copy selection */
+textsheet.select.firstdrag { color: var(--gray-50); }
+textsheet.select.outline { color: var(--gray-25); }
+textsheet.select.stippleoutline { color: var(--gray-60); }
+
+
+/* ============================================================ */
+/* TILE                                                         */
+/* Network editor node tiles                                    */
+/* ============================================================ */
+
+tile.active.bg { color: darken(var(--palette-bg), 0.01); }     /* Active tile background */
+tile.bg { color: var(--black); }
+tile.block { color: var(--gray-10); }
+tile.commented { color: var(--palette-accent-alt); }            /* Commented node overlay */
+tile.connection.hilite1 { color: var(--warning); }
+tile.connection.hilite2 { color: #808000; }                    /* Olive connection highlight */
+tile.connector.bg { color: var(--gray-10); }
+tile.connector.fg { color: var(--gray-75); }
+tile.default.bg { color: var(--black); }
+tile.dockedconnection.line { color: var(--gray-20); }
+tile.drag.crosshair { color: var(--gray-40); }
+tile.droppable { color: var(--black); }
+tile.extraconnection.line { color: lighten(var(--palette-bg-raised), 0.04); }        /* Extra connection wire */
+tile.extraconnection.line.hilite { color: lighten(var(--palette-bg-raised), 0.08); } /* Highlighted extra wire */
+
+/* --- Tile flags --- */
+tile.flag.activate { color: var(--white); }
+tile.flag.bg { color: var(--gray-25); }
+tile.flag.bypass { color: var(--gray-30); }
+tile.flag.bypass.bright { color: var(--gray-80); }
+tile.flag.bypass.cross { color: var(--flag-bypass-cross); }
+tile.flag.bypass.nocookcross { color: var(--black); }
+tile.flag.bypass.noparentcookcross { color: var(--palette-fg-dim); }  /* Dim bypass cross */
+tile.flag.bypass.noparentcookcross.bright { color: var(--gray-80); }
+tile.flag.capture { color: var(--flag-capture); }
+tile.flag.clone { color: var(--flag-clone); }
+tile.flag.clonechild { color: #802626; }                       /* Dark red - clone child indicator */
+tile.flag.compare { color: var(--flag-compare); }
+tile.flag.display { color: var(--flag-display); }
+tile.flag.export { color: var(--flag-export); }
+tile.flag.expose { color: var(--error); }
+tile.flag.hardlock { color: var(--flag-hardlock); }
+tile.flag.link { color: var(--flag-link); }
+tile.flag.origin { color: var(--flag-origin); }
+tile.flag.pickable { color: var(--flag-pickable); }
+tile.flag.render { color: var(--flag-render); }
+tile.flag.saveviewer { color: var(--gray-70); }
+tile.flag.template { color: var(--flag-template); }
+tile.flag.viewer { color: var(--gray-80); }
+
+/* --- Tile flag panels --- */
+tile.flagh.bg { color: lighten(var(--palette-bg), 0.04); }     /* Horizontal flag panel background */
+tile.flagh.border { color: var(--gray-52); }
+tile.flagh.icon.locate { color: var(--white); }
+tile.flagv.bg.hilite { color: var(--white); }
+tile.flagv.bypass { color: var(--gray-30); }
+tile.flagv.cloneimmune { color: #E67300; }                     /* Orange - clone immune indicator */
+tile.flagv.hardlock { color: #D2B422; }                        /* Yellow - hard lock indicator */
+tile.flagv.icon.locate { color: var(--white); }
+tile.flagv.mastercloneimmune { color: #734D00; }               /* Dark orange - master clone immune */
+
+/* --- Tile misc --- */
+tile.ghost { color: var(--gray-30); }
+tile.hiddenconnection.line { color: #4D6659; }                 /* Green-tinted hidden connection */
+tile.icon.bg { color: var(--gray-20); }
+tile.locate { color: var(--gray-20); }
+tile.name.bg { color: var(--gray-20); }
+tile.name.border { color: var(--gray-52); }
+tile.name.fg { color: var(--gray-75); }
+tile.name.hilite { color: var(--gray-40); }
+tile.replicatorconnection.line { color: var(--gray-20); }
+tile.resizeborder { color: var(--gray-20); }
+tile.utility.current { color: var(--gray-70); }
+tile.utility.picked { color: var(--gray-70); }
+
+
+/* ============================================================ */
+/* TOOLTIP                                                      */
+/* ============================================================ */
+
+tooltip.bg { color: var(--gray-15); }
+tooltip.fg { color: var(--gray-45); }
+tooltip.fg.value { color: lighten(var(--palette-fg), 0.05); }  /* Slightly brighter tooltip value */
+
+
+/* ============================================================ */
+/* TOP VIEWER                                                   */
+/* Texture operator viewer display                              */
+/* ============================================================ */
+
+top.viewer.bg { color: var(--gray-10); }
+top.viewer.checker { color: var(--gray-10); }
+top.viewer.fieldguide.grid { color: var(--gray-40); }
+top.viewer.fieldguide.hilite { color: var(--error); }
+top.viewer.fieldguide.safe { color: var(--gray-70); }
+top.viewer.label.text { color: var(--white); }
+top.viewer.separator { color: var(--gray-sys-50); }
+
+
+/* ============================================================ */
+/* WORKSHEET                                                    */
+/* Network editor canvas (background, grid, mode indicators)    */
+/* ============================================================ */
+
+worksheet.autoscroll.highlight { color: var(--network-autoscroll); }
+worksheet.bg { color: var(--network-bg); }
+worksheet.external.flag { color: #666626; }                    /* Olive - external reference flag */
+worksheet.grid { color: var(--network-grid); }
+worksheet.gridxy { color: var(--network-grid-axis); }
+worksheet.newnode { color: var(--gray-80); }
+worksheet.operatemode { color: darken(var(--palette-error), 0.05); }  /* Red operate mode indicator */
+worksheet.pickbox { color: var(--gray-80); }
+worksheet.private { color: var(--palette-info); }              /* Blue - private network indicator */
+
+
+/* ============================================================ */
+/* XCF LADDER                                                   */
+/* Cross-reference ladder display                               */
+/* ============================================================ */
+
+xcfladder.active.bg { color: var(--gray-15); }
+xcfladder.bg { color: var(--gray-10); }
+xcfladder.circle.baseleft { color: #802626; }                  /* Dark red - left base circle */
+xcfladder.circle.baseright { color: #1A801A; }                 /* Dark green - right base circle */
+xcfladder.circle.bg { color: var(--gray-15); }
+xcfladder.circle.line { color: var(--gray-15); }
+xcfladder.circle.outline { color: var(--gray-15); }
+xcfladder.outline { color: var(--gray-25); }
+xcfladder.text { color: var(--gray-60); }
+xcfladder.text.levels { color: var(--gray-60); }
+
+
+/* ============================================================ */
+/* TUIK2 UI COLORS                                              */
+/* TouchDesigner's built-in widget system                       */
+/* ============================================================ */
+
+/* TUIK2 Button */
+TUIK2.button_border_disable { color: var(--tuik2-button-border-disable); }
+TUIK2.button_bordera { color: var(--tuik2-button-bordera); }
+TUIK2.button_borderb { color: var(--tuik2-button-borderb); }
+TUIK2.button_disable { color: var(--tuik2-button-disable); }
+TUIK2.button_off { color: var(--tuik2-button-off); }
+TUIK2.button_offroll { color: var(--tuik2-button-offroll); }
+TUIK2.button_on { color: var(--tuik2-button-on); }
+TUIK2.button_onroll { color: var(--tuik2-button-onroll); }
+TUIK2.buttontext_disable { color: var(--tuik2-buttontext-disable); }
+TUIK2.buttontext_off { color: var(--tuik2-buttontext-off); }
+TUIK2.buttontext_offroll { color: var(--tuik2-buttontext-offroll); }
+TUIK2.buttontext_on { color: var(--tuik2-buttontext-on); }
+TUIK2.buttontext_onroll { color: var(--tuik2-buttontext-onroll); }
+
+/* TUIK2 Checkbox */
+TUIK2.checkbox_border { color: var(--tuik2-checkbox-border); }
+TUIK2.checkbox_border_disable { color: var(--tuik2-checkbox-border-disable); }
+
+/* TUIK2 Field */
+TUIK2.field_disable { color: var(--tuik2-field-disable); }
+TUIK2.field_on { color: var(--tuik2-field-on); }
+TUIK2.field_onroll { color: var(--tuik2-field-onroll); }
+
+/* TUIK2 Gadget */
+TUIK2.gadget_bg { color: var(--tuik2-gadget-bg); }
+TUIK2.gadget_bordera { color: var(--tuik2-gadget-bordera); }
+TUIK2.gadget_borderb { color: var(--tuik2-gadget-borderb); }
+
+/* TUIK2 Header */
+TUIK2.header_bg { color: var(--tuik2-header-bg); }
+TUIK2.header_bordera { color: var(--tuik2-header-bordera); }
+
+/* TUIK2 Indicator */
+TUIK2.indicator_disable { color: var(--tuik2-indicator-disable); }
+TUIK2.indicator_off { color: var(--tuik2-indicator-off); }
+TUIK2.indicator_roll { color: var(--tuik2-indicator-roll); }
+
+/* TUIK2 Knob */
+TUIK2.knob_disable { color: var(--tuik2-knob-disable); }
+TUIK2.knob_off { color: var(--tuik2-knob-off); }
+TUIK2.knob_roll { color: var(--tuik2-knob-roll); }
+TUIK2.knobindicator_disable { color: var(--tuik2-knobindicator-disable); }
+TUIK2.knobindicator_off { color: var(--tuik2-knobindicator-off); }
+TUIK2.knobindicator_roll { color: var(--tuik2-knobindicator-roll); }
+
+/* TUIK2 Label */
+TUIK2.label_text { color: var(--tuik2-label-text); }
+TUIK2.label_text_disable { color: var(--tuik2-label-text-disable); }
+
+/* TUIK2 Operator -- PROTECTED: matches operator family colors */
+TUIK2.operator_CHOP { color: var(--tuik2-operator-chop); }
+TUIK2.operator_CHOPfilter { color: var(--tuik2-operator-chopfilter); }
+TUIK2.operator_CHOPgenerator { color: var(--tuik2-operator-chopgenerator); }
+TUIK2.operator_COMP { color: var(--tuik2-operator-comp); }
+TUIK2.operator_COMPfilter { color: var(--tuik2-operator-compfilter); }
+TUIK2.operator_COMPgenerator { color: var(--tuik2-operator-compgenerator); }
+TUIK2.operator_COMPvoid { color: var(--tuik2-operator-compvoid); }
+TUIK2.operator_DAT { color: var(--tuik2-operator-dat); }
+TUIK2.operator_DATfilter { color: var(--tuik2-operator-datfilter); }
+TUIK2.operator_DATgenerator { color: var(--tuik2-operator-datgenerator); }
+TUIK2.operator_MAT { color: var(--tuik2-operator-mat); }
+TUIK2.operator_MATfilter { color: var(--tuik2-operator-matfilter); }
+TUIK2.operator_MATgenerator { color: var(--tuik2-operator-matgenerator); }
+TUIK2.operator_SOP { color: var(--tuik2-operator-sop); }
+TUIK2.operator_SOPfilter { color: var(--tuik2-operator-sopfilter); }
+TUIK2.operator_SOPgenerator { color: var(--tuik2-operator-sopgenerator); }
+TUIK2.operator_TOP { color: var(--tuik2-operator-top); }
+TUIK2.operator_TOPfilter { color: var(--tuik2-operator-topfilter); }
+TUIK2.operator_TOPgenerator { color: var(--tuik2-operator-topgenerator); }
+
+/* TUIK2 Slider */
+TUIK2.slider_bg_disable { color: var(--tuik2-slider-bg-disable); }
+TUIK2.slider_bg_on { color: var(--tuik2-slider-bg-on); }
+TUIK2.slider_bg_onroll { color: var(--tuik2-slider-bg-onroll); }
+TUIK2.slider_range_off { color: var(--tuik2-slider-range-off); }
+
+/* TUIK2 Template */
+TUIK2.template_bordera { color: var(--tuik2-template-bordera); }
+TUIK2.template_borderb { color: var(--tuik2-template-borderb); }
+TUIK2.template_off { color: var(--tuik2-template-off); }
+TUIK2.template_offroll { color: var(--tuik2-template-offroll); }
+TUIK2.template_on { color: var(--tuik2-template-on); }
+TUIK2.template_onroll { color: var(--tuik2-template-onroll); }
+
+/* TUIK2 Titlebar */
+TUIK2.titlebar_bordera { color: var(--tuik2-titlebar-bordera); }
+TUIK2.titlebar_off { color: var(--tuik2-titlebar-off); }
+TUIK2.titlebar_on { color: var(--tuik2-titlebar-on); }
+TUIK2.titlebar_text_off { color: var(--tuik2-titlebar-text-off); }
+
+/* TUIK2 Other */
+TUIK2.root_time { color: var(--tuik2-root-time); }
+TUIK2.transparent { color: var(--tuik2-transparent); }
+
+
+/* ============================================================ */
+/* McWIDGETS (op.WIDGETS)                                           */
+/* Widget container, button, tab, and matrix colors             */
+/* ============================================================ */
+
+/* Widget Container */
+op.WIDGETS.par.Wcbg { color: var(--mcw-wc-bg); }
+op.WIDGETS.par.Wcbgselected { color: var(--mcw-wc-bg-selected); }
+op.WIDGETS.par.Wcbgdrag { color: var(--mcw-wc-bg-drag); }
+op.WIDGETS.par.Wcbgdrop { color: var(--mcw-wc-bg-drop); }
+op.WIDGETS.par.Wcheader { color: var(--mcw-wc-header); }
+op.WIDGETS.par.Wcheaderselected { color: var(--mcw-wc-header-selected); }
+op.WIDGETS.par.Wcheaderdrag { color: var(--mcw-wc-header-drag); }
+op.WIDGETS.par.Wcheaderdrop { color: var(--mcw-wc-header-drop); }
+op.WIDGETS.par.Wctext { color: var(--mcw-wc-text); }
+op.WIDGETS.par.Wctextselected { color: var(--mcw-wc-text-selected); }
+op.WIDGETS.par.Wctextdrag { color: var(--mcw-wc-text-drag); }
+op.WIDGETS.par.Wctextdrop { color: var(--mcw-wc-text-drop); }
+
+/* Button */
+op.WIDGETS.par.Buttonoff { color: var(--mcw-button-off); }
+op.WIDGETS.par.Buttonoffroll { color: var(--mcw-button-offroll); }
+op.WIDGETS.par.Buttonon { color: var(--mcw-button-on); }
+op.WIDGETS.par.Buttononroll { color: var(--mcw-button-onroll); }
+op.WIDGETS.par.Buttontextoff { color: var(--mcw-buttontext-off); }
+op.WIDGETS.par.Buttontextoffroll { color: var(--mcw-buttontext-offroll); }
+op.WIDGETS.par.Buttontexton { color: var(--mcw-buttontext-on); }
+op.WIDGETS.par.Buttontextonroll { color: var(--mcw-buttontext-onroll); }
+
+/* Pages (Tabs) */
+op.WIDGETS.par.Taboff { color: var(--mcw-tab-off); }
+op.WIDGETS.par.Taboffroll { color: var(--mcw-tab-offroll); }
+op.WIDGETS.par.Tabon { color: var(--mcw-tab-on); }
+op.WIDGETS.par.Tabonroll { color: var(--mcw-tab-onroll); }
+op.WIDGETS.par.Tabtextoff { color: var(--mcw-tabtext-off); }
+op.WIDGETS.par.Tabtextoffroll { color: var(--mcw-tabtext-offroll); }
+op.WIDGETS.par.Tabtexton { color: var(--mcw-tabtext-on); }
+op.WIDGETS.par.Tabtextonroll { color: var(--mcw-tabtext-onroll); }
+
+/* Matrix */
+op.WIDGETS.par.Matrixsplitoff { color: var(--mcw-matrix-off); }
+op.WIDGETS.par.Matrixsplitoffroll { color: var(--mcw-matrix-offroll); }
+op.WIDGETS.par.Matrixspliton { color: var(--mcw-matrix-on); }
+
+/* List */
+op.WIDGETS.par.Listbg { color: var(--mcw-list-bg); }
+op.WIDGETS.par.Listitemoff { color: var(--mcw-list-itemoff); }
+op.WIDGETS.par.Listitemoffroll { color: var(--mcw-list-itemoffroll); }
+op.WIDGETS.par.Listitemon { color: var(--mcw-list-itemon); }
+op.WIDGETS.par.Listitemonroll { color: var(--mcw-list-itemonroll); }
+op.WIDGETS.par.Listtextoff { color: var(--mcw-list-textoff); }
+op.WIDGETS.par.Listtextoffroll { color: var(--mcw-list-textoffroll); }
+op.WIDGETS.par.Listtexton { color: var(--mcw-list-texton); }
+op.WIDGETS.par.Listtextonroll { color: var(--mcw-list-textonroll); }
+
+/* ========== Component Parameters: op.MC (Macros) ========== */
+
+/* Macro List */
+op.MC.par.Macrolistbg { color: var(--mc-list-bg); }
+op.MC.par.Macrolistrowbg { color: var(--mc-list-rowbg); }
+op.MC.par.Macrolistcelloff { color: var(--mc-list-itemoff); }
+op.MC.par.Macrolistcelloffroll { color: var(--mc-list-itemoffroll); }
+op.MC.par.Macrolistcellon { color: var(--mc-list-itemon); }
+op.MC.par.Macrolistcellonroll { color: var(--mc-list-itemonroll); }
+op.MC.par.Macrolisttextl0 { color: var(--mc-list-textl0); }
+op.MC.par.Macrolisttextl1 { color: var(--mc-list-textl1); }
+op.MC.par.Macrolisttextl2 { color: var(--mc-list-textl2); }
+op.MC.par.Macrolisttextl3 { color: var(--mc-list-textl3); }
+op.MC.par.Macrolisttextl4 { color: var(--mc-list-textl4); }
+op.MC.par.Macrolisttextl5 { color: var(--mc-list-textl5); }
+op.MC.par.Macrolisttextl6 { color: var(--mc-list-textl6); }
+op.MC.par.Macrolisttextl7 { color: var(--mc-list-textl7); }
+op.MC.par.Macrolisterroroff { color: var(--mc-list-erroroff); }
+op.MC.par.Macrolisterroroffroll { color: var(--mc-list-erroroffroll); }
+op.MC.par.Macrolisterroron { color: var(--mc-list-erroron); }
+op.MC.par.Macrolisterroronroll { color: var(--mc-list-erroronroll); }
+op.MC.par.Macrolistborderdark { color: var(--mc-list-borderdark); }
+op.MC.par.Macrolistborderlight { color: var(--mc-list-borderlight); }
+op.MC.par.Macrolistdraghighlight { color: var(--mc-list-draghighlight); }

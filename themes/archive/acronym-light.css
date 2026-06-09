@@ -1,0 +1,1239 @@
+/* Theme: Acronym Light */
+/* Warm light theme using Acronym brand palettes (softened) */
+
+:root {
+    /* ============================================ */
+    /* THEME CUSTOMIZATIONS                        */
+    /* These are the colors that differ from TD    */
+    /* ============================================ */
+
+    /* DAT Editor - Background (medium-dark, lighter than dark mode) */
+    --dat-bg: #2E2B28;
+    --dat-bg-hilite: #4C4844;
+    --dat-lineno-bg: #332F2C;
+    --dat-lineno-bg-hilite: #524E48;
+
+    /* DAT Editor - Text (light on dark) */
+    --dat-lineno-fg: #A8A29B;
+    --dat-lineno-fg-nodata: #6E6860;
+    --dat-comment-fg: #7D93AF;
+
+    /* DAT Editor - Python Syntax (TD defaults for dark bg) */
+    --python-text: #FFF200;
+    --python-keywords: #99DEff;
+    --python-functions: #FEFFA6;
+    --python-strings: #F1976A;
+    --python-numbers: #E0FFBB;
+    --python-comments: #60A74D;
+    --python-hilite: #5E5E5E;
+
+    /* DAT Editor - Table */
+    --dat-table-outline: #3E3A36;
+    --dat-table-select-bg: #4C4844;
+    --dat-table-select-outline: #9D948B;
+    --dat-scroll: #FDCF00;
+
+    /* ============================================ */
+    /* CRITICAL UI - Network, Menus, Playbar       */
+    /* ============================================ */
+
+    /* Network editor background & grid (MUD PUDDLE - softened) */
+    --network-bg: #8A8279;
+    --network-grid: #7A7366;
+    --network-grid-axis: #6A634F;
+    --network-autoscroll: #9A938B;
+
+    /* Top menubar and button strips (HAZY - softened) */
+    --menubar-bg: #A19B94;
+    --buttonstrip-bg: #9A938B;
+
+    /* Bottom playbar and status */
+    --playbar-bg: #9A938B;
+    --playbar-on: #07A400;
+    --playbar-off: #4A4D4C;
+    --statusbar-bg: #ADA8A2;
+    --statusbar-fg: #1F2222;
+
+    /* Timeline/animation */
+    --timeline-bg: #8A8279;
+    --timeline-bar-bg: #625C55;
+
+    /* ============================================ */
+    /* BASE COLORS (inverted for light theme)      */
+    /* ============================================ */
+
+    --black: #0C0C0C;
+    --white: #ECECEC;
+
+    /* Warm grays from brand palettes (softened) */
+    --gray-10: #C8C4C0;
+    --gray-15: #C2BEB9;
+    --gray-20: #B5B0AB;
+    --gray-25: #ADA8A2;
+    --gray-30: #A19B94;
+    --gray-40: #8A8379;
+    --gray-50: #787068;
+    --gray-60: #625C55;
+    --gray-70: #4A4D4C;
+    --gray-80: #2B302F;
+
+    /* ============================================ */
+    /* SEMANTIC COLORS (darker for light bg)       */
+    /* ============================================ */
+
+    --error: #CC2200;
+    --warning: #DB5400;
+    --success: #1C7720;
+    --info: #2B3F87;
+    --selected: #BB8800;
+    --current: #07A400;
+
+    /* ============================================ */
+    /* OPERATOR FAMILY COLORS (darker for light bg)*/
+    /* ============================================ */
+
+    --op-chop: #4A7A30;
+    --op-comp: #6E6860;
+    --op-dat: #885070;
+    --op-mat: #908540;
+    --op-pop: #2B3F87;
+    --op-sop: #4878A5;
+    --op-top: #605580;
+
+    /* ============================================ */
+    /* TILE FLAGS                                  */
+    /* ============================================ */
+
+    --flag-display: #2B3F87;
+    --flag-render: #7055DD;
+    --flag-bypass-cross: #CC2200;
+    --flag-clone: #DD3030;
+    --flag-template: #C850CC;
+    --flag-compare: #18A8A4;
+    --flag-capture: #1C7720;
+    --flag-export: #70BF44;
+    --flag-hardlock: #BB8800;
+
+    /* ============================================ */
+    /* PARAMETER MODES                             */
+    /* ============================================ */
+
+    /* Expression mode (STEEL BLUE / MIDNIGHT SLATE) */
+    --expr-bg: #7D93AF;
+    --expr-fg: #2B3F87;
+
+    /* Override mode (MACHINE GREEN) */
+    --override-bg: #5A8848;
+    --override-fg: #1A3310;
+
+    /* Bind mode (AZURE WHITE / MIDNIGHT SLATE) */
+    --bind-bg: #B5BCC8;
+    --bind-fg: #2B3F87;
+
+    /* ============================================ */
+    /* TUIK2 BUTTON                                */
+    /* ============================================ */
+
+    --tuik2-button-border-disable: rgba(165, 158, 150, 0.8);
+    --tuik2-button-bordera: #8A8279;
+    --tuik2-button-borderb: #ADA8A2;
+    --tuik2-button-disable: #ADA8A2;
+    --tuik2-button-off: #A19B94;
+    --tuik2-button-offroll: #9A938B;
+    --tuik2-button-on: #FDCF00;
+    --tuik2-button-onroll: #FDCF00;
+    --tuik2-buttontext-disable: #8A8279;
+    --tuik2-buttontext-off: #2B302F;
+    --tuik2-buttontext-offroll: #1F2222;
+    --tuik2-buttontext-on: #3D2800;
+    --tuik2-buttontext-onroll: #1F2222;
+
+    /* ============================================ */
+    /* TUIK2 CHECKBOX                              */
+    /* ============================================ */
+
+    --tuik2-checkbox-border: rgba(78, 74, 68, 0.8);
+    --tuik2-checkbox-border-disable: rgba(138, 130, 121, 0.8);
+
+    /* ============================================ */
+    /* TUIK2 FIELD                                 */
+    /* ============================================ */
+
+    --tuik2-field-disable: rgba(173, 168, 162, 0.8);
+    --tuik2-field-on: rgba(154, 147, 139, 0.8);
+    --tuik2-field-onroll: rgba(161, 155, 148, 0.8);
+
+    /* ============================================ */
+    /* TUIK2 GADGET                                */
+    /* ============================================ */
+
+    --tuik2-gadget-bg: rgba(161, 155, 148, 0.8);
+    --tuik2-gadget-bordera: #8A8279;
+    --tuik2-gadget-borderb: #B5B0AB;
+
+    /* ============================================ */
+    /* TUIK2 HEADER                                */
+    /* ============================================ */
+
+    --tuik2-header-bg: rgba(138, 130, 121, 0.8);
+    --tuik2-header-bordera: rgba(98, 92, 85, 0.8);
+
+    /* ============================================ */
+    /* TUIK2 INDICATOR                             */
+    /* ============================================ */
+
+    --tuik2-indicator-disable: #CC8080;
+    --tuik2-indicator-off: #CC0000;
+    --tuik2-indicator-roll: #FF0000;
+
+    /* ============================================ */
+    /* TUIK2 KNOB                                  */
+    /* ============================================ */
+
+    --tuik2-knob-disable: #B5B0AB;
+    --tuik2-knob-off: #A19B94;
+    --tuik2-knob-roll: #9A938B;
+    --tuik2-knobindicator-disable: #8A8279;
+    --tuik2-knobindicator-off: #625C55;
+    --tuik2-knobindicator-roll: #3E3A36;
+
+    /* ============================================ */
+    /* TUIK2 LABEL                                 */
+    /* ============================================ */
+
+    --tuik2-label-text: rgba(43, 48, 47, 0.85);
+    --tuik2-label-text-disable: rgba(43, 48, 47, 0.5);
+
+    /* ============================================ */
+    /* TUIK2 OPERATOR (same hues, adjusted for     */
+    /* light bg readability)                        */
+    /* ============================================ */
+
+    --tuik2-operator-chop: rgba(70, 130, 50, 0.8);
+    --tuik2-operator-chopfilter: rgba(55, 105, 35, 0.95);
+    --tuik2-operator-chopgenerator: rgba(40, 78, 20, 0.95);
+    --tuik2-operator-comp: rgba(110, 110, 110, 0.8);
+    --tuik2-operator-compfilter: rgba(100, 100, 100, 0.96);
+    --tuik2-operator-compgenerator: rgba(88, 88, 88, 0.95);
+    --tuik2-operator-compvoid: rgba(95, 95, 95, 0.95);
+    --tuik2-operator-dat: rgba(135, 78, 115, 0.8);
+    --tuik2-operator-datfilter: rgba(110, 55, 90, 0.95);
+    --tuik2-operator-datgenerator: rgba(95, 42, 75, 0.8);
+    --tuik2-operator-mat: rgba(145, 135, 60, 0.8);
+    --tuik2-operator-matfilter: rgba(118, 115, 48, 0.95);
+    --tuik2-operator-matgenerator: rgba(100, 98, 40, 0.95);
+    --tuik2-operator-sop: rgba(60, 115, 165, 0.8);
+    --tuik2-operator-sopfilter: rgba(35, 82, 130, 0.95);
+    --tuik2-operator-sopgenerator: rgba(18, 65, 112, 0.95);
+    --tuik2-operator-top: rgba(92, 80, 135, 0.8);
+    --tuik2-operator-topfilter: rgba(82, 70, 130, 0.95);
+    --tuik2-operator-topgenerator: rgba(65, 55, 108, 0.95);
+
+    /* ============================================ */
+    /* TUIK2 SLIDER                                */
+    /* ============================================ */
+
+    --tuik2-slider-bg-disable: rgba(173, 168, 162, 0.8);
+    --tuik2-slider-bg-on: rgba(154, 147, 139, 0.8);
+    --tuik2-slider-bg-onroll: rgba(138, 130, 121, 0.8);
+    --tuik2-slider-range-off: rgba(98, 92, 85, 0.2);
+
+    /* ============================================ */
+    /* TUIK2 TEMPLATE                              */
+    /* ============================================ */
+
+    --tuik2-template-bordera: rgba(138, 0, 138, 0.8);
+    --tuik2-template-borderb: rgba(200, 140, 200, 0.8);
+    --tuik2-template-off: rgba(200, 140, 200, 0.8);
+    --tuik2-template-offroll: rgba(180, 100, 180, 0.9);
+    --tuik2-template-on: rgba(200, 0, 200, 0.8);
+    --tuik2-template-onroll: rgba(200, 0, 200, 0.8);
+
+    /* ============================================ */
+    /* TUIK2 TITLEBAR                              */
+    /* ============================================ */
+
+    --tuik2-titlebar-bordera: #787068;
+    --tuik2-titlebar-off: #9A938B;
+    --tuik2-titlebar-on: #8A8279;
+    --tuik2-titlebar-text-off: #1F2222;
+
+    /* ============================================ */
+    /* TUIK2 OTHER                                 */
+    /* ============================================ */
+
+    --tuik2-root-time: #FDCF00;
+    --tuik2-transparent: rgba(0, 0, 0, 0);
+
+    /* ============================================ */
+    /* MCWIDGETS (op.WIDGETS)                          */
+    /* ============================================ */
+
+    /* Widget Container (light backgrounds, dark text) */
+    --mcw-wc-bg: var(--gray-15);
+    --mcw-wc-bg-selected: var(--selected);
+    --mcw-wc-bg-drag: #7D93AF;
+    --mcw-wc-bg-drop: #70BF44;
+    --mcw-wc-header: var(--gray-25);
+    --mcw-wc-header-selected: #D4A000;
+    --mcw-wc-header-drag: #97A9BF;
+    --mcw-wc-header-drop: #8CD466;
+    --mcw-wc-text: #1F2222;
+    --mcw-wc-text-selected: var(--black);
+    --mcw-wc-text-drag: var(--black);
+    --mcw-wc-text-drop: var(--black);
+
+    /* Button (light bg, dark text) */
+    --mcw-button-off: var(--gray-25);
+    --mcw-button-offroll: var(--gray-30);
+    --mcw-button-on: #FDCF00;
+    --mcw-button-onroll: #FFD633;
+    --mcw-buttontext-off: #1F2222;
+    --mcw-buttontext-offroll: var(--black);
+    --mcw-buttontext-on: var(--black);
+    --mcw-buttontext-onroll: var(--black);
+
+    /* Tabs/Pages (light bg, dark text) */
+    --mcw-tab-off: var(--gray-25);
+    --mcw-tab-offroll: var(--gray-30);
+    --mcw-tab-on: var(--gray-40);
+    --mcw-tab-onroll: var(--gray-50);
+    --mcw-tabtext-off: #1F2222;
+    --mcw-tabtext-offroll: var(--black);
+    --mcw-tabtext-on: var(--black);
+    --mcw-tabtext-onroll: var(--black);
+
+    /* Matrix */
+    --mcw-matrix-off: var(--gray-60);
+    --mcw-matrix-offroll: var(--gray-25);
+    --mcw-matrix-on: var(--error);
+}
+
+/* ============================================ */
+/* DAT EDITOR - Using custom variables         */
+/* ============================================ */
+
+dat.bg.editable { color: var(--dat-bg); }
+dat.bg.noteditable { color: var(--dat-bg); }
+dat.bg.hilite { color: var(--dat-bg-hilite); }
+dat.lineno.bg { color: var(--dat-lineno-bg); }
+dat.lineno.bg.hilite { color: var(--dat-lineno-bg-hilite); }
+dat.lineno.fg { color: var(--dat-lineno-fg); }
+dat.lineno.fg.nodata { color: var(--dat-lineno-fg-nodata); }
+dat.comment.fg { color: var(--dat-comment-fg); }
+dat.python.editable { color: var(--python-text); }
+dat.python.noteditable { color: var(--python-text); }
+dat.python.editing { color: var(--python-text); }
+dat.python.keywords { color: var(--python-keywords); }
+dat.python.functions { color: var(--python-functions); }
+dat.python.strings { color: var(--python-strings); }
+dat.python.numbers { color: var(--python-numbers); }
+dat.python.comments { color: var(--python-comments); }
+dat.python.hilite { color: var(--python-hilite); }
+dat.table.outline { color: var(--dat-table-outline); }
+dat.table.select.background { color: var(--dat-table-select-bg); }
+dat.table.select.outline { color: var(--dat-table-select-outline); }
+dat.scroll { color: var(--dat-scroll); }
+dat.indicators { color: #6E6860; }
+
+/* GLSL syntax */
+dat.glsl.keywords { color: #A8A8FF; }
+dat.glsl.functions { color: #FFFFA8; }
+dat.glsl.strings { color: #FFA8A8; }
+dat.glsl.numbers { color: #FFFFA8; }
+dat.glsl.comments { color: #99FF99; }
+dat.glsl.preprocessors { color: #929292; }
+
+/* JSON syntax */
+dat.json.booleans { color: #A8A8FF; }
+dat.json.numbers { color: #FFFFA8; }
+dat.json.strings { color: #FFA8A8; }
+dat.json.comments { color: #99FF99; }
+dat.json.symbols { color: #737373; }
+
+/* XML syntax */
+dat.xml.tags { color: #85B0FF; }
+dat.xml.attributes { color: #B0E3FF; }
+dat.xml.attributevalues { color: #E3E399; }
+dat.xml.entityrefs { color: #FFA8FF; }
+dat.xml.comments { color: #99FF99; }
+dat.xml.symbols { color: #737373; }
+
+/* YAML syntax */
+dat.yaml.keys { color: #8F8FFF; }
+dat.yaml.booleans { color: #DBDBFF; }
+dat.yaml.numbers { color: #FFFFA8; }
+dat.yaml.strings { color: #FFA8A8; }
+dat.yaml.comments { color: #99FF99; }
+dat.yaml.symbols { color: #D9D9D9; }
+
+/* TScript */
+dat.tscript.editable { color: #D9BDE0; }
+dat.tscript.editing { color: #CC7DBA; }
+dat.tscript.noteditable { color: #998AA1; }
+dat.tscript.hilite { color: #6C5E70; }
+dat.tscript.comments { color: #616161; }
+
+/* ============================================ */
+/* OPERATOR FAMILY COLORS                      */
+/* ============================================ */
+
+CHOP { color: var(--op-chop); }
+COMP { color: var(--op-comp); }
+COMP.hilite { color: var(--gray-50); }
+DAT { color: var(--op-dat); }
+MAT { color: var(--op-mat); }
+MAT.editbg { color: #A09040; }
+MAT.hilite { color: #B8A850; }
+POP { color: var(--op-pop); }
+POP.hilite { color: #5858C0; }
+SOP { color: var(--op-sop); }
+SOP.editbg { color: #5580A5; }
+SOP.hilite { color: #6898B8; }
+TOP { color: var(--op-top); }
+OP.default { color: #555555; }
+
+/* ============================================ */
+/* SEMANTIC STATUS COLORS                      */
+/* ============================================ */
+
+circle.check { color: var(--success); }
+circle.minus { color: var(--error); }
+default.error { color: var(--error); }
+dialog.error { color: var(--error); }
+tile.error { color: var(--error); }
+tile.warning { color: var(--warning); }
+playback.warning { color: var(--warning); }
+tile.current { color: var(--current); }
+tile.picked { color: var(--selected); }
+
+/* ============================================ */
+/* NETWORK EDITOR                              */
+/* ============================================ */
+
+worksheet.bg { color: var(--network-bg); }
+worksheet.grid { color: var(--network-grid); }
+worksheet.gridxy { color: var(--network-grid-axis); }
+worksheet.autoscroll.highlight { color: var(--network-autoscroll); }
+worksheet.external.flag { color: #666626; }
+worksheet.newnode { color: var(--gray-80); }
+worksheet.operatemode { color: #CC4C4C; }
+worksheet.pickbox { color: var(--gray-80); }
+worksheet.private { color: #0E349E; }
+
+tile.bg { color: var(--black); }
+tile.active.bg { color: #7E7E83; }
+tile.block { color: var(--gray-10); }
+tile.connector.bg { color: var(--gray-10); }
+tile.connector.fg { color: #3E3A36; }
+tile.default.bg { color: var(--black); }
+tile.droppable { color: var(--black); }
+tile.ghost { color: var(--gray-30); }
+tile.icon.bg { color: var(--gray-20); }
+tile.locate { color: var(--gray-20); }
+tile.name.bg { color: var(--gray-10); }
+tile.name.border { color: #7A7A7A; }
+tile.name.fg { color: #2B302F; }
+tile.name.hilite { color: var(--gray-30); }
+tile.commented { color: #2B3F87; }
+tile.connection.hilite1 { color: var(--warning); }
+tile.connection.hilite2 { color: #BB8800; }
+tile.dockedconnection.line { color: var(--gray-20); }
+tile.drag.crosshair { color: var(--gray-40); }
+tile.extraconnection.line { color: #7D93AF; }
+tile.extraconnection.line.hilite { color: #A4B7CE; }
+tile.hiddenconnection.line { color: #709080; }
+tile.replicatorconnection.line { color: var(--gray-20); }
+tile.resizeborder { color: var(--gray-20); }
+tile.utility.current { color: var(--gray-70); }
+tile.utility.picked { color: var(--gray-70); }
+
+/* Tile flags */
+tile.flag.bg { color: var(--gray-25); }
+tile.flag.activate { color: var(--white); }
+tile.flag.bypass { color: var(--gray-30); }
+tile.flag.bypass.bright { color: var(--gray-80); }
+tile.flag.bypass.cross { color: var(--flag-bypass-cross); }
+tile.flag.bypass.nocookcross { color: var(--black); }
+tile.flag.bypass.noparentcookcross { color: #8A8379; }
+tile.flag.bypass.noparentcookcross.bright { color: var(--gray-80); }
+tile.flag.capture { color: var(--flag-capture); }
+tile.flag.clone { color: var(--flag-clone); }
+tile.flag.clonechild { color: #AA5050; }
+tile.flag.compare { color: var(--flag-compare); }
+tile.flag.display { color: var(--flag-display); }
+tile.flag.export { color: var(--flag-export); }
+tile.flag.expose { color: var(--error); }
+tile.flag.hardlock { color: var(--flag-hardlock); }
+tile.flag.link { color: #FDCF00; }
+tile.flag.origin { color: #DB5400; }
+tile.flag.pickable { color: #FF8A2F; }
+tile.flag.render { color: var(--flag-render); }
+tile.flag.saveviewer { color: var(--gray-70); }
+tile.flag.template { color: var(--flag-template); }
+tile.flag.viewer { color: var(--gray-80); }
+tile.flagh.bg { color: #AAA49D; }
+tile.flagh.border { color: #7A7A7A; }
+tile.flagh.icon.locate { color: var(--white); }
+tile.flagv.bg.hilite { color: var(--white); }
+tile.flagv.bypass { color: var(--gray-30); }
+tile.flagv.cloneimmune { color: #FB6600; }
+tile.flagv.hardlock { color: #BB8800; }
+tile.flagv.icon.locate { color: var(--white); }
+tile.flagv.mastercloneimmune { color: #BB4300; }
+
+/* ============================================ */
+/* DEFAULT UI ELEMENTS                         */
+/* ============================================ */
+
+default.bg { color: var(--gray-25); }
+default.fg { color: #3E3A36; }
+default.button { color: #3E3A36; }
+default.button.select { color: var(--gray-40); }
+default.buttonstrip { color: var(--buttonstrip-bg); }
+default.check { color: #3E3A36; }
+default.radio { color: var(--gray-40); }
+default.rightcheck { color: var(--gray-50); }
+default.arrow.locate { color: var(--white); }
+default.arrow.off { color: var(--black); }
+default.arrow.on { color: var(--white); }
+default.border.hilite { color: var(--white); }
+default.tile.line { color: var(--gray-20); }
+default.field.bg { color: var(--gray-70); }
+default.field.bg.loc { color: #B5B0AB; }
+default.field.bg.sel { color: #A19B94; }
+default.field.fg { color: var(--gray-10); }
+default.input { color: #4D4D4D; }
+default.groove.hilite { color: var(--gray-25); }
+default.groove.lolite { color: var(--buttonstrip-bg); }
+default.label { color: #555959; }
+default.line { color: var(--gray-50); }
+default.listentry.bg { color: #A19B94; }
+default.listentry.bg.loc { color: #9A9A9A; }
+default.listentry.fg { color: #3E3A36; }
+default.listentry.outline { color: var(--gray-20); }
+default.menu { color: var(--gray-25); }
+default.menu.fg { color: #3E3A36; }
+default.menu.loc { color: #5E5850; }
+default.menubar { color: var(--menubar-bg); }
+default.menubar.loc { color: #8A8379; }
+default.menuheading.bg { color: var(--gray-30); }
+default.multitext.editable { color: #1C7720; }
+default.multitext.editing { color: #07A400; }
+default.multitext.hilite { color: var(--black); }
+default.multitext.noteditable { color: #7D93AF; }
+default.negativespace { color: var(--black); }
+default.override { color: #7D93AF; }
+default.paper { color: #C8C4C0; }
+default.scrollbars.bg { color: var(--gray-30); }
+default.separator { color: var(--gray-60); }
+default.slider.outline { color: var(--gray-20); }
+default.slider.thumb { color: #8A8379; }
+default.slider.thumb.outline { color: var(--gray-50); }
+default.stow.bg { color: var(--gray-30); }
+
+/* ============================================ */
+/* PLAYBAR & STATUS                            */
+/* ============================================ */
+
+playbar.bg { color: var(--playbar-bg); }
+playbar.off { color: var(--playbar-off); }
+playbar.on { color: var(--playbar-on); }
+playbar.reset { color: var(--warning); }
+
+statusbar.bg1 { color: var(--statusbar-bg); }
+statusbar.bg2 { color: var(--gray-50); }
+statusbar.fg1 { color: var(--statusbar-fg); }
+statusbar.fg2 { color: var(--black); }
+
+/* ============================================ */
+/* TIMELINE (JIVE)                             */
+/* ============================================ */
+
+jive.channel.bg { color: var(--timeline-bg); }
+jive.graph.bg { color: var(--black); }
+jive.timeline.bg { color: var(--timeline-bar-bg); }
+jive.timeline.fg { color: var(--white); }
+jive.currenttime.bg { color: var(--timeline-bar-bg); }
+jive.currenttime.fg { color: var(--white); }
+jive.timemark.bg { color: var(--timeline-bar-bg); }
+jive.timemark.fg { color: var(--white); }
+jive.channel.current { color: var(--current); }
+jive.channel.picked { color: var(--warning); }
+jive.channel.display { color: #0E349E; }
+jive.channel.normal { color: var(--gray-60); }
+jive.channel.crosshairs { color: #808000; }
+jive.channel.template { color: #FF80FF; }
+jive.handle.time { color: #8080FF; }
+jive.slice.bar { color: var(--warning); }
+jive.slice.box { color: var(--gray-50); }
+jive.pickbox { color: var(--white); }
+jive.frame.timetext { color: #2B3F87; }
+jive.accel.bg { color: var(--gray-50); }
+jive.accel.fg { color: var(--gray-80); }
+jive.inout.bg { color: var(--gray-50); }
+jive.inout.fg { color: var(--gray-80); }
+jive.rawvalue.bg { color: var(--gray-50); }
+jive.rawvalue.fg { color: var(--gray-80); }
+jive.scalehandle.bg { color: var(--gray-50); }
+jive.scalehandle.fg { color: var(--gray-80); }
+jive.segment.bg { color: var(--gray-50); }
+jive.segment.fg { color: var(--gray-80); }
+jive.slope.bg { color: var(--gray-50); }
+jive.slope.fg { color: var(--gray-80); }
+jive.channel.plot.aux1 { color: #BF40BF; }
+jive.channel.plot.aux1.mark { color: #DF9FDF; }
+jive.channel.plot.aux2 { color: #BFBF40; }
+jive.channel.plot.aux2.mark { color: #DFDF9F; }
+jive.channel.plot.aux3 { color: #40BFBF; }
+jive.channel.plot.aux3.mark { color: #9FDFDF; }
+jive.channel.plot.aux4 { color: #FF0080; }
+jive.channel.plot.aux4.mark { color: #FF80BF; }
+
+/* ============================================ */
+/* PANELS & LISTS                              */
+/* ============================================ */
+
+grouplist.bg { color: var(--network-bg); }
+grouplist.splitbar { color: var(--gray-60); }
+
+oplist.bg { color: var(--network-bg); }
+oplist.equal.fg { color: var(--gray-80); }
+oplist.header { color: #888890; }
+oplist.outline { color: #95959A; }
+oplist.select.edithilite { color: #A5A5AA; }
+oplist.select.field.enable { color: #2B302F; }
+oplist.select.field.hilite { color: var(--gray-50); }
+oplist.select.hilite { color: #95959A; }
+oplist.select.outline { color: #7E7E85; }
+oplist.splitbar { color: var(--gray-60); }
+oplist.treearrow.fg { color: var(--black); }
+oplist.treebutton.bg { color: var(--gray-50); }
+oplist.treebutton.fg { color: var(--black); }
+
+textsheet.bg { color: var(--network-bg); }
+textsheet.editable { color: #3030AA; }
+textsheet.noteditable { color: #0888AA; }
+textsheet.row.hilite { color: var(--warning); }
+textsheet.select.copy { color: #666699; }
+textsheet.select.firstdrag { color: var(--gray-50); }
+textsheet.select.outline { color: var(--gray-25); }
+textsheet.select.stippleoutline { color: var(--gray-60); }
+
+/* ============================================ */
+/* PARAMETERS                                  */
+/* ============================================ */
+
+/* Bind mode */
+parms.bind.bg { color: var(--bind-bg); }
+parms.bind.bg.disabled { color: #A8BCCE; }
+parms.bind.bg.enabled { color: var(--bind-fg); }
+parms.bind.fg { color: var(--bind-fg); }
+parms.bind.hilite { color: #B5BCC8; }
+parms.bind.indicator { color: var(--bind-fg); }
+
+/* Expression mode */
+parms.expr.bg { color: var(--expr-bg); }
+parms.expr.bg.disabled { color: #97A9BF; }
+parms.expr.bg.off { color: #A4B7CE; }
+parms.expr.bg.off.selected { color: var(--expr-fg); }
+parms.expr.bg.on { color: #7D93AF; }
+parms.expr.bg.on.selected { color: #2B3F87; }
+parms.expr.bg.selected { color: #7D93AF; }
+parms.expr.fg { color: var(--expr-fg); }
+parms.expr.fg.off { color: var(--gray-80); }
+parms.expr.fg.on { color: var(--gray-80); }
+parms.expr.field.bg { color: var(--gray-20); }
+parms.expr.field.bg.loc { color: #B5B0AB; }
+parms.expr.field.bg.selected { color: #A19B94; }
+parms.expr.field.bg.selected.loc { color: #BBB6B0; }
+parms.expr.field.fg { color: var(--expr-fg); }
+parms.expr.field.hilite { color: #A4B7CE; }
+parms.expr.hilite { color: #2B3F87; }
+parms.expr.menubar.bg { color: var(--expr-bg); }
+parms.expr.menubar.bg.loc { color: var(--expr-bg); }
+parms.expr.menubar.bg.sel { color: var(--expr-bg); }
+parms.expr.menubar.fg { color: var(--gray-80); }
+parms.expr.menubar.fg.loc { color: var(--gray-80); }
+parms.expr.menubar.fg.sel { color: var(--gray-80); }
+
+/* Override mode */
+parms.override.bg { color: var(--override-bg); }
+parms.override.bg.disabled { color: #88A878; }
+parms.override.bg.off { color: #70BF44; }
+parms.override.bg.off.selected { color: #5A8848; }
+parms.override.bg.on { color: var(--override-bg); }
+parms.override.bg.on.selected { color: #1C7720; }
+parms.override.bg.selected { color: #1C7720; }
+parms.override.fg { color: var(--override-fg); }
+parms.override.fg.off { color: var(--gray-80); }
+parms.override.fg.on { color: var(--gray-80); }
+parms.override.field.bg { color: var(--override-bg); }
+parms.override.field.bg.loc { color: #5A8848; }
+parms.override.field.bg.selected { color: #1C7720; }
+parms.override.field.bg.selected.loc { color: #5A8848; }
+parms.override.field.fg { color: var(--override-fg); }
+parms.override.field.hilite { color: #70BF44; }
+parms.override.hilite { color: #07A400; }
+parms.override.menubar.bg { color: var(--override-bg); }
+parms.override.menubar.bg.loc { color: var(--override-bg); }
+parms.override.menubar.bg.sel { color: var(--override-bg); }
+parms.override.menubar.fg { color: var(--override-fg); }
+parms.override.menubar.fg.loc { color: var(--override-fg); }
+parms.override.menubar.fg.sel { color: var(--override-fg); }
+
+/* Buttons */
+parms.button.bg { color: #9A938B; }
+parms.button.bg.disabled { color: var(--gray-30); }
+parms.button.bg.loc { color: #8A8379; }
+parms.button.bg.sel { color: #9A938B; }
+parms.button.border { color: var(--gray-20); }
+parms.button.border.disabled { color: var(--gray-20); }
+parms.button.border.inner { color: var(--gray-25); }
+parms.button.border.top { color: #7E7870; }
+parms.button.fg { color: #2B302F; }
+parms.button.fg.disabled { color: var(--gray-40); }
+parms.button.expr.bg { color: var(--gray-20); }
+parms.button.expr.bg.loc { color: #A19B94; }
+parms.button.expr.bg.sel { color: #B5B0AB; }
+parms.button.expr.border { color: #B0B0B0; }
+parms.button.expr.border.inner { color: #B0B0B0; }
+parms.button.expr.border.top { color: #A8A29B; }
+parms.button.expr.fg { color: var(--expr-fg); }
+parms.button.override.bg { color: var(--override-bg); }
+parms.button.override.bg.loc { color: #5A8848; }
+parms.button.override.bg.sel { color: var(--override-bg); }
+parms.button.override.border { color: var(--gray-20); }
+parms.button.override.border.inner { color: #70BF44; }
+parms.button.override.border.top { color: var(--op-chop); }
+parms.button.override.fg { color: var(--override-fg); }
+
+/* Fields */
+parms.field.numeric.bg { color: #B5B0AB; }
+parms.field.numeric.bg.loc { color: #A8A29B; }
+parms.field.numeric.bg.selected { color: #9E9890; }
+parms.field.numeric.bg.selected.loc { color: #ADA8A2; }
+parms.field.numeric.fg { color: #2B302F; }
+parms.field.numeric.hilite { color: #929292; }
+parms.field.string.bg { color: #C0C0C0; }
+parms.field.string.bg.loc { color: #B0B0B0; }
+parms.field.string.bg.selected { color: #A8A29B; }
+parms.field.string.bg.selected.loc { color: #B5B0AB; }
+parms.field.string.fg { color: var(--black); }
+parms.field.string.hilite { color: #929292; }
+
+/* Labels & tabs */
+parms.label.fg { color: #3E3A36; }
+parms.label.fg.disabled { color: var(--gray-40); }
+parms.label.fg.loc { color: #5E5850; }
+parms.foldertab.fg { color: #3E3A36; }
+parms.foldertab.loc { color: #5E5850; }
+parms.foldertab.underline { color: #918A82; }
+
+/* Menubar */
+parms.menubar.bg { color: #ADA8A2; }
+parms.menubar.bg.loc { color: #9E9890; }
+parms.menubar.bg.sel { color: #A8A29B; }
+parms.menubar.disabled.bg { color: #B0B0B0; }
+parms.menubar.disabled.fg { color: var(--gray-40); }
+parms.menubar.fg { color: #2B302F; }
+parms.menubar.fg.loc { color: #524E48; }
+parms.menubar.fg.sel { color: #2B302F; }
+parms.menubar.outline { color: #A19A92; }
+parms.menubar.outline.loc { color: #918A82; }
+
+/* Menu entries */
+parms.menuentry.bg { color: #ADA8A2; }
+parms.menuentry.bg.loc { color: #9E9890; }
+parms.menuentry.bg.sel { color: #929292; }
+parms.menuentry.fg { color: #2B302F; }
+parms.menuentry.fg.loc { color: #524E48; }
+parms.menuentry.fg.sel { color: #1F2222; }
+parms.menuentry.outline { color: #A19A92; }
+
+/* Multi input */
+parms.multi.input.bg { color: #B5B0AB; }
+parms.multi.input.bg.loc { color: #A8A29B; }
+parms.multi.input.border { color: #A19A92; }
+parms.multi.input.delete { color: #CC1A40; }
+parms.multi.input.entry.bg { color: #B5B0AB; }
+parms.multi.input.entry.fg { color: #2B302F; }
+parms.multi.input.title.bg { color: #9E9890; }
+parms.multi.input.title.fg { color: #3E3A36; }
+parms.multi.input.up { color: #7D93AF; }
+
+/* Other parms */
+parms.comment.disabled.fg { color: var(--gray-50); }
+parms.const.bg { color: #A8A29B; }
+parms.dialog.bg { color: #B8B3AD; }
+parms.dialog.fg { color: #1F2222; }
+parms.disabled.bg { color: var(--gray-20); }
+parms.disabled.err.bg { color: #800000; }
+parms.disabled.err.fg { color: var(--gray-40); }
+parms.disabled.fg { color: var(--gray-40); }
+parms.err.bg { color: var(--error); }
+parms.err.fg { color: var(--white); }
+parms.expand.bg { color: var(--gray-20); }
+parms.readonly.bg { color: #C2BCB6; }
+parms.readonly.fg { color: #3E3A36; }
+parms.readonly.hilite { color: #BB8800; }
+parms.text.hint { color: #8A8279; }
+parms.text.hint.dark { color: #5E5850; }
+parms.text.hint.light { color: #A19A92; }
+parms.textbox.expr.bg { color: #A8BCCE; }
+parms.textbox.override.bg { color: #8FB088; }
+
+/* Slider */
+parms.slider.bg { color: #ADA8A2; }
+parms.slider.disabled.bg { color: #B8B3AD; }
+parms.slider.disabled.fg { color: #A19A92; }
+parms.slider.fg { color: #5E5850; }
+parms.slider.thumb { color: #918A82; }
+parms.slider.thumb.disabled { color: #9A938C; }
+parms.slider.thumb.disabled.outline { color: #9A938C; }
+parms.slider.thumb.loc { color: #8A8279; }
+parms.slider.thumb.off { color: #918A82; }
+parms.slider.thumb.on { color: #8A8279; }
+parms.slider.thumb.outline { color: #A19A92; }
+parms.slider.thumb.outline.loc { color: #918A82; }
+
+/* Toggle */
+parms.toggle.bg { color: #B5B0AB; }
+parms.toggle.bg.off { color: #949494; }
+parms.toggle.bg.off.loc { color: #9E9890; }
+parms.toggle.bg.on { color: #918A82; }
+parms.toggle.bg.on.loc { color: #A19A92; }
+parms.toggle.disabled.bg { color: #B8B3AD; }
+parms.toggle.disabled.fg { color: #9A938C; }
+parms.toggle.fg { color: #5E5850; }
+parms.toggle.fg.off { color: #524E48; }
+parms.toggle.fg.on { color: #E1DFDC; }
+parms.toggle.outline { color: #A19A92; }
+parms.toggle.thumb.disabled { color: #A8A29B; }
+parms.toggle.thumb.off { color: #B5B0AB; }
+parms.toggle.thumb.off.loc { color: #A8A29B; }
+parms.toggle.thumb.on { color: #524E48; }
+parms.toggle.thumb.on.loc { color: #3E3A36; }
+
+/* ============================================ */
+/* DIALOGS                                     */
+/* ============================================ */
+
+dialog.bg { color: var(--gray-20); }
+dialog.commented { color: var(--info); }
+dialog.commented.comp { color: #0E349E; }
+dialog.commenthint { color: #8A8279; }
+dialog.commenthint.comp { color: #707070; }
+dialog.confirm.bg { color: var(--gray-30); }
+dialog.confirm.fg { color: var(--black); }
+
+/* ============================================ */
+/* REMAINING COLORS                            */
+/* ============================================ */
+
+/* Add operator */
+addoperator.fg { color: var(--black); }
+
+/* Channel export */
+channelexport.destination.bg { color: var(--gray-60); }
+channelexport.node.bg { color: var(--gray-40); }
+channelexport.node.fg { color: #1F2222; }
+
+/* CHOP graph/track */
+chop.graph.bg { color: var(--black); }
+chop.graph.divider { color: #050505; }
+chop.graph.label { color: var(--black); }
+chop.graph.pickbox { color: var(--white); }
+chop.graph.bar.0 { color: #787878; }
+chop.graph.bar.1 { color: #8A8A8A; }
+chop.graph.bar.2 { color: var(--gray-60); }
+chop.graph.bar.3 { color: #CCCCB2; }
+chop.graph.bar.4 { color: #A1CCCC; }
+chop.graph.bar.5 { color: #B2B2E6; }
+chop.graph.bar.6 { color: #E6B2B2; }
+chop.graph.bar.7 { color: #E1DFDC; }
+chop.track.bg { color: var(--black); }
+chop.track.channel { color: var(--gray-40); }
+chop.track.extendindicator { color: var(--white); }
+chop.track.label { color: var(--black); }
+chop.track.label.located.bg { color: #07A400; }
+chop.track.label.selected.bg { color: #1C7720; }
+chop.track.separator { color: var(--gray-50); }
+chop.track.time { color: #0E349E; }
+chop.track.timebar { color: #101010; }
+
+/* Color button */
+colorbutton.bg { color: var(--white); }
+colorbutton.fg { color: var(--black); }
+
+/* Desktop */
+desktop.exposeon { color: var(--error); }
+desktop.nosave { color: #1C7720; }
+
+/* Extended help */
+extendedhelp.bg { color: #B5BCC8; }
+extendedhelp.fg { color: #2B302F; }
+
+/* Frame indicator */
+frameindicator.bg { color: #A8A29B; }
+frameindicator.fg { color: #3E3A36; }
+
+/* Gadget */
+gadget.dualmonitor.bg { color: var(--black); }
+gadget.offscreenwin.bg { color: var(--black); }
+
+/* Geo detail */
+geodetail.bg { color: var(--black); }
+geodetail.compare { color: var(--flag-compare); }
+geodetail.fg { color: var(--info); }
+geodetail.template { color: var(--flag-template); }
+
+/* Geo render */
+georender.aux { color: #FB6600; }
+georender.axes { color: var(--error); }
+georender.cplane { color: #008080; }
+georender.cplane.selected { color: #FF82CC; }
+georender.current { color: var(--current); }
+georender.geo.axes { color: var(--black); }
+georender.geo.axes.selected { color: var(--error); }
+georender.ghost { color: #4C6699; }
+georender.grid { color: #9A938C; }
+georender.grid.snap { color: #918A82; }
+georender.guide1 { color: #FF4C4C; }
+georender.guide2 { color: #FFB24C; }
+georender.handle { color: #FF2B00; }
+georender.handle.axis { color: #00FFFF; }
+georender.handle.col1 { color: #CCCC00; }
+georender.handle.col2 { color: #999900; }
+georender.handle.col3 { color: #666600; }
+georender.handle.col4 { color: #333300; }
+georender.handle.pivot { color: var(--success); }
+georender.handle.rotate { color: var(--warning); }
+georender.handle.selected { color: #FF82CC; }
+georender.handle.xaxis { color: var(--error); }
+georender.handle.yaxis { color: var(--success); }
+georender.handle.zaxis { color: var(--info); }
+georender.heightvector { color: #FF8080; }
+georender.label { color: var(--gray-80); }
+georender.label.aux { color: #CCCC00; }
+georender.label.bg { color: var(--gray-20); }
+georender.ortho.origin { color: #A8A29B; }
+georender.point { color: #1796FF; }
+georender.point.closure { color: #00FFF7; }
+georender.point.selected { color: var(--warning); }
+georender.point.unused { color: #EBE39E; }
+georender.prim.aux { color: #B26666; }
+georender.prim.aux.selected { color: #E699B2; }
+georender.prim.closure { color: #4FE64F; }
+georender.prim.edits { color: var(--white); }
+georender.prim.info { color: #FF26C7; }
+georender.prim.info.selected { color: #FFBFFF; }
+georender.prim.selected { color: var(--warning); }
+georender.selected { color: var(--warning); }
+georender.selected.child { color: #808000; }
+georender.selected.spot { color: var(--white); }
+georender.simpledraw { color: var(--white); }
+georender.subdivide.edge.selected { color: var(--error); }
+georender.subdivide.edge.weighted { color: #00FFFF; }
+georender.template { color: var(--gray-40); }
+georender.wire { color: #CCCCBA; }
+georender.xaxis { color: #6B4040; }
+georender.yaxis { color: #406B40; }
+georender.zaxis { color: #40406B; }
+
+/* Graph */
+graph.grid.axes { color: var(--gray-20); }
+graph.grid.axes.main { color: var(--gray-25); }
+graph.grid.label { color: var(--gray-70); }
+graph.grid.label.selected.bg { color: var(--black); }
+graph.separator { color: #A8A29B; }
+
+/* Icon */
+icon.located { color: var(--white); }
+icon.notlocated { color: var(--gray-80); }
+icon.outline { color: var(--black); }
+icon.shadow { color: var(--gray-40); }
+
+/* Image */
+image.disable.overlay { color: var(--black); }
+
+/* Input field */
+inputfield.disabled { color: #A19A92; }
+inputfield.enabled { color: #2B302F; }
+inputfield.hilite { color: #8A8279; }
+
+/* Knob */
+knob.hash { color: #5E5850; }
+knob.inner { color: #A4B7CE; }
+knob.notch { color: #FDCF00; }
+knob.outline { color: #5E5850; }
+
+/* Lasso */
+lasso.bg { color: var(--black); }
+lasso.fg { color: var(--white); }
+
+/* MIDI device */
+mididevice.mapper.bg { color: #B3B3B3; }
+mididevice.mapper.disabled { color: #669966; }
+mididevice.mapper.enabled { color: #07A400; }
+mididevice.mapper.enabled.outline { color: var(--black); }
+
+/* Net overview */
+netoverview.bg { color: #A8A29B; }
+netoverview.fg { color: #2B302F; }
+
+/* Node chooser */
+nodechooser.down.hilite { color: #70BF44; }
+
+/* Op info */
+opinfo.bg { color: var(--white); }
+opinfo.fg { color: var(--black); }
+
+/* Overlap */
+overlap.bg { color: #838B83; }
+overlap.range1 { color: #FF8A2F; }
+overlap.range2 { color: #FAFAD2; }
+overlap.range3 { color: #FAFAD2; }
+
+/* Panel */
+panel.bg { color: var(--gray-10); }
+panel.edit.normal { color: var(--white); }
+panel.edit.picked { color: var(--warning); }
+
+/* Performance */
+performance.actualtime { color: #008000; }
+performance.bg { color: #E7E2DD; }
+performance.embeddedtime { color: #918A82; }
+performance.text { color: #3E3A36; }
+performance.totaltime { color: #A8A29B; }
+
+/* Pref list */
+preflist.info.child.bg { color: var(--white); }
+preflist.info.child.fg { color: var(--black); }
+preflist.info.error { color: var(--error); }
+preflist.info.filtered { color: var(--gray-60); }
+preflist.info.message { color: var(--gray-80); }
+preflist.info.normal { color: var(--gray-50); }
+preflist.info.warning { color: var(--black); }
+preflist.label.append.bg { color: var(--gray-60); }
+preflist.label.hide.bg { color: var(--gray-60); }
+preflist.text.bad.fg { color: #BFBFBF; }
+preflist.text.good.fg { color: var(--black); }
+preflist.text.input.bg { color: #B3B3B3; }
+preflist.text.picked.bg { color: var(--gray-60); }
+
+/* Ramp */
+ramp.bg { color: var(--black); }
+ramp.blue { color: var(--info); }
+ramp.green { color: var(--success); }
+ramp.red { color: var(--error); }
+ramp.marker.normal.bg { color: var(--black); }
+ramp.marker.normal.fg { color: var(--white); }
+ramp.marker.selected.bg { color: var(--white); }
+ramp.marker.selected.fg { color: var(--black); }
+ramp.saturation { color: var(--error); }
+ramp.value { color: var(--white); }
+
+/* Range */
+range.arrow.bg { color: var(--gray-60); }
+range.arrow.fg { color: #B3B3B3; }
+range.bg { color: var(--gray-50); }
+range.tick { color: var(--black); }
+
+/* Rubber box */
+rubberbox.fg { color: var(--white); }
+
+/* Slider */
+slider.linethumb.bg { color: var(--black); }
+slider.linethumb.fg { color: var(--white); }
+
+/* Split pane */
+splitpane.bar { color: var(--gray-40); }
+splitpane.bar.dragging { color: var(--gray-50); }
+
+/* Startup */
+startup.error { color: #CC2200; }
+startup.message { color: #3E3A36; }
+startup.warning { color: #DB5400; }
+
+/* Swatch */
+swatch.none.bg { color: #E0E0E0; }
+swatch.none.text { color: #555959; }
+
+/* Textport */
+textport.bg { color: #0D0D0D; }
+textport.editable { color: #80E6FF; }
+textport.editing { color: #CCFACC; }
+textport.fg { color: #BFBFBF; }
+textport.hilite { color: #E1DFDC; }
+textport.line { color: #737373; }
+textport.noteditable { color: #8CA6CC; }
+textport.status.bg1 { color: #4D4D4D; }
+textport.status.bg2 { color: var(--gray-50); }
+textport.status.fg1 { color: #E5E5E5; }
+textport.status.fg2 { color: var(--black); }
+
+/* Tooltip */
+tooltip.bg { color: #E7E2DD; }
+tooltip.fg { color: #2B302F; }
+tooltip.fg.value { color: #404060; }
+
+/* TOP viewer */
+top.viewer.bg { color: var(--gray-10); }
+top.viewer.checker { color: var(--gray-10); }
+top.viewer.fieldguide.grid { color: var(--gray-40); }
+top.viewer.fieldguide.hilite { color: var(--error); }
+top.viewer.fieldguide.safe { color: var(--gray-70); }
+top.viewer.label.text { color: var(--white); }
+top.viewer.separator { color: var(--gray-50); }
+
+/* XCF Ladder */
+xcfladder.active.bg { color: #B5B0AB; }
+xcfladder.bg { color: #E1DFDC; }
+xcfladder.circle.baseleft { color: #CC4040; }
+xcfladder.circle.baseright { color: #30A030; }
+xcfladder.circle.bg { color: #B5B0AB; }
+xcfladder.circle.line { color: #8A8279; }
+xcfladder.circle.outline { color: #8A8279; }
+xcfladder.outline { color: #9A938C; }
+xcfladder.text { color: #524E48; }
+xcfladder.text.levels { color: #524E48; }
+/* ============================================ */
+/* TUIK2 UI COLORS                             */
+/* ============================================ */
+
+/* TUIK2 Button */
+TUIK2.button_border_disable { color: var(--tuik2-button-border-disable); }
+TUIK2.button_bordera { color: var(--tuik2-button-bordera); }
+TUIK2.button_borderb { color: var(--tuik2-button-borderb); }
+TUIK2.button_disable { color: var(--tuik2-button-disable); }
+TUIK2.button_off { color: var(--tuik2-button-off); }
+TUIK2.button_offroll { color: var(--tuik2-button-offroll); }
+TUIK2.button_on { color: var(--tuik2-button-on); }
+TUIK2.button_onroll { color: var(--tuik2-button-onroll); }
+TUIK2.buttontext_disable { color: var(--tuik2-buttontext-disable); }
+TUIK2.buttontext_off { color: var(--tuik2-buttontext-off); }
+TUIK2.buttontext_offroll { color: var(--tuik2-buttontext-offroll); }
+TUIK2.buttontext_on { color: var(--tuik2-buttontext-on); }
+TUIK2.buttontext_onroll { color: var(--tuik2-buttontext-onroll); }
+
+/* TUIK2 Checkbox */
+TUIK2.checkbox_border { color: var(--tuik2-checkbox-border); }
+TUIK2.checkbox_border_disable { color: var(--tuik2-checkbox-border-disable); }
+
+/* TUIK2 Field */
+TUIK2.field_disable { color: var(--tuik2-field-disable); }
+TUIK2.field_on { color: var(--tuik2-field-on); }
+TUIK2.field_onroll { color: var(--tuik2-field-onroll); }
+
+/* TUIK2 Gadget */
+TUIK2.gadget_bg { color: var(--tuik2-gadget-bg); }
+TUIK2.gadget_bordera { color: var(--tuik2-gadget-bordera); }
+TUIK2.gadget_borderb { color: var(--tuik2-gadget-borderb); }
+
+/* TUIK2 Header */
+TUIK2.header_bg { color: var(--tuik2-header-bg); }
+TUIK2.header_bordera { color: var(--tuik2-header-bordera); }
+
+/* TUIK2 Indicator */
+TUIK2.indicator_disable { color: var(--tuik2-indicator-disable); }
+TUIK2.indicator_off { color: var(--tuik2-indicator-off); }
+TUIK2.indicator_roll { color: var(--tuik2-indicator-roll); }
+
+/* TUIK2 Knob */
+TUIK2.knob_disable { color: var(--tuik2-knob-disable); }
+TUIK2.knob_off { color: var(--tuik2-knob-off); }
+TUIK2.knob_roll { color: var(--tuik2-knob-roll); }
+TUIK2.knobindicator_disable { color: var(--tuik2-knobindicator-disable); }
+TUIK2.knobindicator_off { color: var(--tuik2-knobindicator-off); }
+TUIK2.knobindicator_roll { color: var(--tuik2-knobindicator-roll); }
+
+/* TUIK2 Label */
+TUIK2.label_text { color: var(--tuik2-label-text); }
+TUIK2.label_text_disable { color: var(--tuik2-label-text-disable); }
+
+/* TUIK2 Operator */
+TUIK2.operator_chop { color: var(--tuik2-operator-chop); }
+TUIK2.operator_chopfilter { color: var(--tuik2-operator-chopfilter); }
+TUIK2.operator_chopgenerator { color: var(--tuik2-operator-chopgenerator); }
+TUIK2.operator_comp { color: var(--tuik2-operator-comp); }
+TUIK2.operator_compfilter { color: var(--tuik2-operator-compfilter); }
+TUIK2.operator_compgenerator { color: var(--tuik2-operator-compgenerator); }
+TUIK2.operator_compvoid { color: var(--tuik2-operator-compvoid); }
+TUIK2.operator_dat { color: var(--tuik2-operator-dat); }
+TUIK2.operator_datfilter { color: var(--tuik2-operator-datfilter); }
+TUIK2.operator_datgenerator { color: var(--tuik2-operator-datgenerator); }
+TUIK2.operator_mat { color: var(--tuik2-operator-mat); }
+TUIK2.operator_matfilter { color: var(--tuik2-operator-matfilter); }
+TUIK2.operator_matgenerator { color: var(--tuik2-operator-matgenerator); }
+TUIK2.operator_sop { color: var(--tuik2-operator-sop); }
+TUIK2.operator_sopfilter { color: var(--tuik2-operator-sopfilter); }
+TUIK2.operator_sopgenerator { color: var(--tuik2-operator-sopgenerator); }
+TUIK2.operator_top { color: var(--tuik2-operator-top); }
+TUIK2.operator_topfilter { color: var(--tuik2-operator-topfilter); }
+TUIK2.operator_topgenerator { color: var(--tuik2-operator-topgenerator); }
+
+/* TUIK2 Slider */
+TUIK2.slider_bg_disable { color: var(--tuik2-slider-bg-disable); }
+TUIK2.slider_bg_on { color: var(--tuik2-slider-bg-on); }
+TUIK2.slider_bg_onroll { color: var(--tuik2-slider-bg-onroll); }
+TUIK2.slider_range_off { color: var(--tuik2-slider-range-off); }
+
+/* TUIK2 Template */
+TUIK2.template_bordera { color: var(--tuik2-template-bordera); }
+TUIK2.template_borderb { color: var(--tuik2-template-borderb); }
+TUIK2.template_off { color: var(--tuik2-template-off); }
+TUIK2.template_offroll { color: var(--tuik2-template-offroll); }
+TUIK2.template_on { color: var(--tuik2-template-on); }
+TUIK2.template_onroll { color: var(--tuik2-template-onroll); }
+
+/* TUIK2 Titlebar */
+TUIK2.titlebar_bordera { color: var(--tuik2-titlebar-bordera); }
+TUIK2.titlebar_off { color: var(--tuik2-titlebar-off); }
+TUIK2.titlebar_on { color: var(--tuik2-titlebar-on); }
+TUIK2.titlebar_text_off { color: var(--tuik2-titlebar-text-off); }
+
+/* TUIK2 Other */
+TUIK2.root_time { color: var(--tuik2-root-time); }
+TUIK2.transparent { color: var(--tuik2-transparent); }
+
+/* ========== Component Parameters: op.WIDGETS (AcroWidgets) ========== */
+
+/* Widget Container */
+op.WIDGETS.par.Wcbg { color: var(--mcw-wc-bg); }
+op.WIDGETS.par.Wcbgselected { color: var(--mcw-wc-bg-selected); }
+op.WIDGETS.par.Wcbgdrag { color: var(--mcw-wc-bg-drag); }
+op.WIDGETS.par.Wcbgdrop { color: var(--mcw-wc-bg-drop); }
+op.WIDGETS.par.Wcheader { color: var(--mcw-wc-header); }
+op.WIDGETS.par.Wcheaderselected { color: var(--mcw-wc-header-selected); }
+op.WIDGETS.par.Wcheaderdrag { color: var(--mcw-wc-header-drag); }
+op.WIDGETS.par.Wcheaderdrop { color: var(--mcw-wc-header-drop); }
+op.WIDGETS.par.Wctext { color: var(--mcw-wc-text); }
+op.WIDGETS.par.Wctextselected { color: var(--mcw-wc-text-selected); }
+op.WIDGETS.par.Wctextdrag { color: var(--mcw-wc-text-drag); }
+op.WIDGETS.par.Wctextdrop { color: var(--mcw-wc-text-drop); }
+
+/* Button */
+op.WIDGETS.par.Buttonoff { color: var(--mcw-button-off); }
+op.WIDGETS.par.Buttonoffroll { color: var(--mcw-button-offroll); }
+op.WIDGETS.par.Buttonon { color: var(--mcw-button-on); }
+op.WIDGETS.par.Buttononroll { color: var(--mcw-button-onroll); }
+op.WIDGETS.par.Buttontextoff { color: var(--mcw-buttontext-off); }
+op.WIDGETS.par.Buttontextoffroll { color: var(--mcw-buttontext-offroll); }
+op.WIDGETS.par.Buttontexton { color: var(--mcw-buttontext-on); }
+op.WIDGETS.par.Buttontextonroll { color: var(--mcw-buttontext-onroll); }
+
+/* Pages (Tabs) */
+op.WIDGETS.par.Taboff { color: var(--mcw-tab-off); }
+op.WIDGETS.par.Taboffroll { color: var(--mcw-tab-offroll); }
+op.WIDGETS.par.Tabon { color: var(--mcw-tab-on); }
+op.WIDGETS.par.Tabonroll { color: var(--mcw-tab-onroll); }
+op.WIDGETS.par.Tabtextoff { color: var(--mcw-tabtext-off); }
+op.WIDGETS.par.Tabtextoffroll { color: var(--mcw-tabtext-offroll); }
+op.WIDGETS.par.Tabtexton { color: var(--mcw-tabtext-on); }
+op.WIDGETS.par.Tabtextonroll { color: var(--mcw-tabtext-onroll); }
+
+/* Matrix */
+op.WIDGETS.par.Matrixsplitoff { color: var(--mcw-matrix-off); }
+op.WIDGETS.par.Matrixsplitoffroll { color: var(--mcw-matrix-offroll); }
+op.WIDGETS.par.Matrixspliton { color: var(--mcw-matrix-on); }

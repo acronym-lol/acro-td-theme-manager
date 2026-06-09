@@ -1,0 +1,876 @@
+/* Theme: TouchDesigner Default */
+
+/* COMP */
+COMP.hilite { color: #808080; }
+
+/* MAT */
+MAT.editbg { color: #ABA366; }
+MAT.hilite { color: #D9D361; }
+
+/* OP */
+OP.default { color: #ABABAB; }
+
+/* POP */
+POP.hilite { color: #8F99FF; }
+
+/* SOP */
+SOP.editbg { color: #618FB8; }
+SOP.hilite { color: #7EC3E5; }
+
+/* addoperator */
+addoperator.fg { color: #000000; }
+
+/* channelexport */
+channelexport.destination.bg { color: #999999; }
+channelexport.node.bg { color: #666666; }
+channelexport.node.fg { color: #E5E5E5; }
+
+/* chop */
+chop.graph.bar.0 { color: #787878; }
+chop.graph.bar.1 { color: #8A8A8A; }
+chop.graph.bar.2 { color: #999999; }
+chop.graph.bar.3 { color: #CCCCB2; }
+chop.graph.bar.4 { color: #A1CCCC; }
+chop.graph.bar.5 { color: #B2B2E5; }
+chop.graph.bar.6 { color: #E5B2B2; }
+chop.graph.bar.7 { color: #E5E5E5; }
+chop.graph.bg { color: #000000; }
+chop.graph.divider { color: #050505; }
+chop.graph.label { color: #000000; }
+chop.graph.pickbox { color: #FFFFFF; }
+chop.track.bg { color: #000000; }
+chop.track.channel { color: #666666; }
+chop.track.extendindicator { color: #FFFFFF; }
+chop.track.label { color: #000000; }
+chop.track.label.located.bg { color: #178A00; }
+chop.track.label.selected.bg { color: #45673E; }
+chop.track.separator { color: #7F7F7F; }
+chop.track.time { color: #3333FF; }
+chop.track.timebar { color: #101010; }
+
+/* circle */
+circle.check { color: #00FF00; }
+circle.minus { color: #FF0000; }
+
+/* colorbutton */
+colorbutton.bg { color: #FFFFFF; }
+colorbutton.fg { color: #000000; }
+
+/* dat */
+dat.bg.editable { color: #1A1A1A; }
+dat.bg.hilite { color: #383838; }
+dat.bg.noteditable { color: #2A2A2A; }
+dat.comment.fg { color: #A6A6A6; }
+dat.glsl.comments { color: #99FF99; }
+dat.glsl.functions { color: #FFFFA8; }
+dat.glsl.keywords { color: #A8A8FF; }
+dat.glsl.numbers { color: #FFFFA8; }
+dat.glsl.preprocessors { color: #A8A8A8; }
+dat.glsl.strings { color: #FFA8A8; }
+dat.indicators { color: #4D4D4D; }
+dat.json.booleans { color: #A8A8FF; }
+dat.json.comments { color: #99FF99; }
+dat.json.numbers { color: #FFFFA8; }
+dat.json.strings { color: #FFA8A8; }
+dat.json.symbols { color: #737373; }
+dat.lineno.bg { color: #252525; }
+dat.lineno.bg.hilite { color: #404040; }
+dat.lineno.fg { color: #B2B2B2; }
+dat.lineno.fg.nodata { color: #4D4D4D; }
+dat.python.comments { color: #99FF99; }
+dat.python.editable { color: #A6F2FF; }
+dat.python.editing { color: #80B2FF; }
+dat.python.functions { color: #FFFFA8; }
+dat.python.hilite { color: #537980; }
+dat.python.keywords { color: #A8A8FF; }
+dat.python.noteditable { color: #66B2CC; }
+dat.python.numbers { color: #FFFFA8; }
+dat.python.strings { color: #FFA8A8; }
+dat.scroll { color: #FFFFFF; }
+dat.table.outline { color: #404040; }
+dat.table.select.background { color: #40434D; }
+dat.table.select.outline { color: #737373; }
+dat.tscript.comments { color: #616161; }
+dat.tscript.editable { color: #D9BDE0; }
+dat.tscript.editing { color: #CC7DBA; }
+dat.tscript.hilite { color: #6C5E70; }
+dat.tscript.noteditable { color: #998AA1; }
+dat.xml.attributes { color: #B0E3FF; }
+dat.xml.attributevalues { color: #E3E399; }
+dat.xml.comments { color: #99FF99; }
+dat.xml.entityrefs { color: #FFA8FF; }
+dat.xml.symbols { color: #737373; }
+dat.xml.tags { color: #85B0FF; }
+dat.yaml.booleans { color: #DBDBFF; }
+dat.yaml.comments { color: #99FF99; }
+dat.yaml.keys { color: #8F8FFF; }
+dat.yaml.numbers { color: #FFFFA8; }
+dat.yaml.strings { color: #FFA8A8; }
+dat.yaml.symbols { color: #D9D9D9; }
+
+/* default */
+default.arrow.locate { color: #FFFFFF; }
+default.arrow.off { color: #000000; }
+default.arrow.on { color: #FFFFFF; }
+default.bg { color: #404040; }
+default.border.hilite { color: #FFFFFF; }
+default.button { color: #BFBFBF; }
+default.button.select { color: #666666; }
+default.buttonstrip { color: #37383C; }
+default.check { color: #BFBFBF; }
+default.error { color: #FF0000; }
+default.fg { color: #A6A6A6; }
+default.field.bg { color: #B2B2B2; }
+default.field.bg.loc { color: #E5E5E5; }
+default.field.bg.sel { color: #F2F2F2; }
+default.field.fg { color: #1A1A1A; }
+default.groove.hilite { color: #404040; }
+default.groove.lolite { color: #37383C; }
+default.input { color: #B3B3B3; }
+default.label { color: #666680; }
+default.line { color: #7F7F7F; }
+default.listentry.bg { color: #5C5C5C; }
+default.listentry.bg.loc { color: #6B6B6B; }
+default.listentry.fg { color: #A6A6A6; }
+default.listentry.outline { color: #333333; }
+default.menu { color: #404040; }
+default.menu.fg { color: #A6A6A6; }
+default.menu.loc { color: #707070; }
+default.menubar { color: #2F3033; }
+default.menubar.loc { color: #707070; }
+default.menuheading.bg { color: #4D4D4D; }
+default.multitext.editable { color: #A6E580; }
+default.multitext.editing { color: #CCFACC; }
+default.multitext.hilite { color: #FFFFFF; }
+default.multitext.noteditable { color: #8CA6CC; }
+default.negativespace { color: #000000; }
+default.override { color: #406775; }
+default.paper { color: #E5E5E5; }
+default.radio { color: #666666; }
+default.rightcheck { color: #808080; }
+default.scrollbars.bg { color: #4D4D4D; }
+default.separator { color: #999999; }
+default.slider.outline { color: #333333; }
+default.slider.thumb { color: #595959; }
+default.slider.thumb.outline { color: #808080; }
+default.stow.bg { color: #4D4D4D; }
+default.tile.line { color: #333333; }
+
+/* desktop */
+desktop.exposeon { color: #FF0000; }
+desktop.nosave { color: #00661A; }
+
+/* dialog */
+dialog.bg { color: #333333; }
+dialog.commented { color: #0000FF; }
+dialog.commented.comp { color: #00B2FF; }
+dialog.commenthint { color: #333333; }
+dialog.commenthint.comp { color: #808080; }
+dialog.confirm.bg { color: #4D4D4D; }
+dialog.confirm.fg { color: #000000; }
+dialog.error { color: #FF0000; }
+
+/* extendedhelp */
+extendedhelp.bg { color: #333336; }
+extendedhelp.fg { color: #A6A6A6; }
+
+/* frameindicator */
+frameindicator.bg { color: #999999; }
+frameindicator.fg { color: #B3B3B3; }
+
+/* gadget */
+gadget.dualmonitor.bg { color: #000000; }
+gadget.offscreenwin.bg { color: #000000; }
+
+/* geodetail */
+geodetail.bg { color: #000000; }
+geodetail.compare { color: #1CC3BE; }
+geodetail.fg { color: #0000FF; }
+geodetail.template { color: #DE60E3; }
+
+/* georender */
+georender.aux { color: #FF7312; }
+georender.axes { color: #FF0000; }
+georender.cplane { color: #008080; }
+georender.cplane.selected { color: #FF82CC; }
+georender.current { color: #00FF00; }
+georender.geo.axes { color: #000000; }
+georender.geo.axes.selected { color: #FF0000; }
+georender.ghost { color: #4D6699; }
+georender.grid { color: #383838; }
+georender.grid.snap { color: #4D4D4D; }
+georender.guide1 { color: #FF4D4D; }
+georender.guide2 { color: #FFB24D; }
+georender.handle { color: #FF2B00; }
+georender.handle.axis { color: #00FFFF; }
+georender.handle.col1 { color: #CCCC00; }
+georender.handle.col2 { color: #999900; }
+georender.handle.col3 { color: #666600; }
+georender.handle.col4 { color: #333300; }
+georender.handle.pivot { color: #00FF00; }
+georender.handle.rotate { color: #FFFF00; }
+georender.handle.selected { color: #FF82CC; }
+georender.handle.xaxis { color: #FF0000; }
+georender.handle.yaxis { color: #00FF00; }
+georender.handle.zaxis { color: #0000FF; }
+georender.heightvector { color: #FF8080; }
+georender.label { color: #CCCCCC; }
+georender.label.aux { color: #CCCC00; }
+georender.label.bg { color: #333333; }
+georender.ortho.origin { color: #262626; }
+georender.point { color: #1796FF; }
+georender.point.closure { color: #00FFF7; }
+georender.point.selected { color: #FFFF00; }
+georender.point.unused { color: #EBE39E; }
+georender.prim.aux { color: #B26666; }
+georender.prim.aux.selected { color: #E599B2; }
+georender.prim.closure { color: #4FE54F; }
+georender.prim.edits { color: #FFFFFF; }
+georender.prim.info { color: #FF26C7; }
+georender.prim.info.selected { color: #FFBFFF; }
+georender.prim.selected { color: #FFFF00; }
+georender.selected { color: #FFFF00; }
+georender.selected.child { color: #808000; }
+georender.selected.spot { color: #FFFFFF; }
+georender.simpledraw { color: #FFFFFF; }
+georender.subdivide.edge.selected { color: #FF0000; }
+georender.subdivide.edge.weighted { color: #00FFFF; }
+georender.template { color: #666666; }
+georender.wire { color: #CCCCBA; }
+georender.xaxis { color: #6B4040; }
+georender.yaxis { color: #406B40; }
+georender.zaxis { color: #40406B; }
+
+/* graph */
+graph.grid.axes { color: #333333; }
+graph.grid.axes.main { color: #404040; }
+graph.grid.label { color: #B2B2B2; }
+graph.grid.label.selected.bg { color: #000000; }
+graph.separator { color: #1F1F1F; }
+
+/* grouplist */
+grouplist.bg { color: #1A1B1F; }
+grouplist.splitbar { color: #999999; }
+
+/* icon */
+icon.located { color: #FFFFFF; }
+icon.notlocated { color: #CCCCCC; }
+icon.outline { color: #000000; }
+icon.shadow { color: #666666; }
+
+/* image */
+image.disable.overlay { color: #000000; }
+
+/* inputfield */
+inputfield.disabled { color: #666666; }
+inputfield.enabled { color: #1A1A1A; }
+inputfield.hilite { color: #A6A6A6; }
+
+/* jive */
+jive.accel.bg { color: #7F7F7F; }
+jive.accel.fg { color: #CCCCCC; }
+jive.channel.bg { color: #1A1B1F; }
+jive.channel.crosshairs { color: #808000; }
+jive.channel.current { color: #00FF00; }
+jive.channel.display { color: #5580FF; }
+jive.channel.normal { color: #999999; }
+jive.channel.picked { color: #FFFF00; }
+jive.channel.plot.aux1 { color: #BF40BF; }
+jive.channel.plot.aux1.mark { color: #DF9FDF; }
+jive.channel.plot.aux2 { color: #BFBF40; }
+jive.channel.plot.aux2.mark { color: #DFDF9F; }
+jive.channel.plot.aux3 { color: #40BFBF; }
+jive.channel.plot.aux3.mark { color: #9FDFDF; }
+jive.channel.plot.aux4 { color: #FF0080; }
+jive.channel.plot.aux4.mark { color: #FF80BF; }
+jive.channel.template { color: #FF80FF; }
+jive.currenttime.bg { color: #B3B3B3; }
+jive.currenttime.fg { color: #FFFFFF; }
+jive.frame.timetext { color: #3333B2; }
+jive.graph.bg { color: #000000; }
+jive.handle.time { color: #8080FF; }
+jive.inout.bg { color: #7F7F7F; }
+jive.inout.fg { color: #CCCCCC; }
+jive.pickbox { color: #FFFFFF; }
+jive.rawvalue.bg { color: #7F7F7F; }
+jive.rawvalue.fg { color: #CCCCCC; }
+jive.scalehandle.bg { color: #7F7F7F; }
+jive.scalehandle.fg { color: #CCCCCC; }
+jive.segment.bg { color: #7F7F7F; }
+jive.segment.fg { color: #CCCCCC; }
+jive.slice.bar { color: #FFFF00; }
+jive.slice.box { color: #7F7F7F; }
+jive.slope.bg { color: #7F7F7F; }
+jive.slope.fg { color: #CCCCCC; }
+jive.timeline.bg { color: #B3B3B3; }
+jive.timeline.fg { color: #FFFFFF; }
+jive.timemark.bg { color: #B3B3B3; }
+jive.timemark.fg { color: #FFFFFF; }
+
+/* knob */
+knob.hash { color: #000000; }
+knob.inner { color: #6675A6; }
+knob.notch { color: #F2F200; }
+knob.outline { color: #000000; }
+
+/* lasso */
+lasso.bg { color: #000000; }
+lasso.fg { color: #FFFFFF; }
+
+/* mididevice */
+mididevice.mapper.bg { color: #B3B3B3; }
+mididevice.mapper.disabled { color: #669966; }
+mididevice.mapper.enabled { color: #1A9933; }
+mididevice.mapper.enabled.outline { color: #000000; }
+
+/* netoverview */
+netoverview.bg { color: #999999; }
+netoverview.fg { color: #000000; }
+
+/* nodechooser */
+nodechooser.down.hilite { color: #669966; }
+
+/* opinfo */
+opinfo.bg { color: #FFFFFF; }
+opinfo.fg { color: #000000; }
+
+/* oplist */
+oplist.bg { color: #1A1B1F; }
+oplist.equal.fg { color: #CCCCCC; }
+oplist.header { color: #0D0D0F; }
+oplist.outline { color: #26282E; }
+oplist.select.edithilite { color: #33363D; }
+oplist.select.field.enable { color: #D9D9D9; }
+oplist.select.field.hilite { color: #808080; }
+oplist.select.hilite { color: #26282E; }
+oplist.select.outline { color: #40434D; }
+oplist.splitbar { color: #999999; }
+oplist.treearrow.fg { color: #000000; }
+oplist.treebutton.bg { color: #7F7F7F; }
+oplist.treebutton.fg { color: #000000; }
+
+/* other */
+CHOP { color: #628C46; }
+COMP { color: #303030; }
+DAT { color: #935C80; }
+MAT { color: #9F9447; }
+POP { color: #504EBF; }
+SOP { color: #4A80B2; }
+TOP { color: #695C93; }
+
+/* overlap */
+overlap.bg { color: #838B83; }
+overlap.range1 { color: #F4A460; }
+overlap.range2 { color: #FAFAD2; }
+overlap.range3 { color: #FAFAD2; }
+
+/* panel */
+panel.bg { color: #1A1A1A; }
+panel.edit.normal { color: #FFFFFF; }
+panel.edit.picked { color: #FFFF00; }
+
+/* parms */
+parms.bind.bg { color: #313033; }
+parms.bind.bg.disabled { color: #6A5C99; }
+parms.bind.bg.enabled { color: #C4B2FF; }
+parms.bind.fg { color: #C4B2FF; }
+parms.bind.hilite { color: #4F4766; }
+parms.bind.indicator { color: #C4B2FF; }
+parms.button.bg { color: #5C5C5C; }
+parms.button.bg.disabled { color: #4D4D4D; }
+parms.button.bg.loc { color: #6B6B6B; }
+parms.button.bg.sel { color: #5C5C5C; }
+parms.button.border { color: #333333; }
+parms.button.border.disabled { color: #333333; }
+parms.button.border.inner { color: #404040; }
+parms.button.border.top { color: #737373; }
+parms.button.expr.bg { color: #333333; }
+parms.button.expr.bg.loc { color: #383838; }
+parms.button.expr.bg.sel { color: #2E2E2E; }
+parms.button.expr.border { color: #262626; }
+parms.button.expr.border.inner { color: #262626; }
+parms.button.expr.border.top { color: #383838; }
+parms.button.expr.fg { color: #A4E5E5; }
+parms.button.fg { color: #B8B8B8; }
+parms.button.fg.disabled { color: #666666; }
+parms.button.override.bg { color: #598040; }
+parms.button.override.bg.loc { color: #668C4D; }
+parms.button.override.bg.sel { color: #598040; }
+parms.button.override.border { color: #333333; }
+parms.button.override.border.inner { color: #364D26; }
+parms.button.override.border.top { color: #628C46; }
+parms.button.override.fg { color: #A4E599; }
+parms.comment.disabled.fg { color: #999999; }
+parms.const.bg { color: #6C6C6C; }
+parms.dialog.bg { color: #404040; }
+parms.dialog.fg { color: #E5E5E5; }
+parms.disabled.bg { color: #404040; }
+parms.disabled.err.bg { color: #800000; }
+parms.disabled.err.fg { color: #666666; }
+parms.disabled.fg { color: #666666; }
+parms.err.bg { color: #FF0000; }
+parms.err.fg { color: #CCCCCC; }
+parms.expand.bg { color: #404040; }
+parms.expr.bg { color: #80B2B2; }
+parms.expr.bg.disabled { color: #405959; }
+parms.expr.bg.off { color: #8CA6A6; }
+parms.expr.bg.off.selected { color: #A4E5E5; }
+parms.expr.bg.on { color: #7FAFAF; }
+parms.expr.bg.on.selected { color: #B5FCFC; }
+parms.expr.bg.selected { color: #A7E5E5; }
+parms.expr.fg { color: #A4E5E5; }
+parms.expr.fg.off { color: #1A1A1A; }
+parms.expr.fg.on { color: #1A1A1A; }
+parms.expr.field.bg { color: #333333; }
+parms.expr.field.bg.loc { color: #2B2B2B; }
+parms.expr.field.bg.selected { color: #262626; }
+parms.expr.field.bg.selected.loc { color: #1F1F1F; }
+parms.expr.field.fg { color: #A4E5E5; }
+parms.expr.field.hilite { color: #527373; }
+parms.expr.hilite { color: #1A4D8C; }
+parms.expr.menubar.bg { color: #80B2B2; }
+parms.expr.menubar.bg.loc { color: #80B2B2; }
+parms.expr.menubar.bg.sel { color: #80B2B2; }
+parms.expr.menubar.fg { color: #1A1A1A; }
+parms.expr.menubar.fg.loc { color: #1A1A1A; }
+parms.expr.menubar.fg.sel { color: #1A1A1A; }
+parms.field.numeric.bg { color: #535353; }
+parms.field.numeric.bg.loc { color: #666666; }
+parms.field.numeric.bg.selected { color: #737373; }
+parms.field.numeric.bg.selected.loc { color: #606060; }
+parms.field.numeric.fg { color: #BFBFBF; }
+parms.field.numeric.hilite { color: #4D4D4D; }
+parms.field.string.bg { color: #B2B2B2; }
+parms.field.string.bg.loc { color: #BFBFBF; }
+parms.field.string.bg.selected { color: #E5E5E5; }
+parms.field.string.bg.selected.loc { color: #F2F2F2; }
+parms.field.string.fg { color: #1A1A1A; }
+parms.field.string.hilite { color: #B8B8B8; }
+parms.foldertab.fg { color: #BFBFBF; }
+parms.foldertab.loc { color: #D9D9D9; }
+parms.foldertab.underline { color: #D9D9D9; }
+parms.label.fg { color: #B8B8B8; }
+parms.label.fg.disabled { color: #666666; }
+parms.label.fg.loc { color: #D9D9D9; }
+parms.menubar.bg { color: #5C5C5C; }
+parms.menubar.bg.loc { color: #6B6B6B; }
+parms.menubar.bg.sel { color: #5C5C5C; }
+parms.menubar.disabled.bg { color: #595959; }
+parms.menubar.disabled.fg { color: #808080; }
+parms.menubar.fg { color: #B8B8B8; }
+parms.menubar.fg.loc { color: #B2B2B2; }
+parms.menubar.fg.sel { color: #B2B2B2; }
+parms.menubar.outline { color: #333333; }
+parms.menubar.outline.loc { color: #333333; }
+parms.menuentry.bg { color: #5C5C5C; }
+parms.menuentry.bg.loc { color: #6B6B6B; }
+parms.menuentry.bg.sel { color: #808080; }
+parms.menuentry.fg { color: #B8B8B8; }
+parms.menuentry.fg.loc { color: #B2B2B2; }
+parms.menuentry.fg.sel { color: #1A1A1A; }
+parms.menuentry.outline { color: #333333; }
+parms.multi.input.bg { color: #4D4D4D; }
+parms.multi.input.bg.loc { color: #575757; }
+parms.multi.input.border { color: #6B6B6B; }
+parms.multi.input.delete { color: #CC1A40; }
+parms.multi.input.entry.bg { color: #4D4D4D; }
+parms.multi.input.entry.fg { color: #B8B8B8; }
+parms.multi.input.title.bg { color: #595959; }
+parms.multi.input.title.fg { color: #B2B2B2; }
+parms.multi.input.up { color: #408C8C; }
+parms.override.bg { color: #598040; }
+parms.override.bg.disabled { color: #24331A; }
+parms.override.bg.off { color: #849A7F; }
+parms.override.bg.off.selected { color: #9EB998; }
+parms.override.bg.on { color: #598040; }
+parms.override.bg.on.selected { color: #669959; }
+parms.override.bg.selected { color: #528033; }
+parms.override.fg { color: #A4E599; }
+parms.override.fg.off { color: #1A1A1A; }
+parms.override.fg.on { color: #1A1A1A; }
+parms.override.field.bg { color: #598040; }
+parms.override.field.bg.loc { color: #668C4D; }
+parms.override.field.bg.selected { color: #528033; }
+parms.override.field.bg.selected.loc { color: #5E8C40; }
+parms.override.field.fg { color: #A4E599; }
+parms.override.field.hilite { color: #2B4029; }
+parms.override.hilite { color: #1A591A; }
+parms.override.menubar.bg { color: #598040; }
+parms.override.menubar.bg.loc { color: #598040; }
+parms.override.menubar.bg.sel { color: #598040; }
+parms.override.menubar.fg { color: #A4E599; }
+parms.override.menubar.fg.loc { color: #A4E599; }
+parms.override.menubar.fg.sel { color: #A4E599; }
+parms.readonly.bg { color: #404040; }
+parms.readonly.fg { color: #BFBF4D; }
+parms.readonly.hilite { color: #595933; }
+parms.slider.bg { color: #2D2D2D; }
+parms.slider.disabled.bg { color: #4D4D4D; }
+parms.slider.disabled.fg { color: #595959; }
+parms.slider.fg { color: #0D0D0D; }
+parms.slider.thumb { color: #666666; }
+parms.slider.thumb.disabled { color: #4D4D4D; }
+parms.slider.thumb.disabled.outline { color: #4D4D4D; }
+parms.slider.thumb.loc { color: #808080; }
+parms.slider.thumb.off { color: #808080; }
+parms.slider.thumb.on { color: #808080; }
+parms.slider.thumb.outline { color: #393939; }
+parms.slider.thumb.outline.loc { color: #393939; }
+parms.text.hint { color: #4D4D4D; }
+parms.text.hint.dark { color: #666666; }
+parms.text.hint.light { color: #999999; }
+parms.textbox.expr.bg { color: #8FA3B0; }
+parms.textbox.override.bg { color: #7EB3CB; }
+parms.toggle.bg { color: #262626; }
+parms.toggle.bg.off { color: #535359; }
+parms.toggle.bg.off.loc { color: #464646; }
+parms.toggle.bg.on { color: #8C8C8C; }
+parms.toggle.bg.on.loc { color: #A6A6A6; }
+parms.toggle.disabled.bg { color: #333333; }
+parms.toggle.disabled.fg { color: #404040; }
+parms.toggle.fg { color: #808080; }
+parms.toggle.fg.off { color: #B2B2B2; }
+parms.toggle.fg.on { color: #1A1A1A; }
+parms.toggle.outline { color: #333333; }
+parms.toggle.thumb.disabled { color: #666666; }
+parms.toggle.thumb.off { color: #333333; }
+parms.toggle.thumb.off.loc { color: #2B2B2B; }
+parms.toggle.thumb.on { color: #B2B2B2; }
+parms.toggle.thumb.on.loc { color: #D9D9D9; }
+
+/* performance */
+performance.actualtime { color: #008000; }
+performance.bg { color: #0D0D0D; }
+performance.embeddedtime { color: #4D4D4D; }
+performance.text { color: #B2B2B2; }
+performance.totaltime { color: #262626; }
+
+/* playback */
+playback.warning { color: #FFFF00; }
+
+/* playbar */
+playbar.bg { color: #999999; }
+playbar.off { color: #1A1A1A; }
+playbar.on { color: #0DCC0D; }
+playbar.reset { color: #FFFF00; }
+
+/* preflist */
+preflist.info.child.bg { color: #FFFFFF; }
+preflist.info.child.fg { color: #000000; }
+preflist.info.error { color: #FF0000; }
+preflist.info.filtered { color: #999999; }
+preflist.info.message { color: #CCCCCC; }
+preflist.info.normal { color: #7F7F7F; }
+preflist.info.warning { color: #000000; }
+preflist.label.append.bg { color: #999999; }
+preflist.label.hide.bg { color: #999999; }
+preflist.text.bad.fg { color: #BFBFBF; }
+preflist.text.good.fg { color: #000000; }
+preflist.text.input.bg { color: #B3B3B3; }
+preflist.text.picked.bg { color: #999999; }
+
+/* ramp */
+ramp.bg { color: #000000; }
+ramp.blue { color: #0000FF; }
+ramp.green { color: #00FF00; }
+ramp.marker.normal.bg { color: #000000; }
+ramp.marker.normal.fg { color: #FFFFFF; }
+ramp.marker.selected.bg { color: #FFFFFF; }
+ramp.marker.selected.fg { color: #000000; }
+ramp.red { color: #FF0000; }
+ramp.saturation { color: #FF0000; }
+ramp.value { color: #FFFFFF; }
+
+/* range */
+range.arrow.bg { color: #999999; }
+range.arrow.fg { color: #B3B3B3; }
+range.bg { color: #7F7F7F; }
+range.tick { color: #000000; }
+
+/* rubberbox */
+rubberbox.fg { color: #FFFFFF; }
+
+/* slider */
+slider.linethumb.bg { color: #000000; }
+slider.linethumb.fg { color: #FFFFFF; }
+
+/* splitpane */
+splitpane.bar { color: #4D4D66; }
+splitpane.bar.dragging { color: #666666; }
+
+/* startup */
+startup.error { color: #FF5959; }
+startup.message { color: #B2B2B2; }
+startup.warning { color: #E5E57F; }
+
+/* statusbar */
+statusbar.bg1 { color: #262626; }
+statusbar.bg2 { color: #808080; }
+statusbar.fg1 { color: #AFAFAF; }
+statusbar.fg2 { color: #000000; }
+
+/* swatch */
+swatch.none.bg { color: #141414; }
+swatch.none.text { color: #A1ABBF; }
+
+/* textport */
+textport.bg { color: #0D0D0D; }
+textport.editable { color: #80E5FF; }
+textport.editing { color: #CCFACC; }
+textport.fg { color: #BFBFBF; }
+textport.hilite { color: #E5E5E5; }
+textport.line { color: #737373; }
+textport.noteditable { color: #8CA6CC; }
+textport.status.bg1 { color: #4D4D4D; }
+textport.status.bg2 { color: #7F7F7F; }
+textport.status.fg1 { color: #E5E5E5; }
+textport.status.fg2 { color: #000000; }
+
+/* textsheet */
+textsheet.bg { color: #1A1B1F; }
+textsheet.editable { color: #B2B2FF; }
+textsheet.noteditable { color: #1ABBE2; }
+textsheet.row.hilite { color: #FFFF00; }
+textsheet.select.copy { color: #666699; }
+textsheet.select.firstdrag { color: #808080; }
+textsheet.select.outline { color: #404040; }
+textsheet.select.stippleoutline { color: #999999; }
+
+/* tile */
+tile.active.bg { color: #171A1C; }
+tile.bg { color: #000000; }
+tile.block { color: #1A1A1A; }
+tile.commented { color: #4D5C99; }
+tile.connection.hilite1 { color: #FFFF00; }
+tile.connection.hilite2 { color: #808000; }
+tile.connector.bg { color: #1A1A1A; }
+tile.connector.fg { color: #BFBFBF; }
+tile.current { color: #00FF00; }
+tile.default.bg { color: #000000; }
+tile.dockedconnection.line { color: #333333; }
+tile.drag.crosshair { color: #666666; }
+tile.droppable { color: #000000; }
+tile.error { color: #FF0000; }
+tile.extraconnection.line { color: #4D5966; }
+tile.extraconnection.line.hilite { color: #667780; }
+tile.flag.activate { color: #FFFFFF; }
+tile.flag.bg { color: #404040; }
+tile.flag.bypass { color: #4D4D4D; }
+tile.flag.bypass.bright { color: #CCCCCC; }
+tile.flag.bypass.cross { color: #CC0000; }
+tile.flag.bypass.nocookcross { color: #000000; }
+tile.flag.bypass.noparentcookcross { color: #525252; }
+tile.flag.bypass.noparentcookcross.bright { color: #CCCCCC; }
+tile.flag.capture { color: #76BB15; }
+tile.flag.clone { color: #FF4D4D; }
+tile.flag.clonechild { color: #802626; }
+tile.flag.compare { color: #1CC3BE; }
+tile.flag.display { color: #327DFF; }
+tile.flag.export { color: #86BF60; }
+tile.flag.expose { color: #FF0000; }
+tile.flag.hardlock { color: #FFFF00; }
+tile.flag.link { color: #C7BA11; }
+tile.flag.origin { color: #D64F37; }
+tile.flag.pickable { color: #E28E19; }
+tile.flag.render { color: #8767FF; }
+tile.flag.saveviewer { color: #B2B2B2; }
+tile.flag.template { color: #DE60E3; }
+tile.flag.viewer { color: #CCCCCC; }
+tile.flagh.bg { color: #2B2B2B; }
+tile.flagh.border { color: #858585; }
+tile.flagh.icon.locate { color: #FFFFFF; }
+tile.flagv.bg.hilite { color: #FFFFFF; }
+tile.flagv.bypass { color: #4D4D4D; }
+tile.flagv.cloneimmune { color: #E57300; }
+tile.flagv.hardlock { color: #D2B422; }
+tile.flagv.icon.locate { color: #FFFFFF; }
+tile.flagv.mastercloneimmune { color: #734D00; }
+tile.ghost { color: #4D4D4D; }
+tile.hiddenconnection.line { color: #4D6659; }
+tile.icon.bg { color: #333333; }
+tile.locate { color: #333333; }
+tile.name.bg { color: #333333; }
+tile.name.border { color: #858585; }
+tile.name.fg { color: #BFBFBF; }
+tile.name.hilite { color: #666666; }
+tile.picked { color: #D9D900; }
+tile.replicatorconnection.line { color: #333333; }
+tile.resizeborder { color: #333333; }
+tile.utility.current { color: #B2B2B2; }
+tile.utility.picked { color: #B2B2B2; }
+tile.warning { color: #FFFF00; }
+
+/* tooltip */
+tooltip.bg { color: #262626; }
+tooltip.fg { color: #737373; }
+tooltip.fg.value { color: #B2B2CC; }
+
+/* top */
+top.viewer.bg { color: #1A1A1A; }
+top.viewer.checker { color: #1A1A1A; }
+top.viewer.fieldguide.grid { color: #666666; }
+top.viewer.fieldguide.hilite { color: #FF0000; }
+top.viewer.fieldguide.safe { color: #B2B2B2; }
+top.viewer.label.text { color: #FFFFFF; }
+top.viewer.separator { color: #7F7F7F; }
+
+/* worksheet */
+worksheet.autoscroll.highlight { color: #202026; }
+worksheet.bg { color: #1A1B1F; }
+worksheet.external.flag { color: #666626; }
+worksheet.grid { color: #1A1A26; }
+worksheet.gridxy { color: #26264D; }
+worksheet.newnode { color: #CCCCCC; }
+worksheet.operatemode { color: #CC4D4D; }
+worksheet.pickbox { color: #CCCCCC; }
+worksheet.private { color: #1A1AD9; }
+
+/* xcfladder */
+xcfladder.active.bg { color: #262626; }
+xcfladder.bg { color: #1A1A1A; }
+xcfladder.circle.baseleft { color: #802626; }
+xcfladder.circle.baseright { color: #1A801A; }
+xcfladder.circle.bg { color: #262626; }
+xcfladder.circle.line { color: #262626; }
+xcfladder.circle.outline { color: #262626; }
+xcfladder.outline { color: #404040; }
+xcfladder.text { color: #999999; }
+xcfladder.text.levels { color: #999999; }
+
+/* ========== TUIK2 UI Colors ========== */
+
+/* TUIK2 Button */
+TUIK2.button_border_disable { color: rgba(35, 36, 38, 0.8); }
+TUIK2.button_bordera { color: rgba(106, 108, 115, 1.0); }
+TUIK2.button_borderb { color: rgba(35, 36, 38, 1.0); }
+TUIK2.button_disable { color: rgba(54, 57, 64, 1.0); }
+TUIK2.button_off { color: rgba(54, 57, 64, 1.0); }
+TUIK2.button_offroll { color: rgba(89, 102, 128, 1.0); }
+TUIK2.button_on { color: rgba(191, 129, 72, 1.0); }
+TUIK2.button_onroll { color: rgba(150, 113, 78, 1.0); }
+TUIK2.buttontext_disable { color: rgba(105, 107, 115, 1.0); }
+TUIK2.buttontext_off { color: rgba(161, 171, 191, 1.0); }
+TUIK2.buttontext_offroll { color: rgba(203, 216, 242, 1.0); }
+TUIK2.buttontext_on { color: rgba(64, 2, 0, 1.0); }
+TUIK2.buttontext_onroll { color: rgba(230, 232, 242, 1.0); }
+
+/* TUIK2 Checkbox */
+TUIK2.checkbox_border { color: rgba(186, 186, 191, 0.8); }
+TUIK2.checkbox_border_disable { color: rgba(84, 84, 89, 0.8); }
+
+/* TUIK2 Field */
+TUIK2.field_disable { color: rgba(48, 54, 64, 0.8); }
+TUIK2.field_on { color: rgba(74, 79, 89, 0.8); }
+TUIK2.field_onroll { color: rgba(48, 54, 64, 0.8); }
+
+/* TUIK2 Gadget */
+TUIK2.gadget_bg { color: rgba(59, 60, 64, 0.8); }
+TUIK2.gadget_bordera { color: rgba(106, 108, 115, 1.0); }
+TUIK2.gadget_borderb { color: rgba(35, 36, 38, 1.0); }
+
+/* TUIK2 Header */
+TUIK2.header_bg { color: rgba(71, 77, 89, 0.8); }
+TUIK2.header_bordera { color: rgba(122, 128, 140, 0.8); }
+
+/* TUIK2 Indicator */
+TUIK2.indicator_disable { color: rgba(128, 0, 0, 1.0); }
+TUIK2.indicator_off { color: rgba(204, 0, 0, 1.0); }
+TUIK2.indicator_roll { color: rgba(255, 0, 0, 1.0); }
+
+/* TUIK2 Knob */
+TUIK2.knob_disable { color: rgba(30, 31, 33, 1.0); }
+TUIK2.knob_off { color: rgba(35, 36, 38, 1.0); }
+TUIK2.knob_roll { color: rgba(48, 49, 51, 1.0); }
+TUIK2.knobindicator_disable { color: rgba(51, 51, 76, 1.0); }
+TUIK2.knobindicator_off { color: rgba(76, 76, 102, 1.0); }
+TUIK2.knobindicator_roll { color: rgba(153, 153, 178, 1.0); }
+
+/* TUIK2 Label */
+TUIK2.label_text { color: rgba(177, 180, 191, 0.8); }
+TUIK2.label_text_disable { color: rgba(177, 180, 191, 0.8); }
+
+/* TUIK2 Operator */
+TUIK2.operator_CHOP { color: rgba(98, 140, 70, 0.8); }
+TUIK2.operator_CHOPfilter { color: rgba(72, 112, 45, 0.95); }
+TUIK2.operator_CHOPgenerator { color: rgba(49, 84, 25, 0.95); }
+TUIK2.operator_COMP { color: rgba(48, 48, 48, 0.8); }
+TUIK2.operator_COMPfilter { color: rgba(43, 43, 43, 0.96); }
+TUIK2.operator_COMPgenerator { color: rgba(34, 34, 34, 0.95); }
+TUIK2.operator_COMPvoid { color: rgba(45, 45, 45, 0.95); }
+TUIK2.operator_DAT { color: rgba(147, 92, 127, 0.8); }
+TUIK2.operator_DATfilter { color: rgba(118, 65, 98, 0.95); }
+TUIK2.operator_DATgenerator { color: rgba(103, 49, 83, 0.8); }
+TUIK2.operator_MAT { color: rgba(159, 148, 71, 0.8); }
+TUIK2.operator_MATfilter { color: rgba(127, 126, 57, 0.95); }
+TUIK2.operator_MATgenerator { color: rgba(111, 110, 50, 0.95); }
+TUIK2.operator_SOP { color: rgba(74, 127, 178, 0.8); }
+TUIK2.operator_SOPfilter { color: rgba(43, 93, 142, 0.95); }
+TUIK2.operator_SOPgenerator { color: rgba(23, 75, 125, 0.95); }
+TUIK2.operator_TOP { color: rgba(105, 92, 147, 0.8); }
+TUIK2.operator_TOPfilter { color: rgba(97, 81, 147, 0.95); }
+TUIK2.operator_TOPgenerator { color: rgba(77, 65, 118, 0.95); }
+
+/* TUIK2 Slider */
+TUIK2.slider_bg_disable { color: rgba(33, 35, 38, 0.8); }
+TUIK2.slider_bg_on { color: rgba(59, 60, 64, 0.8); }
+TUIK2.slider_bg_onroll { color: rgba(46, 47, 51, 0.8); }
+TUIK2.slider_range_off { color: rgba(65, 92, 120, 0.2); }
+
+/* TUIK2 Template */
+TUIK2.template_bordera { color: rgba(138, 0, 138, 0.8); }
+TUIK2.template_borderb { color: rgba(46, 0, 46, 0.8); }
+TUIK2.template_off { color: rgba(46, 0, 46, 0.8); }
+TUIK2.template_offroll { color: rgba(69, 0, 69, 0.8); }
+TUIK2.template_on { color: rgba(230, 0, 230, 0.8); }
+TUIK2.template_onroll { color: rgba(230, 0, 230, 0.8); }
+
+/* TUIK2 Titlebar */
+TUIK2.titlebar_bordera { color: rgba(105, 123, 157, 1.0); }
+TUIK2.titlebar_off { color: rgba(54, 71, 106, 1.0); }
+TUIK2.titlebar_on { color: rgba(67, 84, 119, 1.0); }
+TUIK2.titlebar_text_off { color: rgba(182, 199, 234, 1.0); }
+
+/* TUIK2 Other */
+TUIK2.root_time { color: rgba(125, 166, 247, 1.0); }
+TUIK2.transparent { color: rgba(0, 0, 0, 0.0); }
+
+/* ========== Component Parameters: op.WIDGETS (AcroWidgets) ========== */
+
+/* Widget Container */
+op.WIDGETS.par.Wcbg { color: rgba(38, 38, 38, 1); }
+op.WIDGETS.par.Wcbgselected { color: rgba(255, 179, 0, 1); }
+op.WIDGETS.par.Wcbgdrag { color: rgba(0, 255, 255, 1); }
+op.WIDGETS.par.Wcbgdrop { color: rgba(0, 255, 185, 1); }
+op.WIDGETS.par.Wcheader { color: rgba(64, 64, 64, 1); }
+op.WIDGETS.par.Wcheaderselected { color: rgba(255, 194, 51, 1); }
+op.WIDGETS.par.Wcheaderdrag { color: rgba(51, 255, 255, 1); }
+op.WIDGETS.par.Wcheaderdrop { color: rgba(51, 255, 199, 1); }
+op.WIDGETS.par.Wctext { color: rgba(153, 153, 153, 1); }
+op.WIDGETS.par.Wctextselected { color: rgba(0, 0, 0, 1); }
+op.WIDGETS.par.Wctextdrag { color: rgba(0, 0, 0, 1); }
+op.WIDGETS.par.Wctextdrop { color: rgba(0, 0, 0, 1); }
+
+/* Button */
+op.WIDGETS.par.Buttonoff { color: rgba(26, 26, 26, 1); }
+op.WIDGETS.par.Buttonoffroll { color: rgba(51, 51, 51, 1); }
+op.WIDGETS.par.Buttonon { color: rgba(255, 179, 0, 1); }
+op.WIDGETS.par.Buttononroll { color: rgba(255, 204, 26, 1); }
+op.WIDGETS.par.Buttontextoff { color: rgba(230, 230, 230, 1); }
+op.WIDGETS.par.Buttontextoffroll { color: rgba(255, 255, 255, 1); }
+op.WIDGETS.par.Buttontexton { color: rgba(0, 0, 0, 1); }
+op.WIDGETS.par.Buttontextonroll { color: rgba(0, 0, 0, 1); }
+
+/* Pages (Tabs) */
+op.WIDGETS.par.Taboff { color: rgba(26, 26, 26, 1); }
+op.WIDGETS.par.Taboffroll { color: rgba(51, 51, 51, 1); }
+op.WIDGETS.par.Tabon { color: rgba(102, 102, 102, 1); }
+op.WIDGETS.par.Tabonroll { color: rgba(128, 128, 128, 1); }
+op.WIDGETS.par.Tabtextoff { color: rgba(179, 179, 179, 1); }
+op.WIDGETS.par.Tabtextoffroll { color: rgba(255, 255, 255, 1); }
+op.WIDGETS.par.Tabtexton { color: rgba(230, 230, 230, 1); }
+op.WIDGETS.par.Tabtextonroll { color: rgba(255, 255, 255, 1); }
+
+/* Matrix */
+op.WIDGETS.par.Matrixsplitoff { color: rgba(204, 204, 204, 1); }
+op.WIDGETS.par.Matrixsplitoffroll { color: rgba(26, 26, 26, 1); }
+op.WIDGETS.par.Matrixspliton { color: rgba(255, 0, 0, 1); }
