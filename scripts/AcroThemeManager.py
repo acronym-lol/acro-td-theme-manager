@@ -635,7 +635,7 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
                 debug(f'AcroThemeManager: Invalid op color key: {key}')
                 continue
 
-            shortcut = match.group(1)  # 'MCW'
+            shortcut = match.group(1)  # 'AW'
             par_base = match.group(2)  # 'Tabcolor'
 
             # Resolve op shortcut dynamically

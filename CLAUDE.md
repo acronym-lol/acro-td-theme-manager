@@ -45,7 +45,7 @@ Themes use two sections:
 ### Selector Name Format
 - Core TD colors: `category.element.state` (e.g., `parms.button.bg.loc`)
 - TUIK2 colors: `TUIK2.element_state` (e.g., `TUIK2.button_off`)
-- Component params: `op.SHORTCUT.par.Parname` (e.g., `op.MCW.par.Wcbg`)
+- Component params: `op.SHORTCUT.par.Parname` (e.g., `op.AW.par.Wcbg`)
 
 ### TUIK2 Operator Selectors — Case Sensitive
 The TUIK2 operator selectors use UPPERCASE family names:
