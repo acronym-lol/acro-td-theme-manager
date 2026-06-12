@@ -834,43 +834,43 @@ TUIK2.titlebar_text_off { color: rgba(182, 199, 234, 1.0); }
 TUIK2.root_time { color: rgba(125, 166, 247, 1.0); }
 TUIK2.transparent { color: rgba(0, 0, 0, 0.0); }
 
-/* ========== Component Parameters: op.WIDGETS (AcroWidgets) ========== */
+/* ========== Component Parameters: op.AW (AcroWidgets) ========== */
 
 /* Widget Container */
-op.WIDGETS.par.Wcbg { color: rgba(38, 38, 38, 1); }
-op.WIDGETS.par.Wcbgselected { color: rgba(255, 179, 0, 1); }
-op.WIDGETS.par.Wcbgdrag { color: rgba(0, 255, 255, 1); }
-op.WIDGETS.par.Wcbgdrop { color: rgba(0, 255, 185, 1); }
-op.WIDGETS.par.Wcheader { color: rgba(64, 64, 64, 1); }
-op.WIDGETS.par.Wcheaderselected { color: rgba(255, 194, 51, 1); }
-op.WIDGETS.par.Wcheaderdrag { color: rgba(51, 255, 255, 1); }
-op.WIDGETS.par.Wcheaderdrop { color: rgba(51, 255, 199, 1); }
-op.WIDGETS.par.Wctext { color: rgba(153, 153, 153, 1); }
-op.WIDGETS.par.Wctextselected { color: rgba(0, 0, 0, 1); }
-op.WIDGETS.par.Wctextdrag { color: rgba(0, 0, 0, 1); }
-op.WIDGETS.par.Wctextdrop { color: rgba(0, 0, 0, 1); }
+op.AW.par.Wcbg { color: rgba(38, 38, 38, 1); }
+op.AW.par.Wcbgselected { color: rgba(255, 179, 0, 1); }
+op.AW.par.Wcbgdrag { color: rgba(0, 255, 255, 1); }
+op.AW.par.Wcbgdrop { color: rgba(0, 255, 185, 1); }
+op.AW.par.Wcheader { color: rgba(64, 64, 64, 1); }
+op.AW.par.Wcheaderselected { color: rgba(255, 194, 51, 1); }
+op.AW.par.Wcheaderdrag { color: rgba(51, 255, 255, 1); }
+op.AW.par.Wcheaderdrop { color: rgba(51, 255, 199, 1); }
+op.AW.par.Wctext { color: rgba(153, 153, 153, 1); }
+op.AW.par.Wctextselected { color: rgba(0, 0, 0, 1); }
+op.AW.par.Wctextdrag { color: rgba(0, 0, 0, 1); }
+op.AW.par.Wctextdrop { color: rgba(0, 0, 0, 1); }
 
 /* Button */
-op.WIDGETS.par.Buttonoff { color: rgba(26, 26, 26, 1); }
-op.WIDGETS.par.Buttonoffroll { color: rgba(51, 51, 51, 1); }
-op.WIDGETS.par.Buttonon { color: rgba(255, 179, 0, 1); }
-op.WIDGETS.par.Buttononroll { color: rgba(255, 204, 26, 1); }
-op.WIDGETS.par.Buttontextoff { color: rgba(230, 230, 230, 1); }
-op.WIDGETS.par.Buttontextoffroll { color: rgba(255, 255, 255, 1); }
-op.WIDGETS.par.Buttontexton { color: rgba(0, 0, 0, 1); }
-op.WIDGETS.par.Buttontextonroll { color: rgba(0, 0, 0, 1); }
+op.AW.par.Buttonoff { color: rgba(26, 26, 26, 1); }
+op.AW.par.Buttonoffroll { color: rgba(51, 51, 51, 1); }
+op.AW.par.Buttonon { color: rgba(255, 179, 0, 1); }
+op.AW.par.Buttononroll { color: rgba(255, 204, 26, 1); }
+op.AW.par.Buttontextoff { color: rgba(230, 230, 230, 1); }
+op.AW.par.Buttontextoffroll { color: rgba(255, 255, 255, 1); }
+op.AW.par.Buttontexton { color: rgba(0, 0, 0, 1); }
+op.AW.par.Buttontextonroll { color: rgba(0, 0, 0, 1); }
 
 /* Pages (Tabs) */
-op.WIDGETS.par.Taboff { color: rgba(26, 26, 26, 1); }
-op.WIDGETS.par.Taboffroll { color: rgba(51, 51, 51, 1); }
-op.WIDGETS.par.Tabon { color: rgba(102, 102, 102, 1); }
-op.WIDGETS.par.Tabonroll { color: rgba(128, 128, 128, 1); }
-op.WIDGETS.par.Tabtextoff { color: rgba(179, 179, 179, 1); }
-op.WIDGETS.par.Tabtextoffroll { color: rgba(255, 255, 255, 1); }
-op.WIDGETS.par.Tabtexton { color: rgba(230, 230, 230, 1); }
-op.WIDGETS.par.Tabtextonroll { color: rgba(255, 255, 255, 1); }
+op.AW.par.Taboff { color: rgba(26, 26, 26, 1); }
+op.AW.par.Taboffroll { color: rgba(51, 51, 51, 1); }
+op.AW.par.Tabon { color: rgba(102, 102, 102, 1); }
+op.AW.par.Tabonroll { color: rgba(128, 128, 128, 1); }
+op.AW.par.Tabtextoff { color: rgba(179, 179, 179, 1); }
+op.AW.par.Tabtextoffroll { color: rgba(255, 255, 255, 1); }
+op.AW.par.Tabtexton { color: rgba(230, 230, 230, 1); }
+op.AW.par.Tabtextonroll { color: rgba(255, 255, 255, 1); }
 
 /* Matrix */
-op.WIDGETS.par.Matrixsplitoff { color: rgba(204, 204, 204, 1); }
-op.WIDGETS.par.Matrixsplitoffroll { color: rgba(26, 26, 26, 1); }
-op.WIDGETS.par.Matrixspliton { color: rgba(255, 0, 0, 1); }
+op.AW.par.Matrixsplitoff { color: rgba(204, 204, 204, 1); }
+op.AW.par.Matrixsplitoffroll { color: rgba(26, 26, 26, 1); }
+op.AW.par.Matrixspliton { color: rgba(255, 0, 0, 1); }

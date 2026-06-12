@@ -110,7 +110,7 @@ A theme file has two sections:
 |--------|------------------|-------|
 | `ui.colors` keys | `dat.bg.editable { color: var(--dat-bg); }` | Uses TD's dotted color path verbatim. |
 | TUIK2 colors | `TUIK2.button_off { color: var(--accent); }` | Lowercased except for op-family names (`TUIK2.operator_CHOP`). |
-| Op shortcut params | `op.WIDGETS.par.Tabcolor { color: var(--accent); }` | Maps to four parameters: `Tabcolorr`, `Tabcolorg`, `Tabcolorb`, `Tabcolora`. |
+| Op shortcut params | `op.AW.par.Tabcolor { color: var(--accent); }` | Maps to four parameters: `Tabcolorr`, `Tabcolorg`, `Tabcolorb`, `Tabcolora`. |
 
 Alpha is stripped automatically when writing to `ui.colors` (TD core does not store alpha). It is preserved for TUIK2 and op-shortcut writes.
 

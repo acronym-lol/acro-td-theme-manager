@@ -521,9 +521,9 @@
 
 
     /* ============================================================ */
-    /* SECTION 16: McWIDGETS                                        */
+    /* SECTION 16: AcroWidgets                                        */
     /* ============================================================ */
-    /* AcroWidgets (op.WIDGETS) UI component colors for widget containers, */
+    /* AcroWidgets (op.AW) UI component colors for widget containers, */
     /* buttons, tabs, and matrix elements.                          */
     /* ============================================================ */
 
@@ -1762,59 +1762,59 @@ TUIK2.transparent { color: var(--tuik2-transparent); }
 
 
 /* ============================================================ */
-/* McWIDGETS (op.WIDGETS)                                           */
+/* AcroWidgets (op.AW)                                           */
 /* Widget container, button, tab, and matrix colors             */
 /* ============================================================ */
 
 /* Widget Container */
-op.WIDGETS.par.Wcbg { color: var(--mcw-wc-bg); }
-op.WIDGETS.par.Wcbgselected { color: var(--mcw-wc-bg-selected); }
-op.WIDGETS.par.Wcbgdrag { color: var(--mcw-wc-bg-drag); }
-op.WIDGETS.par.Wcbgdrop { color: var(--mcw-wc-bg-drop); }
-op.WIDGETS.par.Wcheader { color: var(--mcw-wc-header); }
-op.WIDGETS.par.Wcheaderselected { color: var(--mcw-wc-header-selected); }
-op.WIDGETS.par.Wcheaderdrag { color: var(--mcw-wc-header-drag); }
-op.WIDGETS.par.Wcheaderdrop { color: var(--mcw-wc-header-drop); }
-op.WIDGETS.par.Wctext { color: var(--mcw-wc-text); }
-op.WIDGETS.par.Wctextselected { color: var(--mcw-wc-text-selected); }
-op.WIDGETS.par.Wctextdrag { color: var(--mcw-wc-text-drag); }
-op.WIDGETS.par.Wctextdrop { color: var(--mcw-wc-text-drop); }
+op.AW.par.Wcbg { color: var(--mcw-wc-bg); }
+op.AW.par.Wcbgselected { color: var(--mcw-wc-bg-selected); }
+op.AW.par.Wcbgdrag { color: var(--mcw-wc-bg-drag); }
+op.AW.par.Wcbgdrop { color: var(--mcw-wc-bg-drop); }
+op.AW.par.Wcheader { color: var(--mcw-wc-header); }
+op.AW.par.Wcheaderselected { color: var(--mcw-wc-header-selected); }
+op.AW.par.Wcheaderdrag { color: var(--mcw-wc-header-drag); }
+op.AW.par.Wcheaderdrop { color: var(--mcw-wc-header-drop); }
+op.AW.par.Wctext { color: var(--mcw-wc-text); }
+op.AW.par.Wctextselected { color: var(--mcw-wc-text-selected); }
+op.AW.par.Wctextdrag { color: var(--mcw-wc-text-drag); }
+op.AW.par.Wctextdrop { color: var(--mcw-wc-text-drop); }
 
 /* Button */
-op.WIDGETS.par.Buttonoff { color: var(--mcw-button-off); }
-op.WIDGETS.par.Buttonoffroll { color: var(--mcw-button-offroll); }
-op.WIDGETS.par.Buttonon { color: var(--mcw-button-on); }
-op.WIDGETS.par.Buttononroll { color: var(--mcw-button-onroll); }
-op.WIDGETS.par.Buttontextoff { color: var(--mcw-buttontext-off); }
-op.WIDGETS.par.Buttontextoffroll { color: var(--mcw-buttontext-offroll); }
-op.WIDGETS.par.Buttontexton { color: var(--mcw-buttontext-on); }
-op.WIDGETS.par.Buttontextonroll { color: var(--mcw-buttontext-onroll); }
+op.AW.par.Buttonoff { color: var(--mcw-button-off); }
+op.AW.par.Buttonoffroll { color: var(--mcw-button-offroll); }
+op.AW.par.Buttonon { color: var(--mcw-button-on); }
+op.AW.par.Buttononroll { color: var(--mcw-button-onroll); }
+op.AW.par.Buttontextoff { color: var(--mcw-buttontext-off); }
+op.AW.par.Buttontextoffroll { color: var(--mcw-buttontext-offroll); }
+op.AW.par.Buttontexton { color: var(--mcw-buttontext-on); }
+op.AW.par.Buttontextonroll { color: var(--mcw-buttontext-onroll); }
 
 /* Pages (Tabs) */
-op.WIDGETS.par.Taboff { color: var(--mcw-tab-off); }
-op.WIDGETS.par.Taboffroll { color: var(--mcw-tab-offroll); }
-op.WIDGETS.par.Tabon { color: var(--mcw-tab-on); }
-op.WIDGETS.par.Tabonroll { color: var(--mcw-tab-onroll); }
-op.WIDGETS.par.Tabtextoff { color: var(--mcw-tabtext-off); }
-op.WIDGETS.par.Tabtextoffroll { color: var(--mcw-tabtext-offroll); }
-op.WIDGETS.par.Tabtexton { color: var(--mcw-tabtext-on); }
-op.WIDGETS.par.Tabtextonroll { color: var(--mcw-tabtext-onroll); }
+op.AW.par.Taboff { color: var(--mcw-tab-off); }
+op.AW.par.Taboffroll { color: var(--mcw-tab-offroll); }
+op.AW.par.Tabon { color: var(--mcw-tab-on); }
+op.AW.par.Tabonroll { color: var(--mcw-tab-onroll); }
+op.AW.par.Tabtextoff { color: var(--mcw-tabtext-off); }
+op.AW.par.Tabtextoffroll { color: var(--mcw-tabtext-offroll); }
+op.AW.par.Tabtexton { color: var(--mcw-tabtext-on); }
+op.AW.par.Tabtextonroll { color: var(--mcw-tabtext-onroll); }
 
 /* Matrix */
-op.WIDGETS.par.Matrixsplitoff { color: var(--mcw-matrix-off); }
-op.WIDGETS.par.Matrixsplitoffroll { color: var(--mcw-matrix-offroll); }
-op.WIDGETS.par.Matrixspliton { color: var(--mcw-matrix-on); }
+op.AW.par.Matrixsplitoff { color: var(--mcw-matrix-off); }
+op.AW.par.Matrixsplitoffroll { color: var(--mcw-matrix-offroll); }
+op.AW.par.Matrixspliton { color: var(--mcw-matrix-on); }
 
 /* List */
-op.WIDGETS.par.Listbg { color: var(--mcw-list-bg); }
-op.WIDGETS.par.Listitemoff { color: var(--mcw-list-itemoff); }
-op.WIDGETS.par.Listitemoffroll { color: var(--mcw-list-itemoffroll); }
-op.WIDGETS.par.Listitemon { color: var(--mcw-list-itemon); }
-op.WIDGETS.par.Listitemonroll { color: var(--mcw-list-itemonroll); }
-op.WIDGETS.par.Listtextoff { color: var(--mcw-list-textoff); }
-op.WIDGETS.par.Listtextoffroll { color: var(--mcw-list-textoffroll); }
-op.WIDGETS.par.Listtexton { color: var(--mcw-list-texton); }
-op.WIDGETS.par.Listtextonroll { color: var(--mcw-list-textonroll); }
+op.AW.par.Listbg { color: var(--mcw-list-bg); }
+op.AW.par.Listitemoff { color: var(--mcw-list-itemoff); }
+op.AW.par.Listitemoffroll { color: var(--mcw-list-itemoffroll); }
+op.AW.par.Listitemon { color: var(--mcw-list-itemon); }
+op.AW.par.Listitemonroll { color: var(--mcw-list-itemonroll); }
+op.AW.par.Listtextoff { color: var(--mcw-list-textoff); }
+op.AW.par.Listtextoffroll { color: var(--mcw-list-textoffroll); }
+op.AW.par.Listtexton { color: var(--mcw-list-texton); }
+op.AW.par.Listtextonroll { color: var(--mcw-list-textonroll); }
 
 /* ========== Component Parameters: op.AM (Macros) ========== */
 
