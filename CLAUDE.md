@@ -160,6 +160,13 @@ To identify which selector controls a specific UI element:
 
 ## Theme Files
 
+> Several themes (Dracula, Catppuccin, Nord, Gruvbox, Everforest, Kanagawa,
+> Tokyo Night, Rosé Pine, Solarized, One Dark, Monokai) are independent color
+> interpretations of publicly documented palettes — no upstream source is
+> copied. See [`ATTRIBUTIONS.md`](ATTRIBUTIONS.md) for credits and the
+> not-affiliated disclaimer. Palette colors are not copyrightable, so these
+> credits are a courtesy, not a license requirement.
+
 ### System / Template
 | File | Description |
 |------|-------------|
@@ -199,7 +206,7 @@ To identify which selector controls a specific UI element:
 ### Specialty / Creative Themes (built from base template)
 | File | Description |
 |------|-------------|
-| `lisafrank2.css` | Lisa Frank — neon rainbow overdose, rainbow gray ramp |
+| `rainbow.css` | Rainbow — neon rainbow overdose, rainbow gray ramp |
 | `catnap.css` | Catnap — cat-vision blues/greens/grays, twilight palette |
 | `darkroom.css` | Darkroom — red-only night vision, preserves dark adaptation |
 | `terminal.css` | Terminal — green phosphor CRT (VT100/Apple II) |
@@ -207,7 +214,8 @@ To identify which selector controls a specific UI element:
 | `banana.css` | Banana — banana-themed, ripeness gradient CHOP bars |
 | `abyss.css` | Abyss — deep ocean bioluminescence |
 | `synthwave.css` | Synthwave — 80s retrowave neon, hot pink/electric blue |
-| `barbie.css` | Barbie — aggressively, relentlessly pink |
+| `bubblegum.css` | Bubblegum — aggressively, relentlessly pink |
+| `retro-chrome.css` | Retro Chrome — late-90s desktop OS, silver chrome/navy/teal |
 | `high-vis.css` | High Vis — accessibility/WCAG AAA, colorblind-friendly |
 
 ### Legacy (pre-template, may be replaced)
@@ -215,6 +223,5 @@ To identify which selector controls a specific UI element:
 |------|-------------|
 | `acronym-dark.css` | Old Acronym dark (replace with acronym-dark2.css) |
 | `acronym-light.css` | Old Acronym light (replace with acronym-light2.css) |
-| `lisa-frank.css` | Old Lisa Frank (replace with lisafrank2.css) |
 | `dark-gold.css` | Dark with gold accents (standalone) |
 | `light-mode.css` | Light theme (standalone) |

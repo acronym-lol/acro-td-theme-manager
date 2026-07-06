@@ -1,11 +1,11 @@
 /*
  * ============================================================
- * Windows 98 Theme
+ * Retro Chrome Theme
  * ============================================================
  *
- * Classic Windows 98 aesthetic with silver-gray chrome,
- * navy blue accents, and the iconic teal desktop.
- * Timeline/playbar styled like the Windows 98 Start bar.
+ * Late-90s desktop-OS aesthetic with silver-gray chrome,
+ * navy blue accents, and a teal desktop backdrop.
+ * Timeline/playbar styled like a classic taskbar.
  *
  * ============================================================
  */
@@ -16,7 +16,7 @@
     /* ============================================================ */
     /* SECTION 1: CORE PALETTE                                      */
     /* ============================================================ */
-    /* Classic Windows 98 colors                                    */
+    /* Classic Retro Chrome colors                                    */
     /* ============================================================ */
 
     /* -- Background tones -- */
@@ -58,14 +58,14 @@
     /* ============================================================ */
     /* SECTION 2: GRAY RAMP                                         */
     /* ============================================================ */
-    /* Windows 98 had very specific grays for 3D effects            */
+    /* Retro Chrome had very specific grays for 3D effects            */
     /* ============================================================ */
 
     /* Pure extremes */
     --black: #000000;
     --white: #FFFFFF;
 
-    /* Windows 98 3D effect grays */
+    /* Retro Chrome 3D effect grays */
     --gray-05: #0A0A0A;
     --gray-10: #1A1A1A;
     --gray-15: #262626;
@@ -102,7 +102,7 @@
     /* ============================================================ */
     /* SECTION 3: UI CHROME                                         */
     /* ============================================================ */
-    /* Windows 98 Start bar style for timeline/playbar              */
+    /* Retro Chrome Start bar style for timeline/playbar              */
     /* ============================================================ */
 
     /* Network editor - teal desktop */
@@ -115,7 +115,7 @@
     --menubar-bg: var(--palette-bg-surface);
     --buttonstrip-bg: var(--palette-bg-raised);
 
-    /* Bottom playbar - Windows 98 Start bar style! */
+    /* Bottom playbar - Retro Chrome Start bar style! */
     --playbar-bg: #C0C0C0;              /* Silver taskbar */
     --playbar-on: #008000;               /* Green Start button */
     --playbar-off: #808080;              /* Gray inactive */
@@ -344,10 +344,10 @@
     /* ============================================================ */
     /* SECTION 15: TUIK2 COMPONENTS                                 */
     /* ============================================================ */
-    /* Windows 98 3D button style                                   */
+    /* Retro Chrome 3D button style                                   */
     /* ============================================================ */
 
-    /* --- Buttons --- Windows 98 3D style */
+    /* --- Buttons --- Retro Chrome 3D style */
     --tuik2-button-border-disable: rgba(128, 128, 128, 0.8);
     --tuik2-button-bordera: #FFFFFF;              /* 3D highlight top-left */
     --tuik2-button-borderb: #808080;              /* 3D shadow bottom-right */
@@ -432,7 +432,7 @@
     --tuik2-template-on: rgba(255, 0, 255, 0.8);
     --tuik2-template-onroll: rgba(255, 64, 255, 0.8);
 
-    /* --- Titlebar --- Windows 98 blue gradient style */
+    /* --- Titlebar --- Retro Chrome blue gradient style */
     --tuik2-titlebar-bordera: #000080;
     --tuik2-titlebar-off: #808080;                /* Inactive = gray */
     --tuik2-titlebar-on: #000080;                 /* Active = navy blue */
@@ -446,7 +446,7 @@
     /* ============================================================ */
     /* SECTION 16: AcroWidgets                                        */
     /* ============================================================ */
-    /* Windows 98 style widgets                                     */
+    /* Retro Chrome style widgets                                     */
     /* ============================================================ */
 
     /* McWidget Container */
@@ -509,7 +509,7 @@
     --mc-list-itemoffroll: #D4D4D4;
     --mc-list-itemon: #000080;
     --mc-list-itemonroll: #0000A0;
-    /* Windows 98 didn't do rainbow, using classic colors */
+    /* Retro Chrome didn't do rainbow, using classic colors */
     --mc-list-textl0: #000000;            /* L0: black */
     --mc-list-textl1: #000080;            /* L1: navy */
     --mc-list-textl2: #008080;            /* L2: teal */

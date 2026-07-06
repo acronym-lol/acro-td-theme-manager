@@ -48,7 +48,7 @@ Adapted from common code-editor palettes.
 
 | File | Description |
 |------|-------------|
-| `lisafrank2.css` | Lisa Frank — neon rainbow overdose, rainbow gray ramp |
+| `rainbow.css` | Rainbow — neon rainbow overdose, rainbow gray ramp |
 | `catnap.css` | Catnap — cat-vision blues / greens / grays, twilight palette |
 | `darkroom.css` | Darkroom — red-only night vision, preserves dark adaptation (see [Monochrome themes](creating-themes#monochrome-themes)) |
 | `terminal.css` | Terminal — green phosphor CRT (VT100 / Apple II) |
@@ -56,7 +56,8 @@ Adapted from common code-editor palettes.
 | `banana.css` | Banana — banana-themed, ripeness gradient CHOP bars |
 | `abyss.css` | Abyss — deep ocean bioluminescence |
 | `synthwave.css` | Synthwave — 80s retrowave neon, hot pink / electric blue |
-| `barbie.css` | Barbie — aggressively, relentlessly pink |
+| `bubblegum.css` | Bubblegum — aggressively, relentlessly pink |
+| `retro-chrome.css` | Retro Chrome — late-90s desktop OS, silver chrome / navy / teal |
 | `high-vis.css` | High Vis — accessibility / WCAG AAA, colorblind-friendly |
 
 ## Legacy
@@ -67,6 +68,5 @@ Earlier (pre-base-template) themes. They still work but may differ visually from
 |------|-------------|
 | `acronym-dark.css` | `acronym-dark2.css` |
 | `acronym-light.css` | `acronym-light2.css` |
-| `lisa-frank.css` | `lisafrank2.css` |
 | `dark-gold.css` | (standalone — no replacement) |
 | `light-mode.css` | (standalone — no replacement) |

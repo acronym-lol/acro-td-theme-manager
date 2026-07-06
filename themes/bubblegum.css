@@ -1,6 +1,5 @@
-/* Theme: Lisa Frank */
-/* MAXIMUM RAINBOW OVERDOSE - 90s fever dream aesthetic */
-/* Dolphins, unicorns, and rainbows screaming into the void */
+/* Theme: Bubblegum */
+/* Unapologetically, aggressively, relentlessly PINK */
 /* Built from td-base-template.css */
 
 
@@ -13,40 +12,40 @@
     /* theme. Everything else in the file derives from these.       */
     /* ============================================================ */
 
-    /* -- Background tones (deep saturated purples) -- */
-    --palette-bg:            #0F0818;  /* Deep ultraviolet */
-    --palette-bg-dark:       #0A0510;  /* Near-black purple */
-    --palette-bg-surface:    #1E1030;  /* Rich purple panels */
-    --palette-bg-raised:     #2D1848;  /* Elevated purple surfaces */
-    --palette-bg-highlight:  #4A2878;  /* Vivid purple selection */
+    /* -- Background tones (dark pink — Bubblegum's dream house at night) -- */
+    --palette-bg:            #1E0818;  /* Dark fuchsia */
+    --palette-bg-dark:       #140510;  /* Deepest pink-black */
+    --palette-bg-surface:    #2A1024;  /* Plum panels */
+    --palette-bg-raised:     #3A1832;  /* Elevated magenta */
+    --palette-bg-highlight:  #502442;  /* Hot pink selection */
 
-    /* -- Text tones (pink-tinted whites) -- */
-    --palette-fg:            #E8C0E8;  /* Pink-lavender text */
-    --palette-fg-bright:     #FFDCFF;  /* Hot pink-white text */
-    --palette-fg-muted:      #8868A0;  /* Muted purple */
-    --palette-fg-dim:        #5A3878;  /* Dim purple */
+    /* -- Text tones (pink spectrum) -- */
+    --palette-fg:            #F0B8D8;  /* Soft pink text */
+    --palette-fg-bright:     #FFD4EC;  /* Bubblegum bright */
+    --palette-fg-muted:      #885878;  /* Dusty rose */
+    --palette-fg-dim:        #5C3050;  /* Muted plum */
 
-    /* -- Accent colors (NEON) -- */
-    --palette-accent:        #FFEE33;  /* Neon yellow - primary accent */
-    --palette-accent-alt:    #FF66AA;  /* Hot pink - secondary accent */
-    --palette-accent-alt-bright: #00FFCC;  /* Neon cyan — timeline rainbow */
-    --palette-tuik-accent:   #FF66AA;  /* Hot Pink - TUIK2 button accent */
+    /* -- Accent colors (PINK!) -- */
+    --palette-accent:        #FF69B4;  /* HOT PINK — THE Bubblegum color */
+    --palette-accent-alt:    #FF1493;  /* Deep pink — even more pink */
+    --palette-accent-alt-bright: #FF88CC;  /* Bubblegum pink — timeline sparkle */
+    --palette-tuik-accent:   #FF69B4;  /* Hot Pink - TUIK2 button accent */
 
     /* -- Border -- */
-    --palette-border:        #AA55DD;  /* Purple border */
+    --palette-border:        #AA4488;  /* Magenta border */
 
-    /* -- Syntax highlighting (FULL RAINBOW) -- */
-    --palette-keyword:       #FF66AA;  /* Hot pink keywords */
-    --palette-function:      #00FFCC;  /* Neon cyan-green functions */
-    --palette-string:        #FF8844;  /* Neon orange strings */
-    --palette-number:        #AAFF44;  /* Neon lime numbers */
-    --palette-comment:       #44BB66;  /* Green comments */
+    /* -- Syntax (shades of pink and friends) -- */
+    --palette-keyword:       #FF69B4;  /* Hot pink keywords */
+    --palette-function:      #FF88CC;  /* Bubblegum functions */
+    --palette-string:        #FFAADD;  /* Light pink strings */
+    --palette-number:        #FFFFFF;  /* White numbers (like diamonds) */
+    --palette-comment:       #6E3858;  /* Dark rose comments */
 
-    /* -- Semantic status colors (SCREAMING NEON) -- */
-    --palette-error:         #FF3366;  /* Neon pink-red */
-    --palette-warning:       #FFEE33;  /* Neon yellow */
-    --palette-success:       #33FF66;  /* Neon green */
-    --palette-info:          #3388FF;  /* Neon blue */
+    /* -- Semantic (pink variations) -- */
+    --palette-error:         #FF1493;  /* Deep pink error */
+    --palette-warning:       #FF69B4;  /* Hot pink warning */
+    --palette-success:       #FF88CC;  /* Bubblegum success */
+    --palette-info:          #CC44AA;  /* Magenta info */
 
 
     /* ============================================================ */
@@ -57,42 +56,42 @@
     /* ramp or one tinted toward warm/cool.                         */
     /* ============================================================ */
 
-    /* Lisa Frank extremes */
-    --black: #0A0510;     /* Deep void purple */
-    --white: #FFE0F5;     /* Pink-white */
+    /* Bubblegum extremes */
+    --black: #100410;     /* Dark pink void */
+    --white: #FFD4EC;     /* Bubblegum white */
 
-    /* Rainbow-shifting saturated "grays" - each step is a different hue! */
-    --gray-05: hsl(290, 50%, 6%);     /* purple */
-    --gray-10: hsl(280, 45%, 11%);    /* blue-purple */
-    --gray-15: hsl(270, 40%, 16%);    /* violet */
-    --gray-20: hsl(260, 38%, 21%);    /* indigo */
-    --gray-25: hsl(250, 35%, 26%);    /* deep blue */
-    --gray-30: hsl(240, 30%, 31%);    /* blue */
-    --gray-35: hsl(220, 28%, 36%);    /* ocean blue */
-    --gray-36: hsl(210, 27%, 37%);    /* steel blue */
-    --gray-40: hsl(200, 25%, 41%);    /* teal-blue */
-    --gray-42: hsl(180, 24%, 43%);    /* teal */
-    --gray-45: hsl(160, 22%, 46%);    /* sea green */
-    --gray-50: hsl(300, 25%, 52%);    /* magenta */
-    --gray-52: hsl(310, 24%, 54%);    /* pink-magenta */
-    --gray-55: hsl(320, 22%, 57%);    /* rose */
-    --gray-60: hsl(330, 25%, 62%);    /* hot pink */
-    --gray-65: hsl(340, 28%, 67%);    /* pink */
-    --gray-67: hsl(350, 30%, 70%);    /* coral-pink */
-    --gray-70: hsl(0, 30%, 72%);      /* coral */
-    --gray-72: hsl(15, 32%, 74%);     /* salmon */
-    --gray-75: hsl(30, 35%, 77%);     /* peach */
-    --gray-80: hsl(45, 38%, 82%);     /* gold */
-    --gray-85: hsl(60, 35%, 87%);     /* yellow */
-    --gray-90: hsl(300, 30%, 91%);    /* lavender */
-    --gray-95: hsl(330, 25%, 95%);    /* pink-white */
+    /* Pink-tinted gray ramp — everything is pink */
+    --gray-05: #160614;
+    --gray-10: #1E0818;
+    --gray-15: #240C20;
+    --gray-20: #2A1024;
+    --gray-25: #32142C;
+    --gray-30: #3A1832;
+    --gray-35: #421E3A;
+    --gray-36: #46203E;
+    --gray-40: #502442;
+    --gray-42: #562848;
+    --gray-45: #5E2C4E;
+    --gray-50: #6A3458;
+    --gray-52: #70385E;
+    --gray-55: #783C64;
+    --gray-60: #884470;
+    --gray-65: #985080;
+    --gray-67: #A05888;
+    --gray-70: #AA6090;
+    --gray-72: #B26898;
+    --gray-75: #BC72A0;
+    --gray-80: #CC88B0;
+    --gray-85: #D8A0C0;
+    --gray-90: #E4B4D0;
+    --gray-95: #F0C8E0;
 
-    /* System grays - rainbow saturated */
-    --gray-sys-30: hsl(240, 30%, 31%);    /* blue */
-    --gray-sys-50: hsl(300, 25%, 52%);    /* magenta */
-    --gray-sys-70: hsl(0, 30%, 72%);      /* coral */
-    --gray-sys-75: hsl(30, 35%, 77%);     /* peach */
-    --gray-sys-90: hsl(300, 30%, 91%);    /* lavender */
+    /* Bubblegum system grays */
+    --gray-sys-30: #3A1832;
+    --gray-sys-50: #6A3458;
+    --gray-sys-70: #AA6090;
+    --gray-sys-75: #BC72A0;
+    --gray-sys-90: #E4B4D0;
 
 
     /* ============================================================ */
@@ -102,26 +101,26 @@
     /* These define the main structural areas of the TD interface.   */
     /* ============================================================ */
 
-    /* Network editor - deep ocean blue */
-    --network-bg: hsl(220, 65%, 8%);
-    --network-grid: hsl(210, 55%, 14%);
-    --network-grid-axis: hsl(195, 100%, 50%);       /* Bright cyan axis! */
-    --network-autoscroll: hsl(200, 60%, 18%);
+    /* Network editor - Bubblegum's dream grid */
+    --network-bg: #1E0818;
+    --network-grid: #2A1024;                          /* Pink grid */
+    --network-grid-axis: #AA4488;                     /* Magenta axis */
+    --network-autoscroll: #240C20;
 
-    /* Top menubar - saturated purple */
-    --menubar-bg: hsl(275, 50%, 18%);
-    --buttonstrip-bg: hsl(280, 45%, 22%);
+    /* Top menubar - dark pink chrome */
+    --menubar-bg: #2A1024;
+    --buttonstrip-bg: #3A1832;
 
-    /* Bottom playbar - SCREAMING hot pink! */
-    --playbar-bg: hsl(325, 100%, 55%);
-    --playbar-on: hsl(85, 100%, 55%);                /* Neon lime play */
-    --playbar-off: hsl(310, 60%, 12%);
-    --statusbar-bg: hsl(270, 55%, 14%);
-    --statusbar-fg: hsl(25, 100%, 65%);              /* Neon orange text! */
+    /* Bottom playbar - IT'S PINK */
+    --playbar-bg: #FF69B4;                            /* HOT PINK PLAYBAR */
+    --playbar-on: #FFAADD;                            /* Cotton candy GO */
+    --playbar-off: #200818;
+    --statusbar-bg: #240C20;
+    --statusbar-fg: #FF69B4;                          /* Pink status */
 
-    /* Timeline - deep electric purple */
-    --timeline-bg: hsl(265, 60%, 9%);
-    --timeline-bar-bg: hsl(320, 45%, 72%);
+    /* Timeline/animation (jive) */
+    --timeline-bg: var(--palette-bg);
+    --timeline-bar-bg: var(--palette-fg-muted);
 
     /* Parameter panel backgrounds */
     --parms-bg: var(--gray-25);
@@ -218,30 +217,30 @@
     --python-comments: var(--palette-comment);
     --python-hilite: var(--palette-bg-highlight);          /* Text selection in editor */
 
-    /* GLSL/JSON shared syntax (NEON RAINBOW) */
-    --syntax-keywords: #CC44FF;    /* Neon purple */
-    --syntax-functions: #00FFCC;   /* Neon cyan-green */
-    --syntax-strings: #FF6688;     /* Neon coral */
-    --syntax-numbers: #AAFF44;     /* Neon lime */
-    --syntax-comments: #44BB66;    /* Green */
-    --syntax-symbols: #8868A0;     /* Muted purple */
+    /* GLSL/JSON (50 shades of pink) */
+    --syntax-keywords: #FF69B4;    /* Hot pink */
+    --syntax-functions: #FF88CC;   /* Bubblegum */
+    --syntax-strings: #FFAADD;     /* Light pink */
+    --syntax-numbers: #FFFFFF;     /* Diamond white */
+    --syntax-comments: #6E3858;    /* Dark rose */
+    --syntax-symbols: #5C3050;     /* Plum */
 
-    /* TScript (purple/pink neon) */
-    --tscript-text: #CC44FF;       /* Neon purple */
-    --tscript-editing: #FF66AA;    /* Hot pink */
-    --tscript-hilite: #4A2878;     /* Deep purple */
-    --tscript-noteditable: #8868A0; /* Muted purple */
+    /* TScript (pink on pink) */
+    --tscript-text: #FF88CC;       /* Bubblegum */
+    --tscript-editing: #FF1493;    /* Deep pink */
+    --tscript-hilite: #502442;     /* Highlight */
+    --tscript-noteditable: #885878;
 
-    /* XML (rainbow) */
-    --xml-tags: #3388FF;           /* Neon blue */
-    --xml-attributes: #00FFCC;     /* Neon cyan */
-    --xml-attributevalues: #FFEE33; /* Neon yellow */
-    --xml-entityrefs: #FF66AA;     /* Hot pink */
+    /* XML (pink paradise) */
+    --xml-tags: #FF1493;           /* Deep pink */
+    --xml-attributes: #FF69B4;     /* Hot pink */
+    --xml-attributevalues: #FFAADD; /* Light pink */
+    --xml-entityrefs: #CC44AA;     /* Magenta */
 
-    /* YAML (rainbow) */
-    --yaml-keys: #CC44FF;          /* Neon purple */
-    --yaml-booleans: #FF66AA;      /* Hot pink */
-    --yaml-symbols: #E8C0E8;       /* Pink-lavender */
+    /* YAML (pink all the way down) */
+    --yaml-keys: #FF69B4;          /* Hot pink */
+    --yaml-booleans: #FF88CC;      /* Bubblegum */
+    --yaml-symbols: #F0B8D8;       /* Soft pink */
 
 
     /* ============================================================ */
@@ -339,8 +338,8 @@
     --jive-bg: var(--timeline-bg);
     --jive-channel-display: var(--palette-info);
     --jive-channel-picked: var(--palette-warning);
-    --jive-channel-template: #FF66AA;   /* Hot pink */
-    --jive-handle-time: #CC44FF;       /* Neon purple */
+    --jive-channel-template: #FF1493;   /* Deep pink */
+    --jive-handle-time: #CC44AA;       /* Magenta */
 
 
     /* ============================================================ */
@@ -349,14 +348,15 @@
     /* Channel graph bar colors -- one per channel index.            */
     /* ============================================================ */
 
-    --chop-bar-0: #FF66AA;   /* Hot pink */
-    --chop-bar-1: #CC44FF;   /* Neon purple */
-    --chop-bar-2: #3388FF;   /* Neon blue */
-    --chop-bar-3: #00FFCC;   /* Neon cyan */
-    --chop-bar-4: #33FF66;   /* Neon green */
-    --chop-bar-5: #AAFF44;   /* Neon lime */
-    --chop-bar-6: #FFEE33;   /* Neon yellow */
-    --chop-bar-7: #FF8844;   /* Neon orange */
+    /* CHOP bars - pink gradient from deep to light */
+    --chop-bar-0: #880044;   /* Deep magenta */
+    --chop-bar-1: #AA2266;   /* Wine pink */
+    --chop-bar-2: #CC4488;   /* Magenta */
+    --chop-bar-3: #FF1493;   /* Deep pink */
+    --chop-bar-4: #FF69B4;   /* HOT PINK */
+    --chop-bar-5: #FF88CC;   /* Bubblegum */
+    --chop-bar-6: #FFAADD;   /* Cotton candy */
+    --chop-bar-7: #FFFFFF;   /* Diamond */
 
 
     /* ============================================================ */
@@ -375,14 +375,14 @@
     /* Splitpane bars, startup messages, textport, multitext.        */
     /* ============================================================ */
 
-    --splitpane-bar: #4A2878;            /* Deep purple */
-    --startup-error: #FF3366;
-    --startup-warning: #FFEE33;
-    --textport-editable: #00FFCC;       /* Neon cyan */
-    --textport-noteditable: #8868A0;    /* Muted purple */
-    --multitext-editable: #33FF66;      /* Neon green */
-    --multitext-editing: #AAFF44;       /* Neon lime */
-    --multitext-noteditable: #8868A0;   /* Muted purple */
+    --splitpane-bar: #502442;
+    --startup-error: #FF1493;
+    --startup-warning: #FF69B4;
+    --textport-editable: #FF88CC;       /* Bubblegum */
+    --textport-noteditable: #885878;    /* Dusty rose */
+    --multitext-editable: #FF69B4;      /* Hot pink */
+    --multitext-editing: #FFAADD;       /* Cotton candy */
+    --multitext-noteditable: #885878;
 
 
     /* ============================================================ */
@@ -394,54 +394,54 @@
     /* ============================================================ */
 
     /* --- Buttons --- */
-    --tuik2-button-border-disable: rgba(100, 20, 100, 0.8);
-    --tuik2-button-bordera: #FF66AA;                           /* Hot pink border! */
+    --tuik2-button-border-disable: rgba(35, 36, 38, 0.8);
+    --tuik2-button-bordera: var(--palette-border);
     --tuik2-button-borderb: var(--palette-bg-dark);
-    --tuik2-button-disable: var(--palette-bg-raised);
-    --tuik2-button-off: var(--palette-bg-raised);
-    --tuik2-button-offroll: #CC44FF;                           /* Neon purple hover! */
-    --tuik2-button-on: #FF8844;                                /* Neon orange active! */
-    --tuik2-button-onroll: darken(var(--palette-accent), 0.25);
+    --tuik2-button-disable: var(--palette-bg-raised);          /* Disabled button background */
+    --tuik2-button-off: var(--palette-bg-raised);              /* Normal button background */
+    --tuik2-button-offroll: lighten(var(--palette-bg-raised), 0.10);  /* Button hover */
+    --tuik2-button-on: darken(var(--palette-accent), 0.15);     /* Pressed/active button */
+    --tuik2-button-onroll: darken(var(--palette-accent), 0.25); /* Active button hover */
     --tuik2-buttontext-disable: var(--palette-fg-dim);
-    --tuik2-buttontext-off: hsl(175, 80%, 52%);                /* Teal text */
-    --tuik2-buttontext-offroll: #FFDCFF;                       /* Pink-white */
+    --tuik2-buttontext-off: var(--palette-fg);
+    --tuik2-buttontext-offroll: var(--palette-fg-bright);
     --tuik2-buttontext-on: var(--palette-bg-dark);
     --tuik2-buttontext-onroll: var(--palette-fg-bright);
 
     /* --- Checkbox --- */
-    --tuik2-checkbox-border: rgba(255, 80, 255, 1.0);          /* Neon magenta! */
-    --tuik2-checkbox-border-disable: rgba(180, 50, 180, 0.7);
+    --tuik2-checkbox-border: rgba(186, 186, 191, 0.8);
+    --tuik2-checkbox-border-disable: rgba(84, 84, 89, 0.8);
 
     /* --- Field --- */
-    --tuik2-field-disable: rgba(30, 16, 48, 0.85);
-    --tuik2-field-on: rgba(60, 30, 90, 0.92);
-    --tuik2-field-onroll: rgba(50, 24, 75, 0.88);
+    --tuik2-field-disable: rgba(48, 54, 64, 0.8);
+    --tuik2-field-on: rgba(74, 79, 89, 0.8);
+    --tuik2-field-onroll: rgba(48, 54, 64, 0.8);
 
     /* --- Gadget --- */
-    --tuik2-gadget-bg: var(--palette-bg-surface);
-    --tuik2-gadget-bordera: #AA55DD;                           /* Purple border */
+    --tuik2-gadget-bg: var(--palette-bg-surface);   /* Parameter panel gadget background */
+    --tuik2-gadget-bordera: var(--palette-border);
     --tuik2-gadget-borderb: var(--palette-bg-dark);
 
     /* --- Header --- */
-    --tuik2-header-bg: var(--palette-bg-raised);
-    --tuik2-header-bordera: #FF66AA;                           /* Hot pink header border! */
+    --tuik2-header-bg: rgba(71, 77, 89, 0.8);
+    --tuik2-header-bordera: rgba(122, 128, 140, 0.8);
 
     /* --- Indicator --- */
-    --tuik2-indicator-disable: #880044;
-    --tuik2-indicator-off: #FF3366;                            /* Neon pink indicator */
-    --tuik2-indicator-roll: #FF66AA;
+    --tuik2-indicator-disable: #800000;
+    --tuik2-indicator-off: #CC0000;
+    --tuik2-indicator-roll: #FF0000;
 
     /* --- Knob --- */
     --tuik2-knob-disable: darken(var(--palette-bg-dark), 0.01);
     --tuik2-knob-off: var(--palette-bg-dark);
     --tuik2-knob-roll: lighten(var(--palette-bg-dark), 0.04);
-    --tuik2-knobindicator-disable: #333366;
-    --tuik2-knobindicator-off: hsl(175, 80%, 48%);             /* Teal knob */
-    --tuik2-knobindicator-roll: #AAFF44;                       /* Neon lime on roll! */
+    --tuik2-knobindicator-disable: #33334C;
+    --tuik2-knobindicator-off: darken(var(--palette-accent-alt), 0.05);
+    --tuik2-knobindicator-roll: lighten(var(--palette-accent-alt), 0.15);
 
     /* --- Label --- */
-    --tuik2-label-text: rgba(255, 170, 255, 0.98);             /* Pink label text! */
-    --tuik2-label-text-disable: rgba(200, 120, 200, 0.75);
+    --tuik2-label-text: rgba(177, 180, 191, 0.8);
+    --tuik2-label-text-disable: rgba(177, 180, 191, 0.8);
 
     /* --- Operator --- */
     /* PROTECTED: These map directly to operator family colors.     */
@@ -481,13 +481,13 @@
     --tuik2-template-onroll: rgba(230, 0, 230, 0.8);
 
     /* --- Titlebar --- */
-    --tuik2-titlebar-bordera: hsl(175, 85%, 45%);              /* Teal border */
-    --tuik2-titlebar-off: #2D1848;                             /* Deep purple */
-    --tuik2-titlebar-on: #4A2878;                              /* Vivid purple */
-    --tuik2-titlebar-text-off: hsl(175, 85%, 55%);             /* Teal text */
+    --tuik2-titlebar-bordera: darken(var(--palette-accent-alt), 0.15);
+    --tuik2-titlebar-off: darken(var(--palette-accent-alt), 0.25);
+    --tuik2-titlebar-on: darken(var(--palette-accent-alt), 0.20);
+    --tuik2-titlebar-text-off: var(--palette-fg);
 
     /* --- Other --- */
-    --tuik2-root-time: var(--palette-accent-alt-bright);       /* Neon cyan timeline */
+    --tuik2-root-time: var(--palette-accent-alt-bright);
     --tuik2-transparent: rgba(0, 0, 0, 0);
 
 

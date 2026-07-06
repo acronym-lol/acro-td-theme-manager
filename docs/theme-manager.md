@@ -214,7 +214,9 @@ The repository's `themes/` folder ships with a curated set of CSS files. They fa
 | **System / template** | `td-default.css`, `td-default-variables.css`, `td-base-template.css`, `debug.css` |
 | **Code editor classics** | `dracula.css`, `gruvbox.css`, `tokyo-night.css`, `monokai.css`, `nord.css`, `solarized-dark.css`, `one-dark.css`, `everforest.css`, `rose-pine.css`, `kanagawa.css` |
 | **Catppuccin family** | `catppuccin-mocha.css`, `catppuccin-macchiato.css`, `catppuccin-frappe.css`, `catppuccin-latte.css` |
-| **Brand / specialty** | `acronym-dark.css`, `acronym-light.css`, `lisa-frank.css`, `catnap.css`, `darkroom.css`, `terminal.css`, `amber.css`, `banana.css`, `abyss.css`, `synthwave.css`, `barbie.css`, `high-vis.css`, `cyberpunk.css` |
+| **Brand / specialty** | `acronym-dark.css`, `acronym-light.css`, `rainbow.css`, `catnap.css`, `darkroom.css`, `terminal.css`, `amber.css`, `banana.css`, `abyss.css`, `synthwave.css`, `bubblegum.css`, `retro-chrome.css`, `high-vis.css`, `cyberpunk.css` |
+
+The "code editor classics" and "Catppuccin family" themes are independent color interpretations of publicly documented palettes; see [`ATTRIBUTIONS.md`](../ATTRIBUTIONS.md) for credits. They are not affiliated with or endorsed by the original projects.
 
 To author a new theme, copy `td-base-template.css`, change the ~20 core palette variables in the first section, and adjust the gray ramp in the second section. The base template's protected sections (op family colors, parameter mode colors) cascade automatically.
 
