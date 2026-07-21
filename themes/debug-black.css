@@ -546,27 +546,27 @@
     --mcw-list-textonroll: #000000;
 
     /* Macros Macro List — all black */
-    --mc-list-bg: #000000;
-    --mc-list-rowbg: #000000;
-    --mc-list-itemoff: #000000;
-    --mc-list-itemoffroll: #000000;
-    --mc-list-itemon: #000000;
-    --mc-list-itemonroll: #000000;
-    --mc-list-textl0: #000000;
-    --mc-list-textl1: #000000;
-    --mc-list-textl2: #000000;
-    --mc-list-textl3: #000000;
-    --mc-list-textl4: #000000;
-    --mc-list-textl5: #000000;
-    --mc-list-textl6: #000000;
-    --mc-list-textl7: #000000;
-    --mc-list-erroroff: #000000;
-    --mc-list-erroroffroll: #000000;
-    --mc-list-erroron: #000000;
-    --mc-list-erroronroll: #000000;
-    --mc-list-borderdark: #000000;
-    --mc-list-borderlight: #000000;
-    --mc-list-draghighlight: #000000;
+    --am-list-bg: #000000;
+    --am-list-rowbg: #000000;
+    --am-list-itemoff: #000000;
+    --am-list-itemoffroll: #000000;
+    --am-list-itemon: #000000;
+    --am-list-itemonroll: #000000;
+    --am-list-textl0: #000000;
+    --am-list-textl1: #000000;
+    --am-list-textl2: #000000;
+    --am-list-textl3: #000000;
+    --am-list-textl4: #000000;
+    --am-list-textl5: #000000;
+    --am-list-textl6: #000000;
+    --am-list-textl7: #000000;
+    --am-list-erroroff: #000000;
+    --am-list-erroroffroll: #000000;
+    --am-list-erroron: #000000;
+    --am-list-erroronroll: #000000;
+    --am-list-borderdark: #000000;
+    --am-list-borderlight: #000000;
+    --am-list-draghighlight: #000000;
 } /* end :root */
 
 
@@ -1779,24 +1779,24 @@ op.AW.par.Listtextonroll { color: var(--mcw-list-textonroll); }
 /* ========== Component Parameters: op.AM (Macros) ========== */
 
 /* Macro List */
-op.AM.par.Macrolistbg { color: var(--mc-list-bg); }
-op.AM.par.Macrolistrowbg { color: var(--mc-list-rowbg); }
-op.AM.par.Macrolistcelloff { color: var(--mc-list-itemoff); }
-op.AM.par.Macrolistcelloffroll { color: var(--mc-list-itemoffroll); }
-op.AM.par.Macrolistcellon { color: var(--mc-list-itemon); }
-op.AM.par.Macrolistcellonroll { color: var(--mc-list-itemonroll); }
-op.AM.par.Macrolisttextl0 { color: var(--mc-list-textl0); }
-op.AM.par.Macrolisttextl1 { color: var(--mc-list-textl1); }
-op.AM.par.Macrolisttextl2 { color: var(--mc-list-textl2); }
-op.AM.par.Macrolisttextl3 { color: var(--mc-list-textl3); }
-op.AM.par.Macrolisttextl4 { color: var(--mc-list-textl4); }
-op.AM.par.Macrolisttextl5 { color: var(--mc-list-textl5); }
-op.AM.par.Macrolisttextl6 { color: var(--mc-list-textl6); }
-op.AM.par.Macrolisttextl7 { color: var(--mc-list-textl7); }
-op.AM.par.Macrolisterroroff { color: var(--mc-list-erroroff); }
-op.AM.par.Macrolisterroroffroll { color: var(--mc-list-erroroffroll); }
-op.AM.par.Macrolisterroron { color: var(--mc-list-erroron); }
-op.AM.par.Macrolisterroronroll { color: var(--mc-list-erroronroll); }
-op.AM.par.Macrolistborderdark { color: var(--mc-list-borderdark); }
-op.AM.par.Macrolistborderlight { color: var(--mc-list-borderlight); }
-op.AM.par.Macrolistdraghighlight { color: var(--mc-list-draghighlight); }
+op.AM.par.Macrolistbg { color: var(--am-list-bg); }
+op.AM.par.Macrolistrowbg { color: var(--am-list-rowbg); }
+op.AM.par.Macrolistcelloff { color: var(--am-list-itemoff); }
+op.AM.par.Macrolistcelloffroll { color: var(--am-list-itemoffroll); }
+op.AM.par.Macrolistcellon { color: var(--am-list-itemon); }
+op.AM.par.Macrolistcellonroll { color: var(--am-list-itemonroll); }
+op.AM.par.Macrolisttextl0 { color: var(--am-list-textl0); }
+op.AM.par.Macrolisttextl1 { color: var(--am-list-textl1); }
+op.AM.par.Macrolisttextl2 { color: var(--am-list-textl2); }
+op.AM.par.Macrolisttextl3 { color: var(--am-list-textl3); }
+op.AM.par.Macrolisttextl4 { color: var(--am-list-textl4); }
+op.AM.par.Macrolisttextl5 { color: var(--am-list-textl5); }
+op.AM.par.Macrolisttextl6 { color: var(--am-list-textl6); }
+op.AM.par.Macrolisttextl7 { color: var(--am-list-textl7); }
+op.AM.par.Macrolisterroroff { color: var(--am-list-erroroff); }
+op.AM.par.Macrolisterroroffroll { color: var(--am-list-erroroffroll); }
+op.AM.par.Macrolisterroron { color: var(--am-list-erroron); }
+op.AM.par.Macrolisterroronroll { color: var(--am-list-erroronroll); }
+op.AM.par.Macrolistborderdark { color: var(--am-list-borderdark); }
+op.AM.par.Macrolistborderlight { color: var(--am-list-borderlight); }
+op.AM.par.Macrolistdraghighlight { color: var(--am-list-draghighlight); }
