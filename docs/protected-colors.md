@@ -1,3 +1,7 @@
+---
+last_reviewed: 2026-08-27
+---
+
 # Protected Colors & UI Mappings
 
 Two categories of TD colors are **hue-protected** — change their value or saturation but not their hue, because users rely on the hue to read the UI at a glance.

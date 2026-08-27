@@ -1,3 +1,7 @@
+---
+last_reviewed: 2026-08-27
+---
+
 # CSS Format & Parser
 
 Themes are written as standard CSS with a few targeted extensions. `ThemeCSSParser` (`scripts/ThemeCSSParser.py`) resolves the file into a flat `{selector: [r, g, b, a]}` dict that `AcroThemeManager` distributes to TD.

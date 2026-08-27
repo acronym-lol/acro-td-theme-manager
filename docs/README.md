@@ -1,3 +1,7 @@
+---
+last_reviewed: 2026-08-27
+---
+
 # Acro TD Theme Manager
 
 CSS-based theme application for TouchDesigner — applies palettes to `ui.colors`, TUIK2 component params, and op-shortcut params from a single `.css` file.

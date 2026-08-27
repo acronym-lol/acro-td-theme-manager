@@ -1,3 +1,7 @@
+---
+last_reviewed: 2026-08-27
+---
+
 # Base Template & Core Palette
 
 `themes/td-base-template.css` is the canonical starting point for new themes. It declares ~20 "core palette" variables that cascade — via `var()` / `lighten()` / `darken()` — into every TD UI surface. The other ~700 individual selectors derive from those 20 values.
