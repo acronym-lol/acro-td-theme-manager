@@ -503,28 +503,28 @@
     /* SECTION 17: MACROS                                        */
     /* ============================================================ */
 
-    --mc-list-bg: #808080;
-    --mc-list-rowbg: #808080;
-    --mc-list-itemoff: #C0C0C0;
-    --mc-list-itemoffroll: #D4D4D4;
-    --mc-list-itemon: #000080;
-    --mc-list-itemonroll: #0000A0;
+    --am-list-bg: #808080;
+    --am-list-rowbg: #808080;
+    --am-list-itemoff: #C0C0C0;
+    --am-list-itemoffroll: #D4D4D4;
+    --am-list-itemon: #000080;
+    --am-list-itemonroll: #0000A0;
     /* Retro Chrome didn't do rainbow, using classic colors */
-    --mc-list-textl0: #000000;            /* L0: black */
-    --mc-list-textl1: #000080;            /* L1: navy */
-    --mc-list-textl2: #008080;            /* L2: teal */
-    --mc-list-textl3: #008000;            /* L3: green */
-    --mc-list-textl4: #808000;            /* L4: olive */
-    --mc-list-textl5: #800000;            /* L5: maroon */
-    --mc-list-textl6: #800080;            /* L6: purple */
-    --mc-list-textl7: #808080;            /* L7: gray */
-    --mc-list-erroroff: #C0C0C0;
-    --mc-list-erroroffroll: #D4A0A0;
-    --mc-list-erroron: #FF0000;
-    --mc-list-erroronroll: #FF4040;
-    --mc-list-borderdark: #404040;
-    --mc-list-borderlight: #C0C0C0;
-    --mc-list-draghighlight: #000080;
+    --am-list-textl0: #000000;            /* L0: black */
+    --am-list-textl1: #000080;            /* L1: navy */
+    --am-list-textl2: #008080;            /* L2: teal */
+    --am-list-textl3: #008000;            /* L3: green */
+    --am-list-textl4: #808000;            /* L4: olive */
+    --am-list-textl5: #800000;            /* L5: maroon */
+    --am-list-textl6: #800080;            /* L6: purple */
+    --am-list-textl7: #808080;            /* L7: gray */
+    --am-list-erroroff: #C0C0C0;
+    --am-list-erroroffroll: #D4A0A0;
+    --am-list-erroron: #FF0000;
+    --am-list-erroronroll: #FF4040;
+    --am-list-borderdark: #404040;
+    --am-list-borderlight: #C0C0C0;
+    --am-list-draghighlight: #000080;
 
 } /* end :root */
 
@@ -1640,24 +1640,24 @@ op.AW.par.Listtextonroll { color: var(--mcw-list-textonroll); }
 /* MACROS (op.AM)                                            */
 /* ============================================================ */
 
-op.AM.par.Macrolistbg { color: var(--mc-list-bg); }
-op.AM.par.Macrolistrowbg { color: var(--mc-list-rowbg); }
-op.AM.par.Macrolistcelloff { color: var(--mc-list-itemoff); }
-op.AM.par.Macrolistcelloffroll { color: var(--mc-list-itemoffroll); }
-op.AM.par.Macrolistcellon { color: var(--mc-list-itemon); }
-op.AM.par.Macrolistcellonroll { color: var(--mc-list-itemonroll); }
-op.AM.par.Macrolisttextl0 { color: var(--mc-list-textl0); }
-op.AM.par.Macrolisttextl1 { color: var(--mc-list-textl1); }
-op.AM.par.Macrolisttextl2 { color: var(--mc-list-textl2); }
-op.AM.par.Macrolisttextl3 { color: var(--mc-list-textl3); }
-op.AM.par.Macrolisttextl4 { color: var(--mc-list-textl4); }
-op.AM.par.Macrolisttextl5 { color: var(--mc-list-textl5); }
-op.AM.par.Macrolisttextl6 { color: var(--mc-list-textl6); }
-op.AM.par.Macrolisttextl7 { color: var(--mc-list-textl7); }
-op.AM.par.Macrolisterroroff { color: var(--mc-list-erroroff); }
-op.AM.par.Macrolisterroroffroll { color: var(--mc-list-erroroffroll); }
-op.AM.par.Macrolisterroron { color: var(--mc-list-erroron); }
-op.AM.par.Macrolisterroronroll { color: var(--mc-list-erroronroll); }
-op.AM.par.Macrolistborderdark { color: var(--mc-list-borderdark); }
-op.AM.par.Macrolistborderlight { color: var(--mc-list-borderlight); }
-op.AM.par.Macrolistdraghighlight { color: var(--mc-list-draghighlight); }
+op.AM.par.Macrolistbg { color: var(--am-list-bg); }
+op.AM.par.Macrolistrowbg { color: var(--am-list-rowbg); }
+op.AM.par.Macrolistcelloff { color: var(--am-list-itemoff); }
+op.AM.par.Macrolistcelloffroll { color: var(--am-list-itemoffroll); }
+op.AM.par.Macrolistcellon { color: var(--am-list-itemon); }
+op.AM.par.Macrolistcellonroll { color: var(--am-list-itemonroll); }
+op.AM.par.Macrolisttextl0 { color: var(--am-list-textl0); }
+op.AM.par.Macrolisttextl1 { color: var(--am-list-textl1); }
+op.AM.par.Macrolisttextl2 { color: var(--am-list-textl2); }
+op.AM.par.Macrolisttextl3 { color: var(--am-list-textl3); }
+op.AM.par.Macrolisttextl4 { color: var(--am-list-textl4); }
+op.AM.par.Macrolisttextl5 { color: var(--am-list-textl5); }
+op.AM.par.Macrolisttextl6 { color: var(--am-list-textl6); }
+op.AM.par.Macrolisttextl7 { color: var(--am-list-textl7); }
+op.AM.par.Macrolisterroroff { color: var(--am-list-erroroff); }
+op.AM.par.Macrolisterroroffroll { color: var(--am-list-erroroffroll); }
+op.AM.par.Macrolisterroron { color: var(--am-list-erroron); }
+op.AM.par.Macrolisterroronroll { color: var(--am-list-erroronroll); }
+op.AM.par.Macrolistborderdark { color: var(--am-list-borderdark); }
+op.AM.par.Macrolistborderlight { color: var(--am-list-borderlight); }
+op.AM.par.Macrolistdraghighlight { color: var(--am-list-draghighlight); }

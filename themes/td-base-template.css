@@ -584,28 +584,28 @@
     /* Matches TD field/gadget styling for consistency.             */
     /* ============================================================ */
 
-    --mc-list-bg: var(--palette-bg-dark);                     /* Dark container like TD fields */
-    --mc-list-rowbg: var(--palette-bg-dark);                  /* Subtle row bg */
-    --mc-list-itemoff: var(--palette-bg-surface);             /* Item matches surface */
-    --mc-list-itemoffroll: var(--palette-bg-raised);          /* Hover = raised */
-    --mc-list-itemon: darken(var(--palette-accent-alt), 0.20);  /* Selected = blue-gray tint */
-    --mc-list-itemonroll: darken(var(--palette-accent-alt), 0.10); /* Selected hover */
+    --am-list-bg: var(--palette-bg-dark);                     /* Dark container like TD fields */
+    --am-list-rowbg: var(--palette-bg-dark);                  /* Subtle row bg */
+    --am-list-itemoff: var(--palette-bg-surface);             /* Item matches surface */
+    --am-list-itemoffroll: var(--palette-bg-raised);          /* Hover = raised */
+    --am-list-itemon: darken(var(--palette-accent-alt), 0.20);  /* Selected = blue-gray tint */
+    --am-list-itemonroll: darken(var(--palette-accent-alt), 0.10); /* Selected hover */
     /* Macro text levels — rainbow hue progression through depth levels */
-    --mc-list-textl0: hsl(224, 90%, 86%);               
-    --mc-list-textl1: hsl(204, 100%, 76%);                    
-    --mc-list-textl2: hsl(184, 100%, 76%);                 
-    --mc-list-textl3: hsl(164, 100%, 76%);                  
-    --mc-list-textl4: hsl(144, 100%, 76%);                
-    --mc-list-textl5: hsl(124, 100%, 76%);                  
-    --mc-list-textl6: hsl(104, 100%, 76%);                  
-    --mc-list-textl7: hsl(84, 100%, 76%);                
-    --mc-list-erroroff: var(--palette-bg-dark);               /* Error item bg */
-    --mc-list-erroroffroll: var(--palette-bg-surface);        /* Error item hover */
-    --mc-list-erroron: var(--palette-error);                  /* Error item selected */
-    --mc-list-erroronroll: lighten(var(--palette-error), 0.10); /* Error selected hover */
-    --mc-list-borderdark: darken(var(--mc-list-bg), 0.1);      /* Dark border */
-    --mc-list-borderlight: lighten(var(--mc-list-bg), 0.17);  /* Light border */
-    --mc-list-draghighlight: var(--palette-tuik-accent);      /* Orange drag highlight */
+    --am-list-textl0: hsl(224, 90%, 86%);               
+    --am-list-textl1: hsl(204, 100%, 76%);                    
+    --am-list-textl2: hsl(184, 100%, 76%);                 
+    --am-list-textl3: hsl(164, 100%, 76%);                  
+    --am-list-textl4: hsl(144, 100%, 76%);                
+    --am-list-textl5: hsl(124, 100%, 76%);                  
+    --am-list-textl6: hsl(104, 100%, 76%);                  
+    --am-list-textl7: hsl(84, 100%, 76%);                
+    --am-list-erroroff: var(--palette-bg-dark);               /* Error item bg */
+    --am-list-erroroffroll: var(--palette-bg-surface);        /* Error item hover */
+    --am-list-erroron: var(--palette-error);                  /* Error item selected */
+    --am-list-erroronroll: lighten(var(--palette-error), 0.10); /* Error selected hover */
+    --am-list-borderdark: darken(var(--am-list-bg), 0.1);      /* Dark border */
+    --am-list-borderlight: lighten(var(--am-list-bg), 0.17);  /* Light border */
+    --am-list-draghighlight: var(--palette-tuik-accent);      /* Orange drag highlight */
 
 } /* end :root */
 
@@ -1819,24 +1819,24 @@ op.AW.par.Listtextonroll { color: var(--mcw-list-textonroll); }
 /* ========== Component Parameters: op.AM (Macros) ========== */
 
 /* Macro List */
-op.AM.par.Macrolistbg { color: var(--mc-list-bg); }
-op.AM.par.Macrolistrowbg { color: var(--mc-list-rowbg); }
-op.AM.par.Macrolistcelloff { color: var(--mc-list-itemoff); }
-op.AM.par.Macrolistcelloffroll { color: var(--mc-list-itemoffroll); }
-op.AM.par.Macrolistcellon { color: var(--mc-list-itemon); }
-op.AM.par.Macrolistcellonroll { color: var(--mc-list-itemonroll); }
-op.AM.par.Macrolisttextl0 { color: var(--mc-list-textl0); }
-op.AM.par.Macrolisttextl1 { color: var(--mc-list-textl1); }
-op.AM.par.Macrolisttextl2 { color: var(--mc-list-textl2); }
-op.AM.par.Macrolisttextl3 { color: var(--mc-list-textl3); }
-op.AM.par.Macrolisttextl4 { color: var(--mc-list-textl4); }
-op.AM.par.Macrolisttextl5 { color: var(--mc-list-textl5); }
-op.AM.par.Macrolisttextl6 { color: var(--mc-list-textl6); }
-op.AM.par.Macrolisttextl7 { color: var(--mc-list-textl7); }
-op.AM.par.Macrolisterroroff { color: var(--mc-list-erroroff); }
-op.AM.par.Macrolisterroroffroll { color: var(--mc-list-erroroffroll); }
-op.AM.par.Macrolisterroron { color: var(--mc-list-erroron); }
-op.AM.par.Macrolisterroronroll { color: var(--mc-list-erroronroll); }
-op.AM.par.Macrolistborderdark { color: var(--mc-list-borderdark); }
-op.AM.par.Macrolistborderlight { color: var(--mc-list-borderlight); }
-op.AM.par.Macrolistdraghighlight { color: var(--mc-list-draghighlight); }
+op.AM.par.Macrolistbg { color: var(--am-list-bg); }
+op.AM.par.Macrolistrowbg { color: var(--am-list-rowbg); }
+op.AM.par.Macrolistcelloff { color: var(--am-list-itemoff); }
+op.AM.par.Macrolistcelloffroll { color: var(--am-list-itemoffroll); }
+op.AM.par.Macrolistcellon { color: var(--am-list-itemon); }
+op.AM.par.Macrolistcellonroll { color: var(--am-list-itemonroll); }
+op.AM.par.Macrolisttextl0 { color: var(--am-list-textl0); }
+op.AM.par.Macrolisttextl1 { color: var(--am-list-textl1); }
+op.AM.par.Macrolisttextl2 { color: var(--am-list-textl2); }
+op.AM.par.Macrolisttextl3 { color: var(--am-list-textl3); }
+op.AM.par.Macrolisttextl4 { color: var(--am-list-textl4); }
+op.AM.par.Macrolisttextl5 { color: var(--am-list-textl5); }
+op.AM.par.Macrolisttextl6 { color: var(--am-list-textl6); }
+op.AM.par.Macrolisttextl7 { color: var(--am-list-textl7); }
+op.AM.par.Macrolisterroroff { color: var(--am-list-erroroff); }
+op.AM.par.Macrolisterroroffroll { color: var(--am-list-erroroffroll); }
+op.AM.par.Macrolisterroron { color: var(--am-list-erroron); }
+op.AM.par.Macrolisterroronroll { color: var(--am-list-erroronroll); }
+op.AM.par.Macrolistborderdark { color: var(--am-list-borderdark); }
+op.AM.par.Macrolistborderlight { color: var(--am-list-borderlight); }
+op.AM.par.Macrolistdraghighlight { color: var(--am-list-draghighlight); }

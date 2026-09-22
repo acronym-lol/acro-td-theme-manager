@@ -549,28 +549,28 @@
     --mcw-list-textonroll: var(--palette-fg-bright);
 
     /* Macros Macro List */
-    --mc-list-bg: var(--palette-bg);
-    --mc-list-rowbg: var(--palette-bg);                          /* Subtle row bg */
-    --mc-list-itemoff: var(--gray-25);
-    --mc-list-itemoffroll: var(--gray-30);
-    --mc-list-itemon: var(--gray-40);
-    --mc-list-itemonroll: var(--gray-45);
+    --am-list-bg: var(--palette-bg);
+    --am-list-rowbg: var(--palette-bg);                          /* Subtle row bg */
+    --am-list-itemoff: var(--gray-25);
+    --am-list-itemoffroll: var(--gray-30);
+    --am-list-itemon: var(--gray-40);
+    --am-list-itemonroll: var(--gray-45);
     /* Macro text levels — warm gold hue shift (MARIGOLD-inspired, 20° per level) */
-    --mc-list-textl0: hsl(48, 100%, 75%);                     /* L0: warm gold — root */
-    --mc-list-textl1: hsl(28, 100%, 75%);                     /* L1 */
-    --mc-list-textl2: hsl(8, 100%, 75%);                      /* L2 */
-    --mc-list-textl3: hsl(348, 100%, 75%);                    /* L3 */
-    --mc-list-textl4: hsl(328, 100%, 75%);                    /* L4 */
-    --mc-list-textl5: hsl(308, 100%, 75%);                    /* L5 */
-    --mc-list-textl6: hsl(288, 100%, 75%);                    /* L6 */
-    --mc-list-textl7: hsl(268, 100%, 75%);                    /* L7: purple — deepest */
-    --mc-list-erroroff: var(--gray-10);
-    --mc-list-erroroffroll: var(--gray-15);
-    --mc-list-erroron: var(--palette-error);
-    --mc-list-erroronroll: lighten(var(--palette-error), 0.10);
-    --mc-list-borderdark: var(--gray-10);
-    --mc-list-borderlight: var(--gray-30);
-    --mc-list-draghighlight: var(--info);
+    --am-list-textl0: hsl(48, 100%, 75%);                     /* L0: warm gold — root */
+    --am-list-textl1: hsl(28, 100%, 75%);                     /* L1 */
+    --am-list-textl2: hsl(8, 100%, 75%);                      /* L2 */
+    --am-list-textl3: hsl(348, 100%, 75%);                    /* L3 */
+    --am-list-textl4: hsl(328, 100%, 75%);                    /* L4 */
+    --am-list-textl5: hsl(308, 100%, 75%);                    /* L5 */
+    --am-list-textl6: hsl(288, 100%, 75%);                    /* L6 */
+    --am-list-textl7: hsl(268, 100%, 75%);                    /* L7: purple — deepest */
+    --am-list-erroroff: var(--gray-10);
+    --am-list-erroroffroll: var(--gray-15);
+    --am-list-erroron: var(--palette-error);
+    --am-list-erroronroll: lighten(var(--palette-error), 0.10);
+    --am-list-borderdark: var(--gray-10);
+    --am-list-borderlight: var(--gray-30);
+    --am-list-draghighlight: var(--info);
 } /* end :root */
 
 
@@ -1783,24 +1783,24 @@ op.AW.par.Listtextonroll { color: var(--mcw-list-textonroll); }
 /* ========== Component Parameters: op.AM (Macros) ========== */
 
 /* Macro List */
-op.AM.par.Macrolistbg { color: var(--mc-list-bg); }
-op.AM.par.Macrolistrowbg { color: var(--mc-list-rowbg); }
-op.AM.par.Macrolistcelloff { color: var(--mc-list-itemoff); }
-op.AM.par.Macrolistcelloffroll { color: var(--mc-list-itemoffroll); }
-op.AM.par.Macrolistcellon { color: var(--mc-list-itemon); }
-op.AM.par.Macrolistcellonroll { color: var(--mc-list-itemonroll); }
-op.AM.par.Macrolisttextl0 { color: var(--mc-list-textl0); }
-op.AM.par.Macrolisttextl1 { color: var(--mc-list-textl1); }
-op.AM.par.Macrolisttextl2 { color: var(--mc-list-textl2); }
-op.AM.par.Macrolisttextl3 { color: var(--mc-list-textl3); }
-op.AM.par.Macrolisttextl4 { color: var(--mc-list-textl4); }
-op.AM.par.Macrolisttextl5 { color: var(--mc-list-textl5); }
-op.AM.par.Macrolisttextl6 { color: var(--mc-list-textl6); }
-op.AM.par.Macrolisttextl7 { color: var(--mc-list-textl7); }
-op.AM.par.Macrolisterroroff { color: var(--mc-list-erroroff); }
-op.AM.par.Macrolisterroroffroll { color: var(--mc-list-erroroffroll); }
-op.AM.par.Macrolisterroron { color: var(--mc-list-erroron); }
-op.AM.par.Macrolisterroronroll { color: var(--mc-list-erroronroll); }
-op.AM.par.Macrolistborderdark { color: var(--mc-list-borderdark); }
-op.AM.par.Macrolistborderlight { color: var(--mc-list-borderlight); }
-op.AM.par.Macrolistdraghighlight { color: var(--mc-list-draghighlight); }
+op.AM.par.Macrolistbg { color: var(--am-list-bg); }
+op.AM.par.Macrolistrowbg { color: var(--am-list-rowbg); }
+op.AM.par.Macrolistcelloff { color: var(--am-list-itemoff); }
+op.AM.par.Macrolistcelloffroll { color: var(--am-list-itemoffroll); }
+op.AM.par.Macrolistcellon { color: var(--am-list-itemon); }
+op.AM.par.Macrolistcellonroll { color: var(--am-list-itemonroll); }
+op.AM.par.Macrolisttextl0 { color: var(--am-list-textl0); }
+op.AM.par.Macrolisttextl1 { color: var(--am-list-textl1); }
+op.AM.par.Macrolisttextl2 { color: var(--am-list-textl2); }
+op.AM.par.Macrolisttextl3 { color: var(--am-list-textl3); }
+op.AM.par.Macrolisttextl4 { color: var(--am-list-textl4); }
+op.AM.par.Macrolisttextl5 { color: var(--am-list-textl5); }
+op.AM.par.Macrolisttextl6 { color: var(--am-list-textl6); }
+op.AM.par.Macrolisttextl7 { color: var(--am-list-textl7); }
+op.AM.par.Macrolisterroroff { color: var(--am-list-erroroff); }
+op.AM.par.Macrolisterroroffroll { color: var(--am-list-erroroffroll); }
+op.AM.par.Macrolisterroron { color: var(--am-list-erroron); }
+op.AM.par.Macrolisterroronroll { color: var(--am-list-erroronroll); }
+op.AM.par.Macrolistborderdark { color: var(--am-list-borderdark); }
+op.AM.par.Macrolistborderlight { color: var(--am-list-borderlight); }
+op.AM.par.Macrolistdraghighlight { color: var(--am-list-draghighlight); }
