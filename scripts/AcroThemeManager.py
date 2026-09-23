@@ -719,7 +719,7 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
         The base template lists every op selector the theme system supports,
         so it doubles as the canonical key list for exports and as the
         fallback palette for resets. The components' own parameter defaults
-        are unusable here — they are all transparent black, so resetting to
+        are unusable here - they are all transparent black, so resetting to
         them would black out the widget and macro list UI.
 
         Returns:
@@ -858,7 +858,7 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
 
     def _touchColorsBackupPath(self):
         """One-shot backup of the original install TouchColors (project folder).
-        Written only if it doesn't already exist — preserves the truly original
+        Written only if it doesn't already exist - preserves the truly original
         bytes even across repeated theme writes."""
         return os.path.normpath(
             os.path.join(project.folder, 'TouchColors.original'))
@@ -907,7 +907,7 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
             return False
 
         # One-shot: capture the install file's original bytes the first time
-        # we write. Idempotent — never overwrites an existing backup, since
+        # we write. Idempotent - never overwrites an existing backup, since
         # by then the source may already be a previously-applied theme.
         backup_path = self._touchColorsBackupPath()
         if not os.path.exists(backup_path):
@@ -920,7 +920,7 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
                 debug(f'AcroThemeManager: Failed to write backup '
                       f'{backup_path}: {e}')
 
-        # Detect line ending style — preserve exactly
+        # Detect line ending style - preserve exactly
         line_ending = b'\r\n' if b'\r\n' in original else b'\n'
         lines = original.split(line_ending)
 
@@ -962,7 +962,7 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
 
         # Sanity: line count must match exactly
         if new_data.count(line_ending) != original.count(line_ending):
-            debug('AcroThemeManager: Refusing to write TouchColors — '
+            debug('AcroThemeManager: Refusing to write TouchColors - '
                   'line count mismatch.')
             return False
 
