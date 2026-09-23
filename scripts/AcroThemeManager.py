@@ -69,6 +69,30 @@ TUIK2_COLORS = [color for colors in TUIK2_SECTIONS.values() for color in colors]
 # Path to TUIK2 color component for reading defaults
 TUIK2_COLOR_COMP = '/ui/lib/TUIK2/colors/color'
 
+# The base template carries every themable op shortcut selector, so it doubles
+# as the canonical key list for exports and resets (see _opColorKeys).
+OP_TEMPLATE_FILE = 'td-base-template.css'
+
+# 'op.AW.par.Wcbg' -> ('AW', 'Wcbg')
+OP_KEY_RE = re.compile(r'^op\.([A-Z][A-Z0-9_]*?)\.par\.([A-Za-z0-9]+)$')
+
+# Same, matched as a CSS rule selector inside a theme file
+OP_SELECTOR_RE = re.compile(
+    r'^\s*(op\.[A-Z][A-Z0-9_]*\.par\.[A-Za-z0-9]+)\s*\{', re.MULTILINE)
+
+
+def _split_op_key(key):
+    """Split an op color key into its shortcut and parameter base
+
+    Args:
+        key: e.g., 'op.AW.par.Wcbg'
+
+    Returns:
+        tuple: ('AW', 'Wcbg'), or (None, None) if the key is malformed
+    """
+    match = OP_KEY_RE.match(key)
+    return match.groups() if match else (None, None)
+
 
 def _tuik2_par_name(color_name):
     """Convert TUIK2 color name to parameter name
@@ -99,6 +123,9 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
         self._previousColors = {}
         self._previousTUIK2Colors = {}
         self._previousOpColors = {}
+
+        # Lazily filled by _opColorDefaults()
+        self._opColorKeyCache = None
 
         # init callbacks
         self.callbackDat = self.ownerComp.par.Callbackdat.eval()
@@ -531,13 +558,13 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
             if write_par is not None and write_par.eval():
                 self.WriteTouchColorsFile(ui_colors=ui_colors)
 
-        # Apply TUIK2 colors to parameters
-        if tuik2_colors:
-            self._applyTUIK2Colors(tuik2_colors)
+        # Apply TUIK2 colors to parameters. Always called, even with nothing
+        # to apply: a theme that omits the section must reset it rather than
+        # leave the previous theme's colors in place.
+        self._applyTUIK2Colors(tuik2_colors)
 
-        # Apply op shortcut colors
-        if op_colors:
-            self._applyOpColors(op_colors)
+        # Apply op shortcut colors (same reasoning)
+        self._applyOpColors(op_colors)
 
         self._previousColors = ui_colors.copy()
         self._previousTUIK2Colors = tuik2_colors.copy()
@@ -618,8 +645,24 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
             self.ownerComp.par[par_name + 'a'] = a
             count += 1
 
+        # Restore anything the previous theme set that this one omits
+        self._resetTUIK2Colors(set(self._previousTUIK2Colors) - set(colors))
+
         # if count > 0:
         #     debug(f'AcroThemeManager: Applied {count} TUIK2 colors')
+
+    def _resetTUIK2Colors(self, color_names):
+        """Restore TUIK2 parameters to their defaults
+
+        Args:
+            color_names: iterable of TUIK2 color names without the prefix
+        """
+        for color_name in color_names:
+            par_name = _tuik2_par_name(color_name)
+            for suffix in 'rgba':
+                par = getattr(self.ownerComp.par, par_name + suffix, None)
+                if par is not None:
+                    par.val = par.default
 
     def _applyOpColors(self, colors):
         """Apply colors to component parameters via op shortcuts
@@ -629,14 +672,11 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
         """
         count = 0
         for key, rgba in colors.items():
-            # Parse key: 'op.AW.par.Tabcolor'
-            match = re.match(r'^op\.([A-Z][A-Z0-9_]*?)\.par\.([A-Za-z0-9]+)$', key)
-            if not match:
+            # Parse key: 'op.AW.par.Tabcolor' -> ('AW', 'Tabcolor')
+            shortcut, par_base = _split_op_key(key)
+            if not shortcut:
                 debug(f'AcroThemeManager: Invalid op color key: {key}')
                 continue
-
-            shortcut = match.group(1)  # 'AW'
-            par_base = match.group(2)  # 'Tabcolor'
 
             # Resolve op shortcut dynamically
             comp = getattr(op, shortcut, None)
@@ -667,8 +707,84 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
             except Exception as e:
                 debug(f'AcroThemeManager: Failed to set op.{shortcut}.par.{par_base}: {e}')
 
+        # Restore anything the previous theme set that this one omits
+        self._resetOpColors(set(self._previousOpColors) - set(colors))
+
         # if count > 0:
         #     debug(f'AcroThemeManager: Applied {count} op shortcut colors')
+
+    def _opColorDefaults(self):
+        """Baseline op shortcut colors, parsed from the base template
+
+        The base template lists every op selector the theme system supports,
+        so it doubles as the canonical key list for exports and as the
+        fallback palette for resets. The components' own parameter defaults
+        are unusable here — they are all transparent black, so resetting to
+        them would black out the widget and macro list UI.
+
+        Returns:
+            dict: {'op.AW.par.Wcbg': [r, g, b, a], ...} in template order
+        """
+        if self._opColorKeyCache is None:
+            colors = {}
+            path = os.path.join(
+                self.ownerComp.par.Repopath.eval(), 'themes', OP_TEMPLATE_FILE)
+            try:
+                with open(path) as f:
+                    css = f.read()
+                parsed = ThemeCSSParser().parse(css)
+                # Keep template order rather than the parser's dict order
+                for key in dict.fromkeys(OP_SELECTOR_RE.findall(css)):
+                    if key in parsed:
+                        colors[key] = parsed[key]
+            except Exception as e:
+                debug(f'AcroThemeManager: Could not read {path}: {e}')
+            self._opColorKeyCache = colors
+
+        return self._opColorKeyCache
+
+    def _opColorKeys(self):
+        """Every themable op shortcut key
+
+        Returns:
+            list: e.g., ['op.AW.par.Wcbg', 'op.AM.par.Macrolistbg', ...]
+        """
+        return list(self._opColorDefaults()) or list(self._previousOpColors)
+
+    def _resetOpColors(self, keys):
+        """Restore op shortcut parameters to their base template values
+
+        Args:
+            keys: iterable of 'op.SHORTCUT.par.Parname' keys
+        """
+        defaults = self._opColorDefaults()
+        missing = [k for k in keys if k not in defaults]
+        if missing:
+            debug(f'AcroThemeManager: No base template value for {missing} - '
+                  f'left unchanged')
+
+        self._applyOpParValues({k: defaults[k] for k in keys if k in defaults})
+
+    def _applyOpParValues(self, colors):
+        """Write {op key: rgba} straight to component parameters
+
+        Args:
+            colors: dict of {'op.SHORTCUT.par.Parname': [r, g, b] or [r, g, b, a]}
+        """
+        for key, rgba in colors.items():
+            shortcut, par_base = _split_op_key(key)
+            if not shortcut:
+                continue
+
+            comp = getattr(op, shortcut, None)
+            if comp is None or not hasattr(comp, 'par'):
+                continue
+
+            values = list(rgba[:3]) + [rgba[3] if len(rgba) > 3 else 1.0]
+            for suffix, value in zip('rgba', values):
+                par = getattr(comp.par, par_base + suffix, None)
+                if par is not None:
+                    par.val = value
 
     def Refresh(self):
         """Force full refresh from theme file"""
@@ -678,13 +794,15 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
         if self.ThemeDAT:
             self.OnThemeChange(self.ThemeDAT)
 
-    def SaveTheme(self, filepath=None, name="Custom Theme", include_tuik2=True):
-        """Export current ui.colors and TUIK2 parameters to CSS file
+    def SaveTheme(self, filepath=None, name="Custom Theme", include_tuik2=True,
+                  include_op=True):
+        """Export current ui.colors and component parameters to CSS file
 
         Args:
             filepath: Output path (uses Themefile parameter if None)
             name: Theme name for header comment
             include_tuik2: Include TUIK2 color parameters in export
+            include_op: Include op shortcut parameters in export
         """
         # Collect all ui.colors
         colors = {}
@@ -703,6 +821,19 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
                     b = self.ownerComp.par[par_name + 'b'].eval()
                     a = self.ownerComp.par[par_name + 'a'].eval()
                     colors[f'TUIK2.{color_name}'] = [r, g, b, a]
+
+        # Collect op shortcut colors from component parameters. Without this
+        # an export drops every op section, and the theme it writes silently
+        # stops theming those components.
+        if include_op:
+            for key in self._opColorKeys():
+                shortcut, par_base = _split_op_key(key)
+                comp = getattr(op, shortcut, None) if shortcut else None
+                if comp is None or not hasattr(comp, 'par'):
+                    continue
+                if not hasattr(comp.par, par_base + 'r'):
+                    continue
+                colors[key] = [comp.par[par_base + c].eval() for c in 'rgba']
 
         # Format as CSS
         css_content = self._cssParser.format_css(colors, name=name)
@@ -864,6 +995,7 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
         """Export TD default colors to a CSS file"""
         # Reset to defaults first
         ui.colors.resetToDefaults()
+        self._resetOpColors(self._opColorKeys())
 
         # Save to themes folder
         repo_path = self.ownerComp.par.Repopath.eval()
@@ -882,6 +1014,10 @@ class AcroThemeManager(CallbacksExt, AcroVersionExt):
         ui.colors.resetToDefaults()
         self._previousColors = {}
         self._previousTUIK2Colors = {}
+        self._previousOpColors = {}
+
+        # Reset op shortcut parameters to their defaults
+        self._resetOpColors(self._opColorKeys())
 
         # Reset TUIK2 parameters to values from color comp
         color_comp = op(TUIK2_COLOR_COMP)

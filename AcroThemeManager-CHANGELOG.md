@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2026-08-28
+- Reset op shortcut and TUIK2 colors a theme omits instead of inheriting the previous theme's values
+- `SaveTheme()` now exports `op.SHORTCUT.par.*` colors; exports previously dropped every op section
+- Filled the missing `op.AM` and `op.AW` List rules in `td-default.css`
+- Renamed CSS tokens `--mc-list-*` to `--am-list-*` and `--mcw-*` to `--aw-*`
+- Fixed malformed hex values in `catnap.css` and `synthwave.css` that silently dropped 4 colors
+
 ## [1.1.2] - 2026-06-09
 - Updated changelog and version paths 
 

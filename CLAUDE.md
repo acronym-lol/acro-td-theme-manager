@@ -34,6 +34,8 @@ Theme CSS file → ThemeCSSParser.py → AcroThemeManager.py → TD ui.colors / 
 - Alpha channel is stripped for `ui.colors` (TD core doesn't support alpha)
 - TUIK2 colors are stored as RGBA parameters on the ThemeManager component
 - Theme diffs are computed on reload — only changed colors are reapplied
+- Keys the previous theme set but the new one omits are restored, not left stale: TUIK2 params to their parameter defaults, `op.*` params to their `td-base-template.css` values (their own parameter defaults are transparent black)
+- `td-base-template.css` is the canonical list of themable `op.*` keys — it drives both that reset and what `SaveTheme()` exports
 
 ## Theme File Structure
 

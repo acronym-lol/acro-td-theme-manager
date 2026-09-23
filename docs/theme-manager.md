@@ -130,6 +130,17 @@ When `OnThemeChange` runs, parsed colors are split by selector prefix:
 
 Subsequent loads diff against the prior parse so unchanged values aren't re-written, which keeps `ui.colors` writes cheap.
 
+### Omitted Sections Reset
+
+A theme is not required to define every key, but anything the *previous* theme set and the new one omits is restored rather than left in place — otherwise switching themes would silently inherit stale colors from the one before it.
+
+| Category | Restored to |
+|----------|-------------|
+| `TUIK2.*` | The parameter's own default (seeded from `/ui/lib/TUIK2/colors/color`). |
+| `op.SHORTCUT.par.*` | The value in `themes/td-base-template.css`. |
+
+Op shortcut parameters use the base template rather than their own parameter defaults, which are transparent black — resetting to those would black out the widget and macro list UI. This makes the base template the canonical list of themable op keys: it drives both this reset and what `SaveTheme()` exports.
+
 ---
 
 ## API Reference
@@ -146,9 +157,9 @@ Subsequent loads diff against the prior parse so unchanged values aren't re-writ
 |--------|-----------|---------|-------------|
 | `OnThemeChange(dat)` | `dat: DAT` | `None` | Called by the DAT Execute when the theme file content changes. Parses, splits by category, applies, and fires the `onThemeLoaded` callback. |
 | `Refresh()` | — | `None` | Force a full re-parse and re-apply. Clears the diff cache so every color is rewritten. |
-| `SaveTheme(filepath=None, name='Custom Theme', include_tuik2=True)` | `str?, str, bool` | `None` | Write current `ui.colors` (and optionally the TUIK2 parameters) back out as a CSS file. Defaults to the configured `Themefile`. |
-| `ExportDefault()` | — | `None` | Reset `ui.colors` to TD defaults, then save them as `themes/td-default.css` under the manager's `Repopath`. |
-| `ResetToDefaults()` | — | `None` | Reset `ui.colors` and TUIK2 parameter values to TD defaults. Does not touch the theme file. |
+| `SaveTheme(filepath=None, name='Custom Theme', include_tuik2=True, include_op=True)` | `str?, str, bool, bool` | `None` | Write current `ui.colors` (and optionally the TUIK2 and `op.SHORTCUT` parameters) back out as a CSS file. Defaults to the configured `Themefile`. |
+| `ExportDefault()` | — | `None` | Reset `ui.colors` to TD defaults and `op.SHORTCUT` parameters to their base template values, then save them as `themes/td-default.css` under the manager's `Repopath`. |
+| `ResetToDefaults()` | — | `None` | Reset `ui.colors` and TUIK2 parameter values to TD defaults, and `op.SHORTCUT` parameters to their base template values. Does not touch the theme file. |
 | `WriteTouchColorsFile(ui_colors=None, output_path=None)` | `dict?, str?` | `bool` | Export a `TouchColors` file to the project folder using current (or supplied) `ui.colors`. Preserves the install file's line endings, ordering, and unrelated lines byte-for-byte; only the keys present in `ui_colors` are overridden. Idempotent — writes a one-time `TouchColors.original` backup the first time it runs. |
 
 ### Internal Methods

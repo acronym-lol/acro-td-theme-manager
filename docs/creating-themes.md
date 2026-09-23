@@ -74,7 +74,9 @@ op.ATM.SaveTheme('/path/to/captured.css', name='Captured State')
 op.ATM.ExportDefault()  # writes to themes/td-default.css
 ```
 
-`SaveTheme()` includes TUIK2 RGBA parameters by default; pass `include_tuik2=False` to skip them and emit only `ui.colors`.
+`SaveTheme()` includes TUIK2 RGBA parameters and `op.SHORTCUT.par.*` component parameters by default; pass `include_tuik2=False` or `include_op=False` to skip either and emit only `ui.colors`.
+
+The op-shortcut keys it writes come from `themes/td-base-template.css`, so adding a new themable parameter there is enough for exports to pick it up.
 
 ## Optional: write TouchColors
 

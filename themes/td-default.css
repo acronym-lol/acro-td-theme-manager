@@ -871,6 +871,40 @@ op.AW.par.Tabtexton { color: rgba(230, 230, 230, 1); }
 op.AW.par.Tabtextonroll { color: rgba(255, 255, 255, 1); }
 
 /* Matrix */
-op.AW.par.Matrixsplitoff { color: rgba(204, 204, 204, 1); }
-op.AW.par.Matrixsplitoffroll { color: rgba(26, 26, 26, 1); }
+op.AW.par.Matrixsplitoff { color: rgba(26, 26, 26, 1); }
+op.AW.par.Matrixsplitoffroll { color: rgba(204, 204, 204, 1); }
 op.AW.par.Matrixspliton { color: rgba(255, 0, 0, 1); }
+
+/* op.AW (restored from td-base-template.css) */
+op.AW.par.Listbg { color: rgba(20, 20, 24, 1); }
+op.AW.par.Listitemoff { color: rgba(47, 48, 51, 1); }
+op.AW.par.Listitemoffroll { color: rgba(55, 56, 60, 1); }
+op.AW.par.Listitemon { color: rgba(110, 126, 179, 1); }
+op.AW.par.Listitemonroll { color: rgba(118, 135, 192, 1); }
+op.AW.par.Listtextoff { color: rgba(200, 200, 200, 1); }
+op.AW.par.Listtextoffroll { color: rgba(240, 240, 240, 1); }
+op.AW.par.Listtexton { color: rgba(240, 240, 240, 1); }
+op.AW.par.Listtextonroll { color: rgba(255, 255, 255, 1); }
+
+/* op.AM (restored from td-base-template.css) */
+op.AM.par.Macrolistbg { color: rgba(20, 20, 24, 1); }
+op.AM.par.Macrolistrowbg { color: rgba(20, 20, 24, 1); }
+op.AM.par.Macrolistcelloff { color: rgba(47, 48, 51, 1); }
+op.AM.par.Macrolistcelloffroll { color: rgba(55, 56, 60, 1); }
+op.AM.par.Macrolistcellon { color: rgba(71, 81, 115, 1); }
+op.AM.par.Macrolistcellonroll { color: rgba(86, 99, 140, 1); }
+op.AM.par.Macrolisttextl0 { color: rgba(187, 204, 251, 1); }
+op.AM.par.Macrolisttextl1 { color: rgba(133, 206, 255, 1); }
+op.AM.par.Macrolisttextl2 { color: rgba(133, 247, 255, 1); }
+op.AM.par.Macrolisttextl3 { color: rgba(133, 255, 222, 1); }
+op.AM.par.Macrolisttextl4 { color: rgba(133, 255, 182, 1); }
+op.AM.par.Macrolisttextl5 { color: rgba(133, 255, 141, 1); }
+op.AM.par.Macrolisttextl6 { color: rgba(165, 255, 133, 1); }
+op.AM.par.Macrolisttextl7 { color: rgba(206, 255, 133, 1); }
+op.AM.par.Macrolisterroroff { color: rgba(20, 20, 24, 1); }
+op.AM.par.Macrolisterroroffroll { color: rgba(47, 48, 51, 1); }
+op.AM.par.Macrolisterroron { color: rgba(255, 85, 85, 1); }
+op.AM.par.Macrolisterroronroll { color: rgba(255, 85, 85, 1); }
+op.AM.par.Macrolistborderdark { color: rgba(0, 0, 0, 1); }
+op.AM.par.Macrolistborderlight { color: rgba(56, 56, 67, 1); }
+op.AM.par.Macrolistdraghighlight { color: rgba(191, 129, 72, 1); }

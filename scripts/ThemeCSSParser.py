@@ -360,12 +360,15 @@ class ThemeCSSParser:
                 lines.append(f'    {var_name}: {hex_color};\n')
             lines.append('}\n')
 
-        # Separate TUIK2 colors from regular colors
+        # Separate TUIK2 and op shortcut colors from regular colors
         tuik2_colors = {}
+        op_colors = {}
         regular_colors = {}
         for key, rgb in colors.items():
             if key.startswith('TUIK2.'):
                 tuik2_colors[key] = rgb
+            elif key.startswith('op.') and '.par.' in key:
+                op_colors[key] = rgb
             else:
                 regular_colors[key] = rgb
 
@@ -405,5 +408,22 @@ class ThemeCSSParser:
                     for key, color in sorted(tuik2_sections[section]):
                         color_str = self._rgba_to_css(color)
                         lines.append(f'{key} {{ color: {color_str}; }}\n')
+
+        # Group op shortcut colors by shortcut. These carry alpha, so they are
+        # written as rgba() rather than hex.
+        if op_colors:
+            lines.append('\n/* ========== Component Parameters ========== */\n')
+            op_sections = {}
+            for key, rgba in op_colors.items():
+                shortcut = key.split('.')[1]
+                if shortcut not in op_sections:
+                    op_sections[shortcut] = []
+                op_sections[shortcut].append((key, rgba))
+
+            for shortcut in sorted(op_sections.keys()):
+                lines.append(f'\n/* op.{shortcut} */\n')
+                for key, color in sorted(op_sections[shortcut]):
+                    color_str = self._rgba_to_css(color)
+                    lines.append(f'{key} {{ color: {color_str}; }}\n')
 
         return ''.join(lines)

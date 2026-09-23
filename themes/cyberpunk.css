@@ -500,55 +500,55 @@
     /* buttons, tabs, and matrix elements.                          */
     /* ============================================================ */
 
-    /* McWidget Container — matches TD gadget/panel styling */
-    --mcw-wc-bg: var(--palette-bg-surface);
-    --mcw-wc-bg-selected: var(--palette-tuik-accent);         /* Orange selection like TUIK */
-    --mcw-wc-bg-drag: var(--palette-accent-alt);              /* Blue-gray drag indicator */
-    --mcw-wc-bg-drop: var(--palette-success);                 /* Green drop target */
-    --mcw-wc-header: var(--palette-bg-raised);                /* Header matches raised surfaces */
-    --mcw-wc-header-selected: var(--palette-tuik-accent);
-    --mcw-wc-header-drag: lighten(var(--palette-accent-alt), 0.15);
-    --mcw-wc-header-drop: lighten(var(--palette-success), 0.15);
-    --mcw-wc-text: var(--palette-fg-muted);
-    --mcw-wc-text-selected: var(--palette-fg-bright);         /* Bright text on selection */
-    --mcw-wc-text-drag: var(--palette-fg-bright);
-    --mcw-wc-text-drop: var(--palette-fg-bright);
+    /* AcroWidget Container — matches TD gadget/panel styling */
+    --aw-wc-bg: var(--palette-bg-surface);
+    --aw-wc-bg-selected: var(--palette-tuik-accent);         /* Orange selection like TUIK */
+    --aw-wc-bg-drag: var(--palette-accent-alt);              /* Blue-gray drag indicator */
+    --aw-wc-bg-drop: var(--palette-success);                 /* Green drop target */
+    --aw-wc-header: var(--palette-bg-raised);                /* Header matches raised surfaces */
+    --aw-wc-header-selected: var(--palette-tuik-accent);
+    --aw-wc-header-drag: lighten(var(--palette-accent-alt), 0.15);
+    --aw-wc-header-drop: lighten(var(--palette-success), 0.15);
+    --aw-wc-text: var(--palette-fg-muted);
+    --aw-wc-text-selected: var(--palette-fg-bright);         /* Bright text on selection */
+    --aw-wc-text-drag: var(--palette-fg-bright);
+    --aw-wc-text-drop: var(--palette-fg-bright);
 
-    /* McWidget Button — matches TUIK2 button styling */
-    --mcw-button-off: var(--palette-bg-raised);               /* Raised surface for off state */
-    --mcw-button-offroll: lighten(var(--palette-bg-raised), 0.08);
-    --mcw-button-on: var(--palette-tuik-accent);              /* Orange for on state */
-    --mcw-button-onroll: lighten(var(--palette-tuik-accent), 0.10);
-    --mcw-buttontext-off: var(--palette-fg);
-    --mcw-buttontext-offroll: var(--palette-fg-bright);
-    --mcw-buttontext-on: var(--palette-fg-bright);
-    --mcw-buttontext-onroll: var(--palette-fg-bright);
+    /* AcroWidget Button — matches TUIK2 button styling */
+    --aw-button-off: var(--palette-bg-raised);               /* Raised surface for off state */
+    --aw-button-offroll: lighten(var(--palette-bg-raised), 0.08);
+    --aw-button-on: var(--palette-tuik-accent);              /* Orange for on state */
+    --aw-button-onroll: lighten(var(--palette-tuik-accent), 0.10);
+    --aw-buttontext-off: var(--palette-fg);
+    --aw-buttontext-offroll: var(--palette-fg-bright);
+    --aw-buttontext-on: var(--palette-fg-bright);
+    --aw-buttontext-onroll: var(--palette-fg-bright);
 
-    /* McWidget Tabs — matches TUIK2 tab styling */
-    --mcw-tab-off: var(--palette-bg-surface);                 /* Surface for off state */
-    --mcw-tab-offroll: var(--palette-bg-raised);
-    --mcw-tab-on: var(--palette-bg-raised);                   /* Raised for on state */
-    --mcw-tab-onroll: lighten(var(--palette-bg-raised), 0.08);
-    --mcw-tabtext-off: var(--palette-fg-muted);
-    --mcw-tabtext-offroll: var(--palette-fg);
-    --mcw-tabtext-on: var(--palette-fg-bright);
-    --mcw-tabtext-onroll: var(--palette-fg-bright);
+    /* AcroWidget Tabs — matches TUIK2 tab styling */
+    --aw-tab-off: var(--palette-bg-surface);                 /* Surface for off state */
+    --aw-tab-offroll: var(--palette-bg-raised);
+    --aw-tab-on: var(--palette-bg-raised);                   /* Raised for on state */
+    --aw-tab-onroll: lighten(var(--palette-bg-raised), 0.08);
+    --aw-tabtext-off: var(--palette-fg-muted);
+    --aw-tabtext-offroll: var(--palette-fg);
+    --aw-tabtext-on: var(--palette-fg-bright);
+    --aw-tabtext-onroll: var(--palette-fg-bright);
 
-    /* McWidget Matrix — matches TUIK2 toggle styling */
-    --mcw-matrix-off: var(--palette-bg-raised);               /* Raised surface for off */
-    --mcw-matrix-offroll: lighten(var(--palette-bg-raised), 0.08);
-    --mcw-matrix-on: var(--palette-tuik-accent);              /* Orange for on state */
+    /* AcroWidget Matrix — matches TUIK2 toggle styling */
+    --aw-matrix-off: var(--palette-bg-raised);               /* Raised surface for off */
+    --aw-matrix-offroll: lighten(var(--palette-bg-raised), 0.08);
+    --aw-matrix-on: var(--palette-tuik-accent);              /* Orange for on state */
 
-    /* McWidget List — subtle gray steps, accent-tinted selection */
-    --mcw-list-bg: var(--palette-bg-surface);                 /* Surface for list container */
-    --mcw-list-itemoff: var(--palette-bg-surface);            /* Surface for items */
-    --mcw-list-itemoffroll: var(--palette-bg-raised);         /* Raised on hover */
-    --mcw-list-itemon: darken(var(--palette-accent-alt), 0.15);  /* Accent-tinted selection */
-    --mcw-list-itemonroll: darken(var(--palette-accent-alt), 0.10);
-    --mcw-list-textoff: var(--palette-fg);
-    --mcw-list-textoffroll: var(--palette-fg-bright);
-    --mcw-list-texton: var(--palette-fg-bright);
-    --mcw-list-textonroll: var(--palette-fg-bright);
+    /* AcroWidget List — subtle gray steps, accent-tinted selection */
+    --aw-list-bg: var(--palette-bg-surface);                 /* Surface for list container */
+    --aw-list-itemoff: var(--palette-bg-surface);            /* Surface for items */
+    --aw-list-itemoffroll: var(--palette-bg-raised);         /* Raised on hover */
+    --aw-list-itemon: darken(var(--palette-accent-alt), 0.15);  /* Accent-tinted selection */
+    --aw-list-itemonroll: darken(var(--palette-accent-alt), 0.10);
+    --aw-list-textoff: var(--palette-fg);
+    --aw-list-textoffroll: var(--palette-fg-bright);
+    --aw-list-texton: var(--palette-fg-bright);
+    --aw-list-textonroll: var(--palette-fg-bright);
 
     /* Macros Macro List — matches AW list with rainbow text levels */
     --am-list-bg: var(--palette-bg-surface);
@@ -1733,54 +1733,54 @@ TUIK2.transparent { color: var(--tuik2-transparent); }
 /* ============================================================ */
 
 /* Widget Container */
-op.AW.par.Wcbg { color: var(--mcw-wc-bg); }
-op.AW.par.Wcbgselected { color: var(--mcw-wc-bg-selected); }
-op.AW.par.Wcbgdrag { color: var(--mcw-wc-bg-drag); }
-op.AW.par.Wcbgdrop { color: var(--mcw-wc-bg-drop); }
-op.AW.par.Wcheader { color: var(--mcw-wc-header); }
-op.AW.par.Wcheaderselected { color: var(--mcw-wc-header-selected); }
-op.AW.par.Wcheaderdrag { color: var(--mcw-wc-header-drag); }
-op.AW.par.Wcheaderdrop { color: var(--mcw-wc-header-drop); }
-op.AW.par.Wctext { color: var(--mcw-wc-text); }
-op.AW.par.Wctextselected { color: var(--mcw-wc-text-selected); }
-op.AW.par.Wctextdrag { color: var(--mcw-wc-text-drag); }
-op.AW.par.Wctextdrop { color: var(--mcw-wc-text-drop); }
+op.AW.par.Wcbg { color: var(--aw-wc-bg); }
+op.AW.par.Wcbgselected { color: var(--aw-wc-bg-selected); }
+op.AW.par.Wcbgdrag { color: var(--aw-wc-bg-drag); }
+op.AW.par.Wcbgdrop { color: var(--aw-wc-bg-drop); }
+op.AW.par.Wcheader { color: var(--aw-wc-header); }
+op.AW.par.Wcheaderselected { color: var(--aw-wc-header-selected); }
+op.AW.par.Wcheaderdrag { color: var(--aw-wc-header-drag); }
+op.AW.par.Wcheaderdrop { color: var(--aw-wc-header-drop); }
+op.AW.par.Wctext { color: var(--aw-wc-text); }
+op.AW.par.Wctextselected { color: var(--aw-wc-text-selected); }
+op.AW.par.Wctextdrag { color: var(--aw-wc-text-drag); }
+op.AW.par.Wctextdrop { color: var(--aw-wc-text-drop); }
 
 /* Button */
-op.AW.par.Buttonoff { color: var(--mcw-button-off); }
-op.AW.par.Buttonoffroll { color: var(--mcw-button-offroll); }
-op.AW.par.Buttonon { color: var(--mcw-button-on); }
-op.AW.par.Buttononroll { color: var(--mcw-button-onroll); }
-op.AW.par.Buttontextoff { color: var(--mcw-buttontext-off); }
-op.AW.par.Buttontextoffroll { color: var(--mcw-buttontext-offroll); }
-op.AW.par.Buttontexton { color: var(--mcw-buttontext-on); }
-op.AW.par.Buttontextonroll { color: var(--mcw-buttontext-onroll); }
+op.AW.par.Buttonoff { color: var(--aw-button-off); }
+op.AW.par.Buttonoffroll { color: var(--aw-button-offroll); }
+op.AW.par.Buttonon { color: var(--aw-button-on); }
+op.AW.par.Buttononroll { color: var(--aw-button-onroll); }
+op.AW.par.Buttontextoff { color: var(--aw-buttontext-off); }
+op.AW.par.Buttontextoffroll { color: var(--aw-buttontext-offroll); }
+op.AW.par.Buttontexton { color: var(--aw-buttontext-on); }
+op.AW.par.Buttontextonroll { color: var(--aw-buttontext-onroll); }
 
 /* Pages (Tabs) */
-op.AW.par.Taboff { color: var(--mcw-tab-off); }
-op.AW.par.Taboffroll { color: var(--mcw-tab-offroll); }
-op.AW.par.Tabon { color: var(--mcw-tab-on); }
-op.AW.par.Tabonroll { color: var(--mcw-tab-onroll); }
-op.AW.par.Tabtextoff { color: var(--mcw-tabtext-off); }
-op.AW.par.Tabtextoffroll { color: var(--mcw-tabtext-offroll); }
-op.AW.par.Tabtexton { color: var(--mcw-tabtext-on); }
-op.AW.par.Tabtextonroll { color: var(--mcw-tabtext-onroll); }
+op.AW.par.Taboff { color: var(--aw-tab-off); }
+op.AW.par.Taboffroll { color: var(--aw-tab-offroll); }
+op.AW.par.Tabon { color: var(--aw-tab-on); }
+op.AW.par.Tabonroll { color: var(--aw-tab-onroll); }
+op.AW.par.Tabtextoff { color: var(--aw-tabtext-off); }
+op.AW.par.Tabtextoffroll { color: var(--aw-tabtext-offroll); }
+op.AW.par.Tabtexton { color: var(--aw-tabtext-on); }
+op.AW.par.Tabtextonroll { color: var(--aw-tabtext-onroll); }
 
 /* Matrix */
-op.AW.par.Matrixsplitoff { color: var(--mcw-matrix-off); }
-op.AW.par.Matrixsplitoffroll { color: var(--mcw-matrix-offroll); }
-op.AW.par.Matrixspliton { color: var(--mcw-matrix-on); }
+op.AW.par.Matrixsplitoff { color: var(--aw-matrix-off); }
+op.AW.par.Matrixsplitoffroll { color: var(--aw-matrix-offroll); }
+op.AW.par.Matrixspliton { color: var(--aw-matrix-on); }
 
 /* List */
-op.AW.par.Listbg { color: var(--mcw-list-bg); }
-op.AW.par.Listitemoff { color: var(--mcw-list-itemoff); }
-op.AW.par.Listitemoffroll { color: var(--mcw-list-itemoffroll); }
-op.AW.par.Listitemon { color: var(--mcw-list-itemon); }
-op.AW.par.Listitemonroll { color: var(--mcw-list-itemonroll); }
-op.AW.par.Listtextoff { color: var(--mcw-list-textoff); }
-op.AW.par.Listtextoffroll { color: var(--mcw-list-textoffroll); }
-op.AW.par.Listtexton { color: var(--mcw-list-texton); }
-op.AW.par.Listtextonroll { color: var(--mcw-list-textonroll); }
+op.AW.par.Listbg { color: var(--aw-list-bg); }
+op.AW.par.Listitemoff { color: var(--aw-list-itemoff); }
+op.AW.par.Listitemoffroll { color: var(--aw-list-itemoffroll); }
+op.AW.par.Listitemon { color: var(--aw-list-itemon); }
+op.AW.par.Listitemonroll { color: var(--aw-list-itemonroll); }
+op.AW.par.Listtextoff { color: var(--aw-list-textoff); }
+op.AW.par.Listtextoffroll { color: var(--aw-list-textoffroll); }
+op.AW.par.Listtexton { color: var(--aw-list-texton); }
+op.AW.par.Listtextonroll { color: var(--aw-list-textonroll); }
 
 /* ========== Component Parameters: op.AM (Macros) ========== */
 

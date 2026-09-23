@@ -449,55 +449,55 @@
     /* Retro Chrome style widgets                                     */
     /* ============================================================ */
 
-    /* McWidget Container */
-    --mcw-wc-bg: #C0C0C0;
-    --mcw-wc-bg-selected: #000080;
-    --mcw-wc-bg-drag: #808080;
-    --mcw-wc-bg-drop: #008000;
-    --mcw-wc-header: #C0C0C0;
-    --mcw-wc-header-selected: #000080;
-    --mcw-wc-header-drag: #A0A0A0;
-    --mcw-wc-header-drop: #00A000;
-    --mcw-wc-text: #000000;
-    --mcw-wc-text-selected: #FFFFFF;
-    --mcw-wc-text-drag: #000000;
-    --mcw-wc-text-drop: #FFFFFF;
+    /* AcroWidget Container */
+    --aw-wc-bg: #C0C0C0;
+    --aw-wc-bg-selected: #000080;
+    --aw-wc-bg-drag: #808080;
+    --aw-wc-bg-drop: #008000;
+    --aw-wc-header: #C0C0C0;
+    --aw-wc-header-selected: #000080;
+    --aw-wc-header-drag: #A0A0A0;
+    --aw-wc-header-drop: #00A000;
+    --aw-wc-text: #000000;
+    --aw-wc-text-selected: #FFFFFF;
+    --aw-wc-text-drag: #000000;
+    --aw-wc-text-drop: #FFFFFF;
 
-    /* McWidget Button */
-    --mcw-button-off: #C0C0C0;
-    --mcw-button-offroll: #D4D4D4;
-    --mcw-button-on: #000080;
-    --mcw-button-onroll: #0000A0;
-    --mcw-buttontext-off: #000000;
-    --mcw-buttontext-offroll: #000000;
-    --mcw-buttontext-on: #FFFFFF;
-    --mcw-buttontext-onroll: #FFFFFF;
+    /* AcroWidget Button */
+    --aw-button-off: #C0C0C0;
+    --aw-button-offroll: #D4D4D4;
+    --aw-button-on: #000080;
+    --aw-button-onroll: #0000A0;
+    --aw-buttontext-off: #000000;
+    --aw-buttontext-offroll: #000000;
+    --aw-buttontext-on: #FFFFFF;
+    --aw-buttontext-onroll: #FFFFFF;
 
-    /* McWidget Tabs */
-    --mcw-tab-off: #C0C0C0;
-    --mcw-tab-offroll: #D4D4D4;
-    --mcw-tab-on: #FFFFFF;
-    --mcw-tab-onroll: #FFFFFF;
-    --mcw-tabtext-off: #000000;
-    --mcw-tabtext-offroll: #000000;
-    --mcw-tabtext-on: #000000;
-    --mcw-tabtext-onroll: #000000;
+    /* AcroWidget Tabs */
+    --aw-tab-off: #C0C0C0;
+    --aw-tab-offroll: #D4D4D4;
+    --aw-tab-on: #FFFFFF;
+    --aw-tab-onroll: #FFFFFF;
+    --aw-tabtext-off: #000000;
+    --aw-tabtext-offroll: #000000;
+    --aw-tabtext-on: #000000;
+    --aw-tabtext-onroll: #000000;
 
-    /* McWidget Matrix */
-    --mcw-matrix-off: #808080;
-    --mcw-matrix-offroll: #C0C0C0;
-    --mcw-matrix-on: #FF0000;
+    /* AcroWidget Matrix */
+    --aw-matrix-off: #808080;
+    --aw-matrix-offroll: #C0C0C0;
+    --aw-matrix-on: #FF0000;
 
-    /* McWidget List */
-    --mcw-list-bg: #808080;
-    --mcw-list-itemoff: #C0C0C0;
-    --mcw-list-itemoffroll: #D4D4D4;
-    --mcw-list-itemon: #000080;
-    --mcw-list-itemonroll: #0000A0;
-    --mcw-list-textoff: #000000;
-    --mcw-list-textoffroll: #000000;
-    --mcw-list-texton: #FFFFFF;
-    --mcw-list-textonroll: #FFFFFF;
+    /* AcroWidget List */
+    --aw-list-bg: #808080;
+    --aw-list-itemoff: #C0C0C0;
+    --aw-list-itemoffroll: #D4D4D4;
+    --aw-list-itemon: #000080;
+    --aw-list-itemonroll: #0000A0;
+    --aw-list-textoff: #000000;
+    --aw-list-textoffroll: #000000;
+    --aw-list-texton: #FFFFFF;
+    --aw-list-textonroll: #FFFFFF;
 
     /* ============================================================ */
     /* SECTION 17: MACROS                                        */
@@ -1590,50 +1590,50 @@ TUIK2.transparent { color: var(--tuik2-transparent); }
 /* AcroWidgets (op.AW)                                           */
 /* ============================================================ */
 
-op.AW.par.Wcbg { color: var(--mcw-wc-bg); }
-op.AW.par.Wcbgselected { color: var(--mcw-wc-bg-selected); }
-op.AW.par.Wcbgdrag { color: var(--mcw-wc-bg-drag); }
-op.AW.par.Wcbgdrop { color: var(--mcw-wc-bg-drop); }
-op.AW.par.Wcheader { color: var(--mcw-wc-header); }
-op.AW.par.Wcheaderselected { color: var(--mcw-wc-header-selected); }
-op.AW.par.Wcheaderdrag { color: var(--mcw-wc-header-drag); }
-op.AW.par.Wcheaderdrop { color: var(--mcw-wc-header-drop); }
-op.AW.par.Wctext { color: var(--mcw-wc-text); }
-op.AW.par.Wctextselected { color: var(--mcw-wc-text-selected); }
-op.AW.par.Wctextdrag { color: var(--mcw-wc-text-drag); }
-op.AW.par.Wctextdrop { color: var(--mcw-wc-text-drop); }
+op.AW.par.Wcbg { color: var(--aw-wc-bg); }
+op.AW.par.Wcbgselected { color: var(--aw-wc-bg-selected); }
+op.AW.par.Wcbgdrag { color: var(--aw-wc-bg-drag); }
+op.AW.par.Wcbgdrop { color: var(--aw-wc-bg-drop); }
+op.AW.par.Wcheader { color: var(--aw-wc-header); }
+op.AW.par.Wcheaderselected { color: var(--aw-wc-header-selected); }
+op.AW.par.Wcheaderdrag { color: var(--aw-wc-header-drag); }
+op.AW.par.Wcheaderdrop { color: var(--aw-wc-header-drop); }
+op.AW.par.Wctext { color: var(--aw-wc-text); }
+op.AW.par.Wctextselected { color: var(--aw-wc-text-selected); }
+op.AW.par.Wctextdrag { color: var(--aw-wc-text-drag); }
+op.AW.par.Wctextdrop { color: var(--aw-wc-text-drop); }
 
-op.AW.par.Buttonoff { color: var(--mcw-button-off); }
-op.AW.par.Buttonoffroll { color: var(--mcw-button-offroll); }
-op.AW.par.Buttonon { color: var(--mcw-button-on); }
-op.AW.par.Buttononroll { color: var(--mcw-button-onroll); }
-op.AW.par.Buttontextoff { color: var(--mcw-buttontext-off); }
-op.AW.par.Buttontextoffroll { color: var(--mcw-buttontext-offroll); }
-op.AW.par.Buttontexton { color: var(--mcw-buttontext-on); }
-op.AW.par.Buttontextonroll { color: var(--mcw-buttontext-onroll); }
+op.AW.par.Buttonoff { color: var(--aw-button-off); }
+op.AW.par.Buttonoffroll { color: var(--aw-button-offroll); }
+op.AW.par.Buttonon { color: var(--aw-button-on); }
+op.AW.par.Buttononroll { color: var(--aw-button-onroll); }
+op.AW.par.Buttontextoff { color: var(--aw-buttontext-off); }
+op.AW.par.Buttontextoffroll { color: var(--aw-buttontext-offroll); }
+op.AW.par.Buttontexton { color: var(--aw-buttontext-on); }
+op.AW.par.Buttontextonroll { color: var(--aw-buttontext-onroll); }
 
-op.AW.par.Taboff { color: var(--mcw-tab-off); }
-op.AW.par.Taboffroll { color: var(--mcw-tab-offroll); }
-op.AW.par.Tabon { color: var(--mcw-tab-on); }
-op.AW.par.Tabonroll { color: var(--mcw-tab-onroll); }
-op.AW.par.Tabtextoff { color: var(--mcw-tabtext-off); }
-op.AW.par.Tabtextoffroll { color: var(--mcw-tabtext-offroll); }
-op.AW.par.Tabtexton { color: var(--mcw-tabtext-on); }
-op.AW.par.Tabtextonroll { color: var(--mcw-tabtext-onroll); }
+op.AW.par.Taboff { color: var(--aw-tab-off); }
+op.AW.par.Taboffroll { color: var(--aw-tab-offroll); }
+op.AW.par.Tabon { color: var(--aw-tab-on); }
+op.AW.par.Tabonroll { color: var(--aw-tab-onroll); }
+op.AW.par.Tabtextoff { color: var(--aw-tabtext-off); }
+op.AW.par.Tabtextoffroll { color: var(--aw-tabtext-offroll); }
+op.AW.par.Tabtexton { color: var(--aw-tabtext-on); }
+op.AW.par.Tabtextonroll { color: var(--aw-tabtext-onroll); }
 
-op.AW.par.Matrixsplitoff { color: var(--mcw-matrix-off); }
-op.AW.par.Matrixsplitoffroll { color: var(--mcw-matrix-offroll); }
-op.AW.par.Matrixspliton { color: var(--mcw-matrix-on); }
+op.AW.par.Matrixsplitoff { color: var(--aw-matrix-off); }
+op.AW.par.Matrixsplitoffroll { color: var(--aw-matrix-offroll); }
+op.AW.par.Matrixspliton { color: var(--aw-matrix-on); }
 
-op.AW.par.Listbg { color: var(--mcw-list-bg); }
-op.AW.par.Listitemoff { color: var(--mcw-list-itemoff); }
-op.AW.par.Listitemoffroll { color: var(--mcw-list-itemoffroll); }
-op.AW.par.Listitemon { color: var(--mcw-list-itemon); }
-op.AW.par.Listitemonroll { color: var(--mcw-list-itemonroll); }
-op.AW.par.Listtextoff { color: var(--mcw-list-textoff); }
-op.AW.par.Listtextoffroll { color: var(--mcw-list-textoffroll); }
-op.AW.par.Listtexton { color: var(--mcw-list-texton); }
-op.AW.par.Listtextonroll { color: var(--mcw-list-textonroll); }
+op.AW.par.Listbg { color: var(--aw-list-bg); }
+op.AW.par.Listitemoff { color: var(--aw-list-itemoff); }
+op.AW.par.Listitemoffroll { color: var(--aw-list-itemoffroll); }
+op.AW.par.Listitemon { color: var(--aw-list-itemon); }
+op.AW.par.Listitemonroll { color: var(--aw-list-itemonroll); }
+op.AW.par.Listtextoff { color: var(--aw-list-textoff); }
+op.AW.par.Listtextoffroll { color: var(--aw-list-textoffroll); }
+op.AW.par.Listtexton { color: var(--aw-list-texton); }
+op.AW.par.Listtextonroll { color: var(--aw-list-textonroll); }
 
 
 /* ============================================================ */
