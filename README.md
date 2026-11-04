@@ -13,3 +13,7 @@ See [CLAUDE.md](CLAUDE.md) for full architecture, theme-file format, and customi
 ```bash
 git subtree add --prefix=modules/acro-td-theme-manager https://github.com/acronym-lol/acro-td-theme-manager.git main --squash
 ```
+
+## Contributing
+
+Issues are welcome here. Pull requests go to [acro-td-core](https://github.com/acronym-lol/acro-td-core) against its `dev` branch; see [CONTRIBUTING.md](CONTRIBUTING.md).
