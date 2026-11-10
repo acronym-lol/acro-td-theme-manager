@@ -13,15 +13,15 @@ name: Acro TD Theme Manager
 summary: 'CSS-based theming for TouchDesigner, applying palettes to ui.colors, TUIK2 component params, and op-shortcut params from a single file.'
 
 owner: '@matthewwachter'
-maintainers: []
+maintainers: ['@matthewwachter']
 
 tier: 2
 status: stable
 
-# `internal` = visible only inside acro-docs. Nothing reaches the public acronym.lol
-# tools page until this is flipped to `public`. Note this is UNRELATED to the repo being
-# private on GitHub.
-visibility: internal
+# `public` = name, summary, category, status and links are published on the public
+# acronym.lol tools page, once acro-docs' public-allowlist.yml also lists this repo.
+# `internal` would keep it inside acro-docs only.
+visibility: public
 
 category: touchdesigner
 
@@ -31,3 +31,7 @@ group: modules
 
 requires:
   - TouchDesigner
+
+links:
+  # The public Docsify site on GitHub Pages.
+  homepage: https://acronym-lol.github.io/acro-td-theme-manager/
